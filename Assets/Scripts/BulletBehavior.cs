@@ -14,7 +14,8 @@ public class BulletBehavior : MonoBehaviour
         {
             bulletDirection.y = -1;
         }
-       GetComponent<Rigidbody2D>().velocity = bulletDirection  * Speed.Value;
+       //GetComponent<Rigidbody2D>().velocity = bulletDirection  * Speed.Value;
+       transform.Translate(bulletDirection * Time.deltaTime * Speed.Value);
     }
 
     void Update()
