@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 4841397904929385670}
   - component: {fileID: 4841397904929385668}
   - component: {fileID: 4841397904929385669}
-  - component: {fileID: 4841397904929385691}
+  - component: {fileID: 894036187}
+  - component: {fileID: 6319824282107117731}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -28,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 4841397904929385671}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -118.47602, y: -0.5400001, z: -9722.079}
-  m_LocalScale: {x: 540.00006, y: 540.00006, z: 108.000015}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -96,12 +97,33 @@ MonoBehaviour:
   speed: {fileID: 11400000, guid: 7d5888c1f5498324e82dfa4d484f86c4, type: 2}
   pistolCooldown: {fileID: 11400000, guid: 231de533d4b733e4ca5d2aa636feb325, type: 2}
   Bullet: {fileID: 7040557380576811275, guid: b7acc825cd88ae4449a4b147147f6a2d, type: 3}
-  boundary:
-    xMin: 0
-    xMax: 0
-    yMin: 0
-    yMax: 0
---- !u!50 &4841397904929385691
+--- !u!61 &894036187
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4841397904929385671}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.2, y: 0.2}
+    newSize: {x: 0.16, y: 0.16}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.2, y: 0.2}
+  m_EdgeRadius: 0
+--- !u!50 &6319824282107117731
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -109,14 +131,14 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4841397904929385671}
-  m_BodyType: 0
+  m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
