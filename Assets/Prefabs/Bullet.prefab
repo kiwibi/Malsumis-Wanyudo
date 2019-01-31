@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7040557380576811279}
   - component: {fileID: 7040557380576811278}
-  - component: {fileID: 7040557380576811273}
   - component: {fileID: 7040557380576811272}
   - component: {fileID: 7040557380576811276}
   m_Layer: 0
@@ -29,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 7040557380576811275}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.00664, y: 0.18617, z: 0}
-  m_LocalScale: {x: 0.065690584, y: 0.20099454, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -82,27 +81,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!50 &7040557380576811273
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7040557380576811275}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 5
 --- !u!70 &7040557380576811272
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -132,3 +110,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: {fileID: 11400000, guid: f47fbb1b580ee82438968a247c5fca89, type: 2}
+  BulletDirectionUp: 1
