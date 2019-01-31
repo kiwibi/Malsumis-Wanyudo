@@ -2,19 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[System.Serializable]
-public class Boundary
-{
-    public float xMin, xMax, yMin, yMax;
-}
-
 
 public class PlayerMovement : MonoBehaviour
 {
     public FloatVariable speed;
     public FloatVariable pistolCooldown;
     public GameObject Bullet;
-    public Boundary boundary;
+
     private float playerPistolCooldown;
     private float timeBetweenShoots;
     
@@ -38,11 +32,5 @@ public class PlayerMovement : MonoBehaviour
             Instantiate(Bullet, new Vector3(transform.position.x, transform.position.y,0), transform.rotation);
             playerPistolCooldown = pistolCooldown.Value;
         }
-        //Will keep the player inside the Boundary if wanted
-        //GetComponent<Rigidbody2D>().position = new Vector2
-        //(
-        //    Mathf.Clamp(GetComponent<Rigidbody2D>().position.x, boundary.xMin, boundary.xMax),
-        //    Mathf.Clamp(GetComponent<Rigidbody2D>().position.y, boundary.yMin, boundary.yMax)
-        //);
     }
 }
