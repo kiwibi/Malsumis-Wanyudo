@@ -12,7 +12,7 @@ public class EnemySpawner : MonoBehaviour
     void Start()
     {
         spawnPoints = GetComponentsInChildren<SpawnPoint>();
-        InvokeRepeating("Spawn", (float)SpawnDelay, (float)SpawnDelay);
+        InvokeRepeating("Spawn", SpawnDelay.Value, SpawnDelay.Value);
     }
 
     void Spawn()

@@ -2,7 +2,10 @@
 
 public class EnemyBehavior : MonoBehaviour
 {
+    public GameObject Bullet;
+    
     private EnemyStats stats;
+    
     void Start()
     {
         stats = GetComponent<EnemyStats>();
@@ -15,8 +18,13 @@ public class EnemyBehavior : MonoBehaviour
 
     }
 
-    void Move()
+    public void Shoot()
     {
-        gameObject.transform.Translate(Vector3.up * (float)stats.Speed * Time.deltaTime);
+        Instantiate(Bullet, transform);
+    }
+
+    public void Move()
+    {
+        gameObject.transform.Translate(Vector3.down * stats.Speed.Value * Time.deltaTime);
     }
 }

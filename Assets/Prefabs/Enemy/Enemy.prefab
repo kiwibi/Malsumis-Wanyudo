@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2323681209936350376}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.81, y: -0.3, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1495804017920751447}
@@ -76,6 +76,7 @@ MonoBehaviour:
   HP: {fileID: 11400000, guid: 86b0499431506424fbea0bf54f927110, type: 2}
   Speed: {fileID: 11400000, guid: eb721e62465ff254b84e2c916785bb39, type: 2}
   Damage: {fileID: 11400000, guid: a91dfc64eae912244b3193c2e4e4ae7f, type: 2}
+  ShootingDelay: {fileID: 11400000, guid: eac8bda64199e0b4d93f49e00b67101c, type: 2}
 --- !u!114 &2323681209936350383
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -88,6 +89,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae53754c0e0ae8b479b27394761e6fff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Bullet: {fileID: 5972835516438047918, guid: 51a054a56e18ed54c8a1775aad54151d, type: 3}
 --- !u!1 &2453075674520480886
 GameObject:
   m_ObjectHideFlags: 0

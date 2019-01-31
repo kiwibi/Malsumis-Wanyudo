@@ -4,17 +4,26 @@ using UnityEngine;
 
 public class BulletBehavior : MonoBehaviour
 {
-    public float m_speed;
+    public FloatVariable Speed;
+    public bool BulletDirectionUp = true;
+    // Bullet direction up by default
+    private Vector3 bulletDirection = new Vector3(0, 1, 0);
     void FixedUpdate()
     {
-       GetComponent<Rigidbody2D>().velocity = transform.up * m_speed;
+        if (!BulletDirectionUp)
+        {
+            bulletDirection.y = -1;
+        }
+       GetComponent<Rigidbody2D>().velocity = bulletDirection  * Speed.Value;
     }
 
     void Update()
     {
+        /*
         if(transform.position.y > 5)
         {
             Destroy(gameObject);
         }
+        */
     }
 }

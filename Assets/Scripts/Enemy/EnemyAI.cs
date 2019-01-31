@@ -7,18 +7,28 @@ using UnityEngine;
 public class EnemyAI : MonoBehaviour
 {
     private EnemyStats stats;
+    private EnemyBehavior behavior;
 
     void Start()
     {
         stats = GetComponent<EnemyStats>();
+        behavior = GetComponent<EnemyBehavior>();
+        // Shoot continuously every shootingdelay (seconds)
+        InvokeRepeating("Shoot", stats.ShootingDelay.Value, stats.ShootingDelay.Value);
     }
 
     void Update()
     {
-        if((int)stats.HP <= 0)
+        
+        if(stats.HP.Value <= 0)
         {
             Die();
         }
+    }
+
+    void Shoot()
+    {
+        behavior.Shoot();   
     }
 
     void Die()

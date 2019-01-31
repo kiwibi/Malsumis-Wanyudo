@@ -8,4 +8,5 @@ public class EnemyStats : MonoBehaviour
     public IntVariable HP;
     public FloatVariable Speed;
     public IntVariable Damage;
+    public FloatVariable ShootingDelay;
 }
