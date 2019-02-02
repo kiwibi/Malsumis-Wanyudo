@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class EnemyStats : MonoBehaviour
 {
-    public IntVariable MaxHP;
-    public FloatVariable MinShootDelay;
-    public FloatVariable MaxShootDelay;
-    public FloatVariable Speed;
-    public FloatVariable StrafeSpeed;
-    public FloatVariable MinChangeDirectionDelay;
-    public FloatVariable MaxChangeDirectionDelay;
+    public IntReference MaxHP;
+    public FloatReference MinShootDelay;
+    public FloatReference MaxShootDelay;
+    public FloatReference Speed;
+    public FloatReference StrafeSpeed;
+    public FloatReference MinChangeDirectionDelay;
+    public FloatReference MaxChangeDirectionDelay;
 
     private int m_HP;
 

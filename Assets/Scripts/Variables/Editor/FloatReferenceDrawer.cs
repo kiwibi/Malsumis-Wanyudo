@@ -28,8 +28,8 @@ using UnityEngine;
 
             EditorGUI.BeginChangeCheck();
 
-            // Get properties
-            SerializedProperty useConstant = property.FindPropertyRelative("UseConstant");
+        // Get properties
+        SerializedProperty useConstant = property.FindPropertyRelative("UseConstant");
             SerializedProperty constantValue = property.FindPropertyRelative("ConstantValue");
             SerializedProperty variable = property.FindPropertyRelative("Variable");
 

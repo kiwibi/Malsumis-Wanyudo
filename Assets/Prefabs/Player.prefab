@@ -125,10 +125,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66e482d89a6514b48bac8f5a58f92ca1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: {fileID: 11400000, guid: 7d5888c1f5498324e82dfa4d484f86c4, type: 2}
-  pistolCooldown: {fileID: 11400000, guid: 231de533d4b733e4ca5d2aa636feb325, type: 2}
+  speed:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: 7d5888c1f5498324e82dfa4d484f86c4, type: 2}
+  pistolCooldown:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: 231de533d4b733e4ca5d2aa636feb325, type: 2}
   Bullet: {fileID: 7040557380576811275, guid: b7acc825cd88ae4449a4b147147f6a2d, type: 3}
-  Camera: {fileID: 0}
 --- !u!61 &894036187
 BoxCollider2D:
   m_ObjectHideFlags: 0

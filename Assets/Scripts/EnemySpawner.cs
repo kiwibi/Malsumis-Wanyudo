@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    public FloatVariable MinSpawnDelay;
-    public FloatVariable MaxSpawnDelay;
+    public FloatReference MinSpawnDelay;
+    public FloatReference MaxSpawnDelay;
     public GameObject Enemy1;
     public GameObject Enemy2;
     public GameObject Enemy3;
-    public BoolVariable SpawnerOn;
+    public BoolReference SpawnerOn;
     public SpawnPoint[] spawnPoints;
 
     private Level level;

@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class Level : MonoBehaviour
 {
-    public IntVariable currentLevel;
+    public IntReference currentLevel;
 }

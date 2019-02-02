@@ -60,15 +60,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48057bd44ce65c94282cf7348f07c7fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHP: {fileID: 11400000, guid: 31a0965c243495747be2046b2b4ebb05, type: 2}
-  MinShootDelay: {fileID: 11400000, guid: 62a3c4b670d60e942b47a6c0959fce8a, type: 2}
-  MaxShootDelay: {fileID: 11400000, guid: 8003623cac99af14a827216d6f35dea0, type: 2}
-  Speed: {fileID: 11400000, guid: 3400088141b632642b83d5d52cf4c6f8, type: 2}
-  StrafeSpeed: {fileID: 11400000, guid: 4e59f4baf98b45b4284187549e8b5ece, type: 2}
-  MinChangeDirectionDelay: {fileID: 11400000, guid: dad9591af810f924c9016cb468aa8c68,
-    type: 2}
-  MaxChangeDirectionDelay: {fileID: 11400000, guid: ec12b2e336087ef44ae2e391ee2392b8,
-    type: 2}
+  MaxHP:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: 31a0965c243495747be2046b2b4ebb05, type: 2}
+  MinShootDelay:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: 62a3c4b670d60e942b47a6c0959fce8a, type: 2}
+  MaxShootDelay:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: 8003623cac99af14a827216d6f35dea0, type: 2}
+  Speed:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: 3400088141b632642b83d5d52cf4c6f8, type: 2}
+  StrafeSpeed:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: 4e59f4baf98b45b4284187549e8b5ece, type: 2}
+  MinChangeDirectionDelay:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: dad9591af810f924c9016cb468aa8c68, type: 2}
+  MaxChangeDirectionDelay:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: ec12b2e336087ef44ae2e391ee2392b8, type: 2}
 --- !u!114 &2323681209936350383
 MonoBehaviour:
   m_ObjectHideFlags: 0

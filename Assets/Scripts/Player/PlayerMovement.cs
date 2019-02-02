@@ -5,10 +5,9 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public FloatVariable speed;
-    public FloatVariable pistolCooldown;
+    public FloatReference speed;
+    public FloatReference pistolCooldown;
     public GameObject Bullet;
-    public Camera Camera;
 
     private float playerPistolCooldown;
     private float timeBetweenShoots;
