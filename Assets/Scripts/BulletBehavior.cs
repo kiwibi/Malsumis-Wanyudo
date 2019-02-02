@@ -5,7 +5,6 @@ using UnityEngine;
 public class BulletBehavior : MonoBehaviour
 {
     public FloatVariable Speed;
-    public FloatVariable Damage;
     public bool BulletDirectionUp = true;
     // Bullet direction up by default
     private Vector3 bulletDirection = new Vector3(0, 1, 0);
