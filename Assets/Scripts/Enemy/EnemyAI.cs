@@ -9,14 +9,12 @@ public class EnemyAI : MonoBehaviour
     private EnemyStats stats;
     private EnemyBehavior behavior;
 
-    private IEnumerator coroutine;
-
     void Start()
     {
         stats = GetComponent<EnemyStats>();
         behavior = GetComponent<EnemyBehavior>();
-        coroutine = ShootDecision();
-        StartCoroutine(coroutine);
+        StartCoroutine(ShootDecision());
+        StartCoroutine(ChangeDirectionDecision());
     }
 
     void Update()
@@ -28,17 +26,12 @@ public class EnemyAI : MonoBehaviour
         }
     }
 
-    void Shoot()
-    {
-        behavior.Shoot();   
-    }
-
     IEnumerator ShootDecision()
     {
         while (true)
         {
             yield return new WaitForSeconds(Random.Range(stats.MinShootDelay.Value, stats.MaxShootDelay.Value));
-            Shoot();
+            behavior.Shoot();
         }
     }
 
