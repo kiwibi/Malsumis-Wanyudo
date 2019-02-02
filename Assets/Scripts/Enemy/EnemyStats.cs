@@ -5,8 +5,17 @@ using UnityEngine;
 public class EnemyStats : MonoBehaviour
 {
     public IntVariable MaxHP;
-    public IntVariable HP;
+    public FloatVariable MinShootDelay;
+    public FloatVariable MaxShootDelay;
     public FloatVariable Speed;
-    public IntVariable Damage;
-    public FloatVariable ShootingDelay;
+    public FloatVariable StrafeSpeed;
+
+    private int m_HP;
+
+    public int HP { get => HP; set => HP = value; }
+
+    private void Start()
+    {
+        m_HP = MaxHP.Value;
+    }
 }

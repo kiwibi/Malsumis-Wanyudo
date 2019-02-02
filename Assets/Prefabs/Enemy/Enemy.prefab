@@ -61,10 +61,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHP: {fileID: 11400000, guid: 072851321ab19214cbb69480fd2febfe, type: 2}
-  HP: {fileID: 11400000, guid: 86b0499431506424fbea0bf54f927110, type: 2}
+  MinShootDelay: {fileID: 11400000, guid: eac8bda64199e0b4d93f49e00b67101c, type: 2}
+  MaxShootDelay: {fileID: 11400000, guid: 8661de1346258a14ab9f08a041f96d15, type: 2}
   Speed: {fileID: 11400000, guid: eb721e62465ff254b84e2c916785bb39, type: 2}
-  Damage: {fileID: 11400000, guid: a91dfc64eae912244b3193c2e4e4ae7f, type: 2}
-  ShootingDelay: {fileID: 11400000, guid: eac8bda64199e0b4d93f49e00b67101c, type: 2}
+  StrafeSpeed: {fileID: 11400000, guid: 923a4f90d8f496c4ca9e4382020249e2, type: 2}
 --- !u!114 &2323681209936350383
 MonoBehaviour:
   m_ObjectHideFlags: 0
