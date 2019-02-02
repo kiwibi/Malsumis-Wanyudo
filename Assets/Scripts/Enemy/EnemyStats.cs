@@ -9,10 +9,12 @@ public class EnemyStats : MonoBehaviour
     public FloatVariable MaxShootDelay;
     public FloatVariable Speed;
     public FloatVariable StrafeSpeed;
+    public FloatVariable MinChangeDirectionDelay;
+    public FloatVariable MaxChangeDirectionDelay;
 
     private int m_HP;
 
-    public int HP { get => HP; set => HP = value; }
+    public int HP { get => m_HP; set => m_HP = value; }
 
     private void Start()
     {

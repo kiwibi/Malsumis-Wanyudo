@@ -5,17 +5,29 @@ public class EnemyBehavior : MonoBehaviour
     public GameObject Bullet;
     
     private EnemyStats stats;
-    
+    public int strafeDirection;
+
     void Start()
     {
         stats = GetComponent<EnemyStats>();
-        stats = GetComponent<EnemyStats>();
+        var randomDirection = Random.Range(1, 3);
+        if(randomDirection == 1)
+        {
+            strafeDirection = 1;
+        } else
+        {
+            strafeDirection = -1;
+        }
     }
 
     void Update()
     {
         Move();
+    }
 
+    public void TakeDamage(int damage)
+    {
+        stats.HP -= damage;
     }
 
     public void Shoot()
@@ -25,6 +37,17 @@ public class EnemyBehavior : MonoBehaviour
 
     public void Move()
     {
-        gameObject.transform.Translate(Vector3.down * stats.Speed.Value * Time.deltaTime);
+        Vector3 direction = new Vector3(strafeDirection * stats.StrafeSpeed.Value, -1 * stats.Speed.Value, 0);
+        gameObject.transform.Translate(direction * Time.deltaTime);
+    }
+
+    public void ChangeDirection()
+    {
+        strafeDirection *= -1;
+    }
+
+    public void Die()
+    {
+        Destroy(gameObject);
     }
 }

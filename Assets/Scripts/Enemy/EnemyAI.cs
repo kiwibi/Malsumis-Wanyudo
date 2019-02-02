@@ -9,20 +9,22 @@ public class EnemyAI : MonoBehaviour
     private EnemyStats stats;
     private EnemyBehavior behavior;
 
+    private IEnumerator coroutine;
+
     void Start()
     {
         stats = GetComponent<EnemyStats>();
         behavior = GetComponent<EnemyBehavior>();
-        // Shoot continuously every shootingdelay (seconds)
-        InvokeRepeating("Shoot", stats.ShootingDelay.Value, stats.ShootingDelay.Value);
+        coroutine = ShootDecision();
+        StartCoroutine(coroutine);
     }
 
     void Update()
     {
-        
-        if(stats.HP.Value <= 0)
+        if(stats.HP <= 0)
         {
-            Die();
+            behavior.Die();
+            StopAllCoroutines();
         }
     }
 
@@ -31,8 +33,21 @@ public class EnemyAI : MonoBehaviour
         behavior.Shoot();   
     }
 
-    void Die()
+    IEnumerator ShootDecision()
     {
-        Destroy(gameObject);
+        while (true)
+        {
+            yield return new WaitForSeconds(Random.Range(stats.MinShootDelay.Value, stats.MaxShootDelay.Value));
+            Shoot();
+        }
+    }
+
+    IEnumerator ChangeDirectionDecision()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(Random.Range(stats.MinShootDelay.Value, stats.MaxShootDelay.Value));
+            behavior.ChangeDirection();
+        }
     }
 }

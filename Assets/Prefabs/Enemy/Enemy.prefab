@@ -65,6 +65,10 @@ MonoBehaviour:
   MaxShootDelay: {fileID: 11400000, guid: 8661de1346258a14ab9f08a041f96d15, type: 2}
   Speed: {fileID: 11400000, guid: eb721e62465ff254b84e2c916785bb39, type: 2}
   StrafeSpeed: {fileID: 11400000, guid: 923a4f90d8f496c4ca9e4382020249e2, type: 2}
+  MinChangeDirectionDelay: {fileID: 11400000, guid: 969bc7db7eef2e74496f5e3e5f3f72ba,
+    type: 2}
+  MaxChangeDirectionDelay: {fileID: 11400000, guid: 46f456f289820c54dbf9e9c51a5f891b,
+    type: 2}
 --- !u!114 &2323681209936350383
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -78,6 +82,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Bullet: {fileID: 5972835516438047918, guid: 51a054a56e18ed54c8a1775aad54151d, type: 3}
+  strafeDirection: 1
 --- !u!50 &6491760475090962942
 Rigidbody2D:
   serializedVersion: 4
