@@ -5,10 +5,4 @@ using UnityEngine;
 public class IntVariable : ScriptableObject
 {
     public int Value;
-
-    // Allow IntVariable to be converted to int
-    public static explicit operator int(IntVariable v)
-    {
-        return v.Value;
-    }
 }

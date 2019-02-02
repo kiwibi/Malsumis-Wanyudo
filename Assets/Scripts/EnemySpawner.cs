@@ -4,15 +4,21 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    public FloatVariable SpawnDelay;
+    public FloatVariable MinSpawnDelay;
+    public FloatVariable MaxSpawnDelay;
     public GameObject Enemy;
+    public BoolVariable SpawnerOn;
 
     public SpawnPoint[] spawnPoints;
 
-    void Start()
+    IEnumerator Start()
     {
         spawnPoints = GetComponentsInChildren<SpawnPoint>();
-        InvokeRepeating("Spawn", SpawnDelay.Value, SpawnDelay.Value);
+        while (SpawnerOn.Value)
+        {
+            yield return new WaitForSeconds(Random.Range(MinSpawnDelay.Value, MaxSpawnDelay.Value));
+            Spawn();
+        }
     }
 
     void Spawn()
