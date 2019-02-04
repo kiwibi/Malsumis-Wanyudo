@@ -147,6 +147,14 @@ MonoBehaviour:
     UseConstant: 0
     ConstantValue: 0
     Variable: {fileID: 11400000, guid: 231de533d4b733e4ca5d2aa636feb325, type: 2}
+  MaxHealth:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: 5b353ffcb42923946a27425cde23bd8d, type: 2}
+  StartingHealth:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: 675045a708d35504399a70c74d10b1d6, type: 2}
 --- !u!61 &894036187
 BoxCollider2D:
   m_ObjectHideFlags: 0
