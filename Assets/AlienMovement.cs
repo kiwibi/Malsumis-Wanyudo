@@ -15,8 +15,8 @@ public class AlienMovement : MonoBehaviour
     
     void Update()
     {
-        Vector2 movement = new Vector2(Target.transform.position.x, Target.transform.position.y);
-        transform.Translate(movement * stats.AlienSpeed.Value * Time.deltaTime);
+        Vector2 target = Target.transform.position - transform.position;
+        transform.Translate(target * stats.AlienSpeed.Value * Time.deltaTime);
 
         if (Camera.main == null) return;
         Vector3 screenPos = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, 10));
