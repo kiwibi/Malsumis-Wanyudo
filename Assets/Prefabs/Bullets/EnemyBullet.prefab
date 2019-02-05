@@ -93,7 +93,7 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -129,6 +129,7 @@ MonoBehaviour:
     UseConstant: 0
     ConstantValue: 0
     Variable: {fileID: 11400000, guid: 6627b61d3935b914b8a479685b7ea5dc, type: 2}
+  Parent: {fileID: 2323681209936350376, guid: 0eaa51a2a4affe54a956b13bffc2f0fe, type: 3}
 --- !u!50 &7059079594933478216
 Rigidbody2D:
   serializedVersion: 4

@@ -10,10 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 7040557380576811279}
   - component: {fileID: 7040557380576811278}
-  - component: {fileID: 7040557380576811272}
-  - component: {fileID: 4457593307583293135}
-  - component: {fileID: 7040557380576811276}
   - component: {fileID: 2185687295593176292}
+  - component: {fileID: 7040557380576811272}
+  - component: {fileID: 7040557380576811276}
   - component: {fileID: 4577538175915436752}
   m_Layer: 0
   m_Name: Bullet
@@ -84,52 +83,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!70 &7040557380576811272
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7040557380576811275}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.1, y: 0.17}
-  m_Direction: 0
---- !u!114 &4457593307583293135
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7040557380576811275}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 832555e6923f4c14e8b335791f92eb6c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DamageAmount:
-    UseConstant: 1
-    ConstantValue: 0
-    Variable: {fileID: 0}
---- !u!114 &7040557380576811276
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7040557380576811275}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15d5313917a8047418035fc3ecefde14, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Speed: {fileID: 11400000, guid: f47fbb1b580ee82438968a247c5fca89, type: 2}
-  BulletDirectionUp: 1
 --- !u!50 &2185687295593176292
 Rigidbody2D:
   serializedVersion: 4
@@ -151,6 +104,36 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!70 &7040557380576811272
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7040557380576811275}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.1, y: 0.17}
+  m_Direction: 0
+--- !u!114 &7040557380576811276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7040557380576811275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15d5313917a8047418035fc3ecefde14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Speed: {fileID: 11400000, guid: f47fbb1b580ee82438968a247c5fca89, type: 2}
+  BulletDirectionUp: 1
 --- !u!114 &4577538175915436752
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -167,3 +150,4 @@ MonoBehaviour:
     UseConstant: 0
     ConstantValue: 0
     Variable: {fileID: 11400000, guid: 3dba26913e4e8624c88d68f805beef5a, type: 2}
+  Parent: {fileID: 4841397904929385671, guid: c052c3438c225fd449c10f804a7ba429, type: 3}
