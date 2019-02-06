@@ -13,12 +13,12 @@ public class EnemyStats : MonoBehaviour
     public FloatReference MaxChangeDirectionDelay;
     private int m_Health;
 
-    private void Start()
+    void Start()
     {
         m_Health = MaxHP;
     }
 
-    private void fixedUpdate()
+    void Update()
     {
         if(m_Health <= 0)
         {

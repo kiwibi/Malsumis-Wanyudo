@@ -209,6 +209,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2652309353226456882, guid: c052c3438c225fd449c10f804a7ba429,
+        type: 3}
+      propertyPath: m_Health
+      value: 
+      objectReference: {fileID: 11400000, guid: 675045a708d35504399a70c74d10b1d6,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c052c3438c225fd449c10f804a7ba429, type: 3}
 --- !u!1 &1674245657 stripped
@@ -411,6 +417,11 @@ PrefabInstance:
       propertyPath: Target
       value: 
       objectReference: {fileID: 1325204547}
+    - target: {fileID: 4544575120694564982, guid: 5c3bd7f78771afb46b1e53a357ea8711,
+        type: 3}
+      propertyPath: AlienSpeed.ConstantValue
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c3bd7f78771afb46b1e53a357ea8711, type: 3}
 --- !u!1001 &1996992818973057462
@@ -539,6 +550,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2631392104102962559, guid: c5767d1bbe315614c8ccad1401ba59b3,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2631392104102962559, guid: c5767d1bbe315614c8ccad1401ba59b3,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6280055589798122767, guid: c5767d1bbe315614c8ccad1401ba59b3,
+        type: 3}
+      propertyPath: tileSizeY.ConstantValue
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c5767d1bbe315614c8ccad1401ba59b3, type: 3}

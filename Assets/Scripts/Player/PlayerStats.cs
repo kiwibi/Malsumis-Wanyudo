@@ -8,13 +8,17 @@ public class PlayerStats : MonoBehaviour
     public FloatReference pistolCooldown;
     public IntReference MaxHealth;
     public IntReference StartingHealth;
-    public IntVariable m_Health;
+    public IntVariable CurrentHealth;
 
-  
-
-    private void fixedUpdate()
+    void Start()
     {
-        if(m_Health.Value <= 0)
+        CurrentHealth.Value = MaxHealth.Value;
+        
+    }
+
+    void Update()
+    {
+        if (CurrentHealth.Value <= 0)
         {
             Die();
         }
@@ -22,7 +26,8 @@ public class PlayerStats : MonoBehaviour
 
     public void DealDamage(int value)
     {
-        m_Health.Value -= value;
+        Debug.Log("should deal dmg");
+        CurrentHealth.Value -= value;
     }
 
     private void Die()
