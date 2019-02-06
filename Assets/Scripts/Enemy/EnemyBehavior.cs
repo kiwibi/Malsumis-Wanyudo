@@ -3,7 +3,8 @@
 public class EnemyBehavior : MonoBehaviour
 {
     public GameObject Bullet;
-    
+    public GameObject Player;
+
     private EnemyStats stats;
     public int strafeDirection;
 

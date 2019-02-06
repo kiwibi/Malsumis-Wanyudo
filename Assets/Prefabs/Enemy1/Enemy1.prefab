@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2323681209936350383}
   - component: {fileID: 6491760475090962942}
   - component: {fileID: 8328797586997841978}
+  - component: {fileID: 5377051576634167973}
   m_Layer: 0
   m_Name: Enemy1
   m_TagString: Enemy
@@ -102,6 +103,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Bullet: {fileID: 5972835516438047918, guid: 51a054a56e18ed54c8a1775aad54151d, type: 3}
+  Player: {fileID: 4841397904929385671, guid: c052c3438c225fd449c10f804a7ba429, type: 3}
   strafeDirection: 1
 --- !u!50 &6491760475090962942
 Rigidbody2D:
@@ -134,7 +136,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -150,6 +152,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &5377051576634167973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2323681209936350376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 832555e6923f4c14e8b335791f92eb6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DamageAmount:
+    UseConstant: 1
+    ConstantValue: 1
+    Variable: {fileID: 0}
+  Parent: {fileID: 2323681209936350376}
 --- !u!1 &2453075674520480886
 GameObject:
   m_ObjectHideFlags: 0
