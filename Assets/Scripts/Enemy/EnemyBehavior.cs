@@ -27,7 +27,7 @@ public class EnemyBehavior : MonoBehaviour
 
     public void Shoot()
     {
-        Instantiate(Bullet, transform);
+        Instantiate(Bullet, transform.GetChild(1));
     }
 
     public void Move()
