@@ -40,9 +40,4 @@ public class EnemyBehavior : MonoBehaviour
     {
         strafeDirection *= -1;
     }
-
-    public void Die()
-    {
-        Destroy(gameObject);
-    }
 }

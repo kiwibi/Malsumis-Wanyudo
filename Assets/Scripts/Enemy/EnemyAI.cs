@@ -17,15 +17,6 @@ public class EnemyAI : MonoBehaviour
         StartCoroutine(ChangeDirectionDecision());
     }
 
-    void Update()
-    {
-        if(stats.HP <= 0)
-        {
-            behavior.Die();
-            StopAllCoroutines();
-        }
-    }
-
     IEnumerator ShootDecision()
     {
         while (true)

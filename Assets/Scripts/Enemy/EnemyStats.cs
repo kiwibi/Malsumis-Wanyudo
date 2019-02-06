@@ -18,8 +18,21 @@ public class EnemyStats : MonoBehaviour
         m_Health = MaxHP;
     }
 
+    private void fixedUpdate()
+    {
+        if(m_Health <= 0)
+        {
+            Die();
+        }
+    }
+
     public void DealDamage(int value)
     {
         m_Health -= value;
+    }
+
+    private void Die()
+    {
+        Destroy(gameObject);
     }
 }

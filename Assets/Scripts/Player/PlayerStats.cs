@@ -16,12 +16,17 @@ public class PlayerStats : MonoBehaviour
     {
         if(m_Health.Value <= 0)
         {
-            Destroy(gameObject);
+            Die();
         }
     }
 
     public void DealDamage(int value)
     {
         m_Health.Value -= value;
+    }
+
+    private void Die()
+    {
+        Destroy(gameObject);
     }
 }
