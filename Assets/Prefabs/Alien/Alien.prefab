@@ -89,7 +89,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2995990598099252652}
   - component: {fileID: 6788232502349624237}
-  - component: {fileID: 9027087404779815675}
+  - component: {fileID: 5438214378953835303}
+  - component: {fileID: 1235160240}
   m_Layer: 0
   m_Name: Alien
   m_TagString: Untagged
@@ -124,8 +125,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6068979463331384c828d61148cf838a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Target: {fileID: 0}
---- !u!114 &9027087404779815675
+--- !u!114 &5438214378953835303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5438214378953835302}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08d3829d83fe94947a84e978c6f1aa93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DashCooldown:
+    UseConstant: 1
+    ConstantValue: 10
+    Variable: {fileID: 0}
+  DashDuration:
+    UseConstant: 1
+    ConstantValue: 0.5
+    Variable: {fileID: 0}
+  CurrentLevel:
+    UseConstant: 0
+    ConstantValue: 1
+    Variable: {fileID: 11400000, guid: b91425eed0d66394a9e1aa9881387d53, type: 2}
+  DashKey: 101
+  DashDistance:
+    UseConstant: 1
+    ConstantValue: 1
+    Variable: {fileID: 0}
+  DashSpeed:
+    UseConstant: 1
+    ConstantValue: 10
+    Variable: {fileID: 0}
+  IsDashing: 0
+--- !u!114 &1235160240
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -134,10 +168,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 5438214378953835302}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9000f773df8ca146b22935bdd3999df, type: 3}
+  m_Script: {fileID: 11500000, guid: 0c7231e3d6b56cc448411a2aeb6bbbd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AlienSpeed:
-    UseConstant: 1
-    ConstantValue: 3
-    Variable: {fileID: 0}
+  currentState: {fileID: 11400000, guid: a1bc61605b454224ab1f83eddc6ef187, type: 2}
+  remainState: {fileID: 0}
+  stats: {fileID: 11400000, guid: 98046954293c27341844ac15558153f1, type: 2}
+  stateVisualizer: {fileID: 2995990598099252652}
+  chaseTarget: {fileID: 0}
+  stateTimeElapsed: 0
