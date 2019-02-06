@@ -26,7 +26,6 @@ public class PlayerStats : MonoBehaviour
 
     public void DealDamage(int value)
     {
-        Debug.Log("should deal dmg");
         CurrentHealth.Value -= value;
     }
 
