@@ -10,8 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c85b2b50a6cf514469b5fb638d6e5b1c, type: 3}
-  m_Name: Follow
+  m_Name: FollowState
   m_EditorClassIdentifier: 
-  actions: []
-  transitions: []
-  sceneGizmoColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  actions:
+  - {fileID: 11400000, guid: 034adf7102654d64893b03702221596f, type: 2}
+  transitions:
+  - decision: {fileID: 11400000, guid: e3c800e5f5d13b34b8cbc764c482c322, type: 2}
+    trueState: {fileID: 11400000, guid: b2ca57dede437ed4c9142f96de1006e4, type: 2}
+    falseState: {fileID: 11400000}
+  sceneGizmoColor: {r: 0.50445, g: 0.9431112, b: 0.9811321, a: 1}
