@@ -25,8 +25,7 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("Right", true);
             animator.SetBool("Left", false);
         }
-        else
-        if(HorizontalMove < -0.5)
+        else if(HorizontalMove < -0.5)
         {
             animator.SetBool("Right", false);
             animator.SetBool("Left", true);
