@@ -25,11 +25,6 @@ public class EnemyBehavior : MonoBehaviour
         Move();
     }
 
-    public void TakeDamage(int damage)
-    {
-        stats.HP -= damage;
-    }
-
     public void Shoot()
     {
         Instantiate(Bullet, transform);

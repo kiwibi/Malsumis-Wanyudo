@@ -404,7 +404,7 @@ PrefabInstance:
     - target: {fileID: 4544575120694564981, guid: 5c3bd7f78771afb46b1e53a357ea8711,
         type: 3}
       propertyPath: AlienSpeed.ConstantValue
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4544575120694564982, guid: 5c3bd7f78771afb46b1e53a357ea8711,
         type: 3}

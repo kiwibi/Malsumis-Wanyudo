@@ -8,13 +8,20 @@ public class PlayerStats : MonoBehaviour
     public FloatReference pistolCooldown;
     public IntReference MaxHealth;
     public IntReference StartingHealth;
+    public IntVariable m_Health;
 
-    private int m_Health;
+  
 
-    public int Health { get => m_Health; set => m_Health = value; }
-
-    private void Start()
+    private void fixedUpdate()
     {
-        m_Health = MaxHealth.Value;
+        if(m_Health.Value <= 0)
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    public void DealDamage(int value)
+    {
+        m_Health.Value -= value;
     }
 }

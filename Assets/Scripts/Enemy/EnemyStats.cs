@@ -11,13 +11,15 @@ public class EnemyStats : MonoBehaviour
     public FloatReference StrafeSpeed;
     public FloatReference MinChangeDirectionDelay;
     public FloatReference MaxChangeDirectionDelay;
-
-    private int m_HP;
-
-    public int HP { get => m_HP; set => m_HP = value; }
+    private int m_Health;
 
     private void Start()
     {
-        m_HP = MaxHP.Value;
+        m_Health = MaxHP;
+    }
+
+    public void DealDamage(int value)
+    {
+        m_Health -= value;
     }
 }

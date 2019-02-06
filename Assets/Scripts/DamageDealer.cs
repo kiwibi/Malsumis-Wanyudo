@@ -11,12 +11,13 @@ public class DamageDealer : MonoBehaviour
     {
         if (col.gameObject.tag == "Enemy" && Parent.gameObject.tag != "Enemy")
         {
-            col.gameObject.GetComponent<EnemyStats>().HP -= DamageAmount.Value;
+            col.gameObject.GetComponent<EnemyStats>().DealDamage(DamageAmount.Value);
             Destroy(gameObject);
         }
         if(col.gameObject.tag == "Player" && Parent.gameObject.tag != "Player")
         {
-            col.gameObject.GetComponent<PlayerStats>().Health -= DamageAmount.Value;
+
+            col.gameObject.GetComponent<PlayerStats>().DealDamage(DamageAmount.Value);
             Destroy(gameObject);
         }
     }
