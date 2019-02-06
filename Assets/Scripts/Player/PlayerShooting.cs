@@ -27,7 +27,7 @@ public class PlayerShooting : MonoBehaviour
         {
             timeBetweenShoots = stats.pistolCooldown.Value;
            
-            Instantiate(Bullet, new Vector3(transform.position.x, transform.position.y,0), transform.rotation);
+            Instantiate(Bullet, new Vector3(transform.GetChild(2).position.x, transform.GetChild(2).position.y, 0), transform.rotation);
             playerPistolCooldown = stats.pistolCooldown.Value;
         }
     }

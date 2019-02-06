@@ -16,7 +16,6 @@ public class DamageDealer : MonoBehaviour
         }
         if(col.gameObject.tag == "Player" && Parent.gameObject.tag != "Player")
         {
-
             col.gameObject.GetComponent<PlayerStats>().DealDamage(DamageAmount.Value);
             Destroy(gameObject);
         }

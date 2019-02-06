@@ -6,6 +6,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     private PlayerStats stats;
+    public Animator animator;
 
     private void Start()
     {
@@ -17,7 +18,24 @@ public class PlayerMovement : MonoBehaviour
         //Get input
         float HorizontalMove = Input.GetAxis("Horizontal");
         float VerticalMove = Input.GetAxis("Vertical");
-
+        //Movement Animation
+        Debug.Log(HorizontalMove);
+        if(HorizontalMove > 0.5)
+        {
+            animator.SetBool("Right", true);
+            animator.SetBool("Left", false);
+        }
+        else
+        if(HorizontalMove < -0.5)
+        {
+            animator.SetBool("Right", false);
+            animator.SetBool("Left", true);
+        }
+        else
+        {
+            animator.SetBool("Left", false);
+            animator.SetBool("Right", false);
+        }
         //using the input to create a new vector to move the playerobject with
         Vector2 movement = new Vector2(HorizontalMove, VerticalMove);
         transform.Translate(movement * Time.deltaTime * stats.speed.Variable.Value);
