@@ -12,7 +12,7 @@ namespace AI.Decisions
 
         private bool Dash(StateController controller)
         {
-            return controller.CheckIfCountDownElapsed (controller.stats.DashDuration);
+            return !controller.dashOnCooldown.Value && Input.GetKeyDown(controller.stats.DashKey) ? true : false;
         }
     }
 }

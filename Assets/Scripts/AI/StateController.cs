@@ -9,6 +9,9 @@ public class StateController : MonoBehaviour {
     public State remainState;
     public AlienStats stats;
     public Transform stateVisualizer;
+    public BoolVariable dashOnCooldown;
+    public State dashState;
+    public State followState;
 
     [HideInInspector] public Transform chaseTarget;
     [HideInInspector] public float stateTimeElapsed;
@@ -26,6 +29,7 @@ public class StateController : MonoBehaviour {
     
     void Start () 
     {
+        dashOnCooldown.Value = false;
         chaseTarget = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<AlienTarget>().transform;
     }
 
@@ -38,6 +42,11 @@ public class StateController : MonoBehaviour {
 
     public void TransitionToState(State nextState)
     {
+        if(currentState == dashState && nextState == followState)
+        {
+            ResetDash();
+        }
+
         if (nextState != remainState) 
         {
             currentState = nextState;
@@ -54,5 +63,13 @@ public class StateController : MonoBehaviour {
     private void OnExitState()
     {
         stateTimeElapsed = 0;
+        StartCoroutine("ResetDash");
+    }
+
+    IEnumerator ResetDash()
+    {
+        dashOnCooldown.Value = true;
+        yield return new WaitForSeconds(stats.DashCooldown);
+        dashOnCooldown.Value = false;
     }
 }
