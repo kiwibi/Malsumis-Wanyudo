@@ -12,7 +12,7 @@ namespace AI.Decisions
 
         private bool Follow(StateController controller)
         {
-            return Input.GetKeyDown(controller.stats.DashKey);
+            return controller.CheckIfCountDownElapsed(controller.stats.DashDuration);
         }
     }
 }

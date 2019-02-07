@@ -6,12 +6,14 @@ using UnityEngine;
 [CreateAssetMenu (menuName = "Alien/AlienStats")]
 public class AlienStats : ScriptableObject
 {
+    [Header("Alien stats")]
     public float AlienSpeed;
     public int AlienLevel;
+    [Header("Dash Ability")]
+    public KeyCode DashKey = KeyCode.LeftControl;
     public float DashCooldown;
     public float DashDuration;
-    public int CurrentLevel;
-    public KeyCode DashKey = KeyCode.LeftControl;
     public float DashDistance;
     public float DashSpeed;
+    //[Header("Fireball Ability")]
 }
