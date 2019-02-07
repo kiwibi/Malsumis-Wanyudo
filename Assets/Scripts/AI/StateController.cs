@@ -5,10 +5,15 @@ using UnityEngine.AI;
 
 public class StateController : MonoBehaviour {
 
+    [Header("State Machine")]
     public State currentState;
     public State remainState;
     public AlienStats stats;
+
+    [Header("Show state color in editor")]
     public Transform stateVisualizer;
+
+    [Header("Dash")]
     public BoolVariable dashOnCooldown;
     public State dashState;
     public State followState;
