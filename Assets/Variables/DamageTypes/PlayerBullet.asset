@@ -12,5 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: PlayerBullet
   m_EditorClassIdentifier: Assembly-CSharp::DamageType
-  DefeatedTypes:
-  - {fileID: 11400000, guid: 4a151ef317908b749b29b2f1244011ed, type: 2}
+  DefeatedTypes: []
