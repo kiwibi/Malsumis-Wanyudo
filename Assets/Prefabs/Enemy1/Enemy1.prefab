@@ -62,6 +62,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48057bd44ce65c94282cf7348f07c7fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  KillCount: {fileID: 11400000, guid: 71c942f071e849b45bba7b9df64489eb, type: 2}
   MaxHP:
     UseConstant: 0
     ConstantValue: 0
@@ -103,7 +104,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Bullet: {fileID: 5972835516438047918, guid: 51a054a56e18ed54c8a1775aad54151d, type: 3}
-  Player: {fileID: 4841397904929385671, guid: c052c3438c225fd449c10f804a7ba429, type: 3}
   strafeDirection: 1
 --- !u!50 &6491760475090962942
 Rigidbody2D:

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemyStats : MonoBehaviour
 {
+    public IntVariable KillCount;
     public IntReference MaxHP;
     public FloatReference MinShootDelay;
     public FloatReference MaxShootDelay;
@@ -33,6 +34,8 @@ public class EnemyStats : MonoBehaviour
 
     private void Die()
     {
+        Debug.Log(KillCount.Value);
+        KillCount.Value++;
         Destroy(gameObject);
     }
 }
