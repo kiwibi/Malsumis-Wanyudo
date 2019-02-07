@@ -2,16 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyStats : MonoBehaviour
+public class EnemyStats : Stats
 {
     public IntVariable KillCount;
-    public IntReference MaxHP;
     public FloatReference MinShootDelay;
     public FloatReference MaxShootDelay;
     public FloatReference Speed;
     public FloatReference StrafeSpeed;
     public FloatReference MinChangeDirectionDelay;
     public FloatReference MaxChangeDirectionDelay;
+    public IntReference MaxHP;
     private int m_Health;
 
     void Start()
@@ -27,14 +27,13 @@ public class EnemyStats : MonoBehaviour
         }
     }
 
-    public void DealDamage(int value)
-    {
+    public override void DealDamage(int value) {
         m_Health -= value;
     }
 
-    private void Die()
+    public override void Die()
     {
-        //Debug.Log(KillCount.Value);
+        Debug.Log("Enemy health: " + KillCount.Value);
         KillCount.Value++;
         Destroy(gameObject);
     }
