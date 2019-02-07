@@ -1,17 +1,20 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class DestroyGameObject : MonoBehaviour
 {
-    public GameObject Player;
+    private PlayerStats playerStats;
+
+    private void Start()
+    {
+        playerStats = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>();
+    }
 
     void OnTriggerEnter2D(Collider2D other)
     {
         Destroy(other.gameObject);
         if (other.gameObject.tag == "Enemy")
         {
-            Player.gameObject.GetComponent<PlayerStats>().DealDamage(1);
+            playerStats.DealDamage(1);
         }
     }
 }

@@ -34,7 +34,7 @@ public class EnemyStats : MonoBehaviour
 
     private void Die()
     {
-        Debug.Log(KillCount.Value);
+        //Debug.Log(KillCount.Value);
         KillCount.Value++;
         Destroy(gameObject);
     }

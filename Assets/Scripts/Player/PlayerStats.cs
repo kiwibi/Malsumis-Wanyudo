@@ -18,7 +18,7 @@ public class PlayerStats : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(CurrentHealth.Value);
+        // Debug.Log(CurrentHealth.Value);
         if (CurrentHealth.Value <= 0)
         {
             Die();
