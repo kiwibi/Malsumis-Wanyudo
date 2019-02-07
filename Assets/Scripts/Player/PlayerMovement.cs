@@ -19,14 +19,13 @@ public class PlayerMovement : MonoBehaviour
         float HorizontalMove = Input.GetAxis("Horizontal");
         float VerticalMove = Input.GetAxis("Vertical");
         //Movement Animation
-        Debug.Log(HorizontalMove);
+        
         if(HorizontalMove > 0.5)
         {
             animator.SetBool("Right", true);
             animator.SetBool("Left", false);
         }
-        else
-        if(HorizontalMove < -0.5)
+        else if(HorizontalMove < -0.5)
         {
             animator.SetBool("Right", false);
             animator.SetBool("Left", true);
