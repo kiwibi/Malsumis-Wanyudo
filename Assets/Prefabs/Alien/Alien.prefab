@@ -140,8 +140,10 @@ MonoBehaviour:
   remainState: {fileID: 11400000, guid: 94420624caaabc64c94fd0bfd2a5c2c3, type: 2}
   stats: {fileID: 11400000, guid: 98046954293c27341844ac15558153f1, type: 2}
   stateVisualizer: {fileID: 2995990598099252652}
-  dashOnCooldown: {fileID: 11400000, guid: c9c3b71f9df7bd042b66b6bd17756525, type: 2}
   dashState: {fileID: 11400000, guid: b2ca57dede437ed4c9142f96de1006e4, type: 2}
   followState: {fileID: 11400000, guid: a1bc61605b454224ab1f83eddc6ef187, type: 2}
+  fireballState: {fileID: 11400000, guid: e6bbbd1c6149d3c469d24657344f1719, type: 2}
+  fireball: {fileID: 1255949191597884776, guid: bd7404781a0ecab4fba83942f07b4946,
+    type: 3}
   chaseTarget: {fileID: 0}
   stateTimeElapsed: 0

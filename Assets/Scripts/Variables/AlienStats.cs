@@ -15,5 +15,12 @@ public class AlienStats : ScriptableObject
     public float DashDuration;
     public float DashDistance;
     public float DashSpeed;
-    //[Header("Fireball Ability")]
+    public bool DashOnCooldown;
+    
+    [Header("Fireball Ability")]
+    public KeyCode FireballKey = KeyCode.LeftShift;
+    public bool FireballSpawned;
+    public bool FireballOnCooldown;
+    public float FireballCooldown;
+    public float FireballDuration;
 }

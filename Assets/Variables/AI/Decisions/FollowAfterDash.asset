@@ -10,5 +10,5 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2ca54f97960732f47b6d48053c595741, type: 3}
-  m_Name: FollowDecision
+  m_Name: FollowAfterDash
   m_EditorClassIdentifier: 
