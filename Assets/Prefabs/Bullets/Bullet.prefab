@@ -150,4 +150,4 @@ MonoBehaviour:
     UseConstant: 0
     ConstantValue: 0
     Variable: {fileID: 11400000, guid: 3dba26913e4e8624c88d68f805beef5a, type: 2}
-  Parent: {fileID: 4841397904929385671, guid: c052c3438c225fd449c10f804a7ba429, type: 3}
+  damageType: {fileID: 11400000, guid: 96dc293d24e66474288d0e3d0570e4d9, type: 2}

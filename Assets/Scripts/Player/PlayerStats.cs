@@ -2,35 +2,35 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerStats : MonoBehaviour
+public class PlayerStats : Stats
 {
+    public IntReference MaxHP;
     public FloatReference speed;
     public FloatReference pistolCooldown;
-    public IntReference MaxHealth;
     public IntReference StartingHealth;
     public IntVariable CurrentHealth;
 
     void Start()
     {
-        CurrentHealth.Value = MaxHealth.Value;
+        CurrentHealth.Value = MaxHP.Value;
         
     }
 
     void Update()
     {
-        // Debug.Log(CurrentHealth.Value);
+        Debug.Log("Player health: " + CurrentHealth.Value);
         if (CurrentHealth.Value <= 0)
         {
             Die();
         }
     }
 
-    public void DealDamage(int value)
+    public override void DealDamage(int value)
     {
         CurrentHealth.Value -= value;
     }
 
-    private void Die()
+    public override void Die()
     {
         Destroy(gameObject);
     }

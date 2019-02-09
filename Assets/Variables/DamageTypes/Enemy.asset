@@ -9,7 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31d9e116bff76bc41be713feb97a6e1f, type: 3}
-  m_Name: ClearLevel1
-  m_EditorClassIdentifier: 
-  Value: 10
+  m_Script: {fileID: 0}
+  m_Name: Enemy
+  m_EditorClassIdentifier: Assembly-CSharp::DamageType
+  DefeatedTypes:
+  - {fileID: 11400000, guid: 96dc293d24e66474288d0e3d0570e4d9, type: 2}
+  - {fileID: 11400000, guid: b30b05460337f9044bc720653fdfda8a, type: 2}
