@@ -187,6 +187,7 @@ GameObject:
   - component: {fileID: 894036187}
   - component: {fileID: 1489775000476511428}
   - component: {fileID: 335623695}
+  - component: {fileID: 8294933538940363255}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -236,6 +237,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43eb164c6252f4d409e9bd14252aeb5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MaxHP:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: 5b353ffcb42923946a27425cde23bd8d, type: 2}
   speed:
     UseConstant: 0
     ConstantValue: 5
@@ -244,10 +249,6 @@ MonoBehaviour:
     UseConstant: 0
     ConstantValue: 0
     Variable: {fileID: 11400000, guid: 231de533d4b733e4ca5d2aa636feb325, type: 2}
-  MaxHealth:
-    UseConstant: 1
-    ConstantValue: 6
-    Variable: {fileID: 11400000, guid: 5b353ffcb42923946a27425cde23bd8d, type: 2}
   StartingHealth:
     UseConstant: 0
     ConstantValue: 0
@@ -361,3 +362,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8294933538940363255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4841397904929385671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 832555e6923f4c14e8b335791f92eb6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DamageAmount:
+    UseConstant: 1
+    ConstantValue: 0
+    Variable: {fileID: 0}
+  damageType: {fileID: 11400000, guid: 96857a9c50b7e3f4385725140edc233f, type: 2}

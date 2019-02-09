@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 8540586198680864798}
   - component: {fileID: 2118677191307446192}
+  - component: {fileID: 7059079594933478216}
   - component: {fileID: 4990998345231363666}
   - component: {fileID: 7963622278460413474}
   - component: {fileID: 3513742817989155722}
-  - component: {fileID: 7059079594933478216}
   m_Layer: 0
   m_Name: EnemyBullet
   m_TagString: Untagged
@@ -83,6 +83,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!50 &7059079594933478216
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5972835516438047918}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!70 &4990998345231363666
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -129,25 +150,4 @@ MonoBehaviour:
     UseConstant: 0
     ConstantValue: 0
     Variable: {fileID: 11400000, guid: 6627b61d3935b914b8a479685b7ea5dc, type: 2}
-  Parent: {fileID: 2323681209936350376, guid: 0eaa51a2a4affe54a956b13bffc2f0fe, type: 3}
---- !u!50 &7059079594933478216
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5972835516438047918}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
+  damageType: {fileID: 11400000, guid: f642b51c63b99c143a71551f9922a071, type: 2}

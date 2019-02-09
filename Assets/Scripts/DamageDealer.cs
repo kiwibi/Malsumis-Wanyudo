@@ -1,23 +1,40 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class DamageDealer : MonoBehaviour
 {
     public IntReference DamageAmount;
-    public GameObject Parent;
+    [Tooltip("Damage type of this object.")]
+    public DamageType damageType;
 
     void OnTriggerEnter2D(Collider2D col)
-    {
-        if (col.gameObject.tag == "Enemy" && Parent.gameObject.tag != "Enemy")
+     {
+        DamageDealer e = col.gameObject.GetComponent<DamageDealer>();
+        if (e != null)
         {
-            col.gameObject.GetComponent<EnemyStats>().DealDamage(DamageAmount.Value);
-            Destroy(gameObject);
+            Debug.Log(damageType.name + " hit: " + e.damageType.name);
+            if (e.damageType.DefeatedTypes.Contains(damageType))
+            {
+                col.gameObject.GetComponent<Stats>().DealDamage(DamageAmount.Value);
+                if(gameObject.tag != "Alien")
+                {
+                    Destroy(gameObject);
+                }
+            }
         }
-        if(col.gameObject.tag == "Player" && Parent.gameObject.tag != "Player")
+        /*
+        if (m_owner != col.gameObject && col.gameObject.tag != "Alien")
         {
-            col.gameObject.GetComponent<PlayerStats>().DealDamage(DamageAmount.Value);
-            Destroy(gameObject);
+            if (col.gameObject.tag == "Enemy")
+            {
+                col.gameObject.GetComponent<EnemyStats>().DealDamage(DamageAmount.Value);
+                Destroy(gameObject);
+            }
+            if (col.gameObject.tag == "Player")
+            {
+                col.gameObject.GetComponent<PlayerStats>().DealDamage(DamageAmount.Value);
+                Destroy(gameObject);
+            }
         }
+        */
     }
 }

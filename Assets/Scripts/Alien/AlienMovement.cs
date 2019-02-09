@@ -21,8 +21,11 @@ namespace Alien
         {
             if (followPlayer)
             {
-                Vector2 alienTarget = target.gameObject.transform.position - transform.position;
-                transform.Translate(alienTarget * stats.AlienSpeed * Time.deltaTime);
+                if(target != null)
+                {
+                    Vector2 alienTarget = target.gameObject.transform.position - transform.position;
+                    transform.Translate(alienTarget * stats.AlienSpeed * Time.deltaTime);
+                }
 
                 if (Camera.main == null) return;
                 Vector3 screenPos = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, 10));
