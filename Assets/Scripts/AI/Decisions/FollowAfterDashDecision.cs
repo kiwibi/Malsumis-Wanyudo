@@ -2,8 +2,8 @@
 
 namespace AI.Decisions
 {
-    [CreateAssetMenu (menuName = "PluggableAI/Decisions/Follow")]
-    public class FollowDecision : Decision 
+    [CreateAssetMenu (menuName = "PluggableAI/Decisions/FollowAfterDash")]
+    public class FollowAfterDashDecision : Decision 
     {
         public override bool Decide (StateController controller)
         {

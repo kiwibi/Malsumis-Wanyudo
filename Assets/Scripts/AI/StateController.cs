@@ -13,10 +13,13 @@ public class StateController : MonoBehaviour {
     [Header("Show state color in editor")]
     public Transform stateVisualizer;
 
-    [Header("Dash")]
-    public BoolVariable dashOnCooldown;
+    [Header("Used for resetting abilities")]
     public State dashState;
     public State followState;
+    public State fireballState;
+
+    [Header("Spawn this Fireball prefab")] 
+    public GameObject fireball;
 
     [HideInInspector] public Transform chaseTarget;
     [HideInInspector] public float stateTimeElapsed;
@@ -34,7 +37,9 @@ public class StateController : MonoBehaviour {
     
     void Start () 
     {
-        dashOnCooldown.Value = false;
+        stats.DashOnCooldown = false;
+        stats.FireballOnCooldown = false;
+        stats.FireballSpawned = false;
         chaseTarget = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<AlienTarget>().transform;
     }
 
@@ -50,6 +55,11 @@ public class StateController : MonoBehaviour {
         if(currentState == dashState && nextState == followState)
         {
             ResetDash();
+        }
+        
+        if(currentState == fireballState && nextState == followState)
+        {
+            ResetFireBall();
         }
 
         if (nextState != remainState) 
@@ -73,8 +83,16 @@ public class StateController : MonoBehaviour {
 
     IEnumerator ResetDash()
     {
-        dashOnCooldown.Value = true;
+        stats.DashOnCooldown = true;
         yield return new WaitForSeconds(stats.DashCooldown);
-        dashOnCooldown.Value = false;
+        stats.DashOnCooldown = false;
+    }
+
+    IEnumerator ResetFireBall()
+    {
+        stats.FireballOnCooldown = true;
+        stats.FireballSpawned = false;
+        yield return new WaitForSeconds(stats.FireballCooldown);
+        stats.FireballOnCooldown = false;
     }
 }
