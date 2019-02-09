@@ -9,10 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: 5a3c53b5db29e444cacbfc3886be6d34, type: 3}
   m_Name: Player
   m_EditorClassIdentifier: Assembly-CSharp::DamageType
   TakesDamageFrom:
-  - {fileID: 11400000, guid: f642b51c63b99c143a71551f9922a071, type: 2}
-  - {fileID: 11400000, guid: 9a55d42bc3b8426499b8766bb0e898b0, type: 2}
   - {fileID: 11400000, guid: 4a151ef317908b749b29b2f1244011ed, type: 2}
+  - {fileID: 11400000, guid: f642b51c63b99c143a71551f9922a071, type: 2}

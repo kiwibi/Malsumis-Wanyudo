@@ -9,10 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: 5a3c53b5db29e444cacbfc3886be6d34, type: 3}
   m_Name: Enemy
   m_EditorClassIdentifier: Assembly-CSharp::DamageType
   TakesDamageFrom:
   - {fileID: 11400000, guid: 9a55d42bc3b8426499b8766bb0e898b0, type: 2}
-  - {fileID: 11400000, guid: b30b05460337f9044bc720653fdfda8a, type: 2}
   - {fileID: 11400000, guid: 96dc293d24e66474288d0e3d0570e4d9, type: 2}
+  - {fileID: 11400000, guid: dc54c5519e449014b90bfdec1ed7ca5e, type: 2}

@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Level : MonoBehaviour
 {
+    public StringVariable titleScreen;
     public IntVariable currentLevel;
     public IntVariable KillCounter;
     //Clear first lvl
@@ -20,7 +22,12 @@ public class Level : MonoBehaviour
     }
     void Update()
     {
-        switch(currentLevel.Value)
+        if (Input.GetKey("escape"))
+        {
+            SceneManager.LoadScene(titleScreen.Value);
+        }
+
+        switch (currentLevel.Value)
         {
             case 1:
                 if(KillCounter.Value >= ClearCondition_1.Value)

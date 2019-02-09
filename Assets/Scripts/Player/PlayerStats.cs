@@ -7,7 +7,6 @@ public class PlayerStats : Stats
     public IntReference MaxHP;
     public FloatReference speed;
     public FloatReference pistolCooldown;
-    public IntReference StartingHealth;
     public IntVariable CurrentHealth;
 
     void Start()
