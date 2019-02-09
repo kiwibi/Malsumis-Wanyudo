@@ -52,14 +52,13 @@ public class StateController : MonoBehaviour {
 
     public void TransitionToState(State nextState)
     {
-        if(currentState == dashState && nextState == followState)
+        if (currentState == dashState && nextState == followState)
         {
-            ResetDash();
+            StartCoroutine("ResetDash");
         }
-        
-        if(currentState == fireballState && nextState == followState)
+        else if(currentState == fireballState && nextState == followState)
         {
-            ResetFireBall();
+            StartCoroutine("ResetFireBall");
         }
 
         if (nextState != remainState) 
@@ -78,7 +77,6 @@ public class StateController : MonoBehaviour {
     private void OnExitState()
     {
         stateTimeElapsed = 0;
-        StartCoroutine("ResetDash");
     }
 
     IEnumerator ResetDash()

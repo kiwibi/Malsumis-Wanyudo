@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: Enemy
   m_EditorClassIdentifier: Assembly-CSharp::DamageType
-  DefeatedTypes:
-  - {fileID: 11400000, guid: 96dc293d24e66474288d0e3d0570e4d9, type: 2}
+  TakesDamageFrom:
+  - {fileID: 11400000, guid: 9a55d42bc3b8426499b8766bb0e898b0, type: 2}
   - {fileID: 11400000, guid: b30b05460337f9044bc720653fdfda8a, type: 2}
+  - {fileID: 11400000, guid: 96dc293d24e66474288d0e3d0570e4d9, type: 2}

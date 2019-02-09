@@ -12,7 +12,7 @@ public class DamageDealer : MonoBehaviour
         if (e != null)
         {
             Debug.Log(damageType.name + " hit: " + e.damageType.name);
-            if (e.damageType.DefeatedTypes.Contains(damageType))
+            if (e.damageType.TakesDamageFrom.Contains(damageType))
             {
                 col.gameObject.GetComponent<Stats>().DealDamage(DamageAmount.Value);
                 if(gameObject.tag != "Alien")

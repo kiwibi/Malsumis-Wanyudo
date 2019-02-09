@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5520462046753707371}
   - component: {fileID: 1093622024}
+  - component: {fileID: 2061959821}
+  - component: {fileID: 2061959822}
   m_Layer: 0
   m_Name: Fireball
   m_TagString: Untagged
@@ -48,6 +50,49 @@ MonoBehaviour:
     UseConstant: 0
     ConstantValue: 0
     Variable: {fileID: 11400000, guid: 9ecafd237c7278041952045213b20960, type: 2}
+--- !u!61 &2061959821
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1255949191597884776}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.7, y: 0.7}
+  m_EdgeRadius: 0
+--- !u!114 &2061959822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1255949191597884776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 832555e6923f4c14e8b335791f92eb6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DamageAmount:
+    UseConstant: 1
+    ConstantValue: 4
+    Variable: {fileID: 0}
+  damageType: {fileID: 11400000, guid: 9a55d42bc3b8426499b8766bb0e898b0, type: 2}
 --- !u!1 &9075182910639331029
 GameObject:
   m_ObjectHideFlags: 0
@@ -74,7 +119,7 @@ Transform:
   m_GameObject: {fileID: 9075182910639331029}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalScale: {x: 4, y: 4, z: 1}
   m_Children: []
   m_Father: {fileID: 5520462046753707371}
   m_RootOrder: 0

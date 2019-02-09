@@ -5,7 +5,7 @@ using UnityEngine;
 namespace AI.Decisions
 {
     [CreateAssetMenu(menuName = "PluggableAI/Decisions/FollowAfterFireball")]
-    public class FollowAfterFireBallDecision : Decision
+    public class FollowAfterFireballDecision : Decision
     {
         public override bool Decide (StateController controller)
         {
