@@ -447,6 +447,11 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 519420031}
+    - target: {fileID: 2631392104102962559, guid: c5767d1bbe315614c8ccad1401ba59b3,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1080
+      objectReference: {fileID: 0}
     - target: {fileID: 1107052217, guid: c5767d1bbe315614c8ccad1401ba59b3, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -455,6 +460,12 @@ PrefabInstance:
       propertyPath: m_AnchorMax.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1996992817226247522, guid: c5767d1bbe315614c8ccad1401ba59b3,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 315cf492eadf1ed4c938d95225ec530f,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c5767d1bbe315614c8ccad1401ba59b3, type: 3}
 --- !u!1001 &2989764037806063997

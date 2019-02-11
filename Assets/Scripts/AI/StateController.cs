@@ -39,6 +39,7 @@ public class StateController : MonoBehaviour {
     void Start ()
     {
         collider2d = GetComponent<BoxCollider2D>();
+        collider2d.enabled = false;
         stats.DashOnCooldown = false;
         stats.FireballOnCooldown = false;
         stats.FireballSpawned = false;
