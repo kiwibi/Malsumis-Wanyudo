@@ -13,12 +13,12 @@ public class EnemyStats : Stats
     public FloatReference MaxChangeDirectionDelay;
     public IntReference MaxHP;
     private int m_Health;
-    private FlashOnHit hitFlash;
+    private DamageFeedback hitFlash;
 
     void Start()
     {
         m_Health = MaxHP;
-        hitFlash = GetComponentInChildren<FlashOnHit>();
+        hitFlash = GetComponentInChildren<DamageFeedback>();
     }
 
     void Update()
