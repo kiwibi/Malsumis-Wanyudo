@@ -7,9 +7,9 @@ public class SimpleAudioEvent : AudioEvent
 {
     public AudioClip[] clips;
     
-    [Range(0,200)]
+    [Range(0,1)]
     public float minVolume;
-    [Range(0,200)]
+    [Range(0,1)]
     public float maxVolume;
     [Range(0,2)]
     public float minPitch;

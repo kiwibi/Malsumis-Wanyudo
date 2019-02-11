@@ -16,8 +16,8 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         //Get input
-        float HorizontalMove = Input.GetAxis("Horizontal");
-        float VerticalMove = Input.GetAxis("Vertical");
+        float HorizontalMove = Input.GetAxisRaw("Horizontal");
+        float VerticalMove = Input.GetAxisRaw("Vertical");
         //Movement Animation
         
         if(HorizontalMove > 0.5)
