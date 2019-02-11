@@ -20,7 +20,7 @@ public class Level : MonoBehaviour
     void Start()
     {
         KillCounter.Value = 0;
-        currentLevel.Value = 1;
+        currentLevel.Value = 2;
         LevelTransitionFade = GetComponentInChildren<LevelFade>();
     }
     void Update()
@@ -35,7 +35,6 @@ public class Level : MonoBehaviour
             case 1:
                 if(KillCounter.Value >= ClearCondition_1.Value)
                 {
-                    Debug.Log("should blackout");
                     LevelTransitionFade.StartFade();
                     currentLevel.Value += 1;
                     KillCounter.Value = 0;
@@ -44,7 +43,7 @@ public class Level : MonoBehaviour
             case 2:
                 if (KillCounter.Value >= ClearCondition_2.Value)
                 {
-                    
+                    LevelTransitionFade.StartFade();
                     currentLevel.Value += 1;
                     KillCounter.Value = 0;
                 }
@@ -52,9 +51,10 @@ public class Level : MonoBehaviour
             case 3:
                 if (KillCounter.Value >= ClearCondition_3.Value)
                 {
+                    LevelTransitionFade.StartFade();
                     //Disable mob spawner for bossfight
                     //or skip to boss scene
-                    
+
                     currentLevel.Value += 1;
                 }
                 break;
