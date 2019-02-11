@@ -84,7 +84,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 6
   m_WholeNumbers: 1
-  m_Value: 0
+  m_Value: 5
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -706,7 +706,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1920, y: 1080}
+  m_SizeDelta: {x: 1920, y: 3240}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1996992817226247523
 CanvasRenderer:
@@ -736,8 +736,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: d9f7eca91a9b2104fbc5aaabde246886, type: 3}
-  m_Type: 2
+  m_Sprite: {fileID: 21300000, guid: 315cf492eadf1ed4c938d95225ec530f, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -871,7 +871,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3486824819467096485}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 496, z: 0}
   m_LocalScale: {x: 2.8421052, y: 2.8421052, z: 2.8421052}
   m_Children:
   - {fileID: 1996992817226247525}
@@ -893,11 +893,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scrollSpeed:
     UseConstant: 1
-    ConstantValue: 0.25
+    ConstantValue: 0.5
     Variable: {fileID: 0}
   tileSizeY:
     UseConstant: 1
-    ConstantValue: 5
+    ConstantValue: 20
     Variable: {fileID: 0}
 --- !u!1 &9087404820993262552
 GameObject:
