@@ -8,6 +8,7 @@ public class PlayerStats : Stats
     public FloatReference speed;
     public FloatReference pistolCooldown;
     public IntVariable CurrentHealth;
+    public AudioClip shootGun;
 
     void Start()
     {
@@ -17,7 +18,7 @@ public class PlayerStats : Stats
 
     void Update()
     {
-        Debug.Log("Player health: " + CurrentHealth.Value);
+        //Debug.Log("Player health: " + CurrentHealth.Value);
         if (CurrentHealth.Value <= 0)
         {
             Die();

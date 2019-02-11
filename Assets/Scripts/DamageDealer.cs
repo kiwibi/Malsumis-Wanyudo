@@ -11,7 +11,7 @@ public class DamageDealer : MonoBehaviour
         DamageDealer e = col.gameObject.GetComponent<DamageDealer>();
         if (e != null)
         {
-            Debug.Log(damageType.name + " hit: " + e.damageType.name);
+            //Debug.Log(damageType.name + " hit: " + e.damageType.name);
             if (e.damageType.TakesDamageFrom.Contains(damageType))
             {
                 col.gameObject.GetComponent<Stats>().DealDamage(DamageAmount.Value);

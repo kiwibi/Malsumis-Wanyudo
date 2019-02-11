@@ -3,12 +3,14 @@
 public class EnemyBehavior : MonoBehaviour
 {
     public GameObject Bullet;
-
-    private EnemyStats stats;
     public int strafeDirection;
+    
+    private EnemyStats stats;
+    private AudioPlayer audioPlayer;
 
     void Start()
     {
+        audioPlayer = GetComponent<AudioPlayer>();
         stats = GetComponent<EnemyStats>();
         var randomDirection = Random.Range(1, 3);
         if(randomDirection == 1)
@@ -28,6 +30,8 @@ public class EnemyBehavior : MonoBehaviour
     public void Shoot()
     {
         var bullet = Instantiate(Bullet, new Vector3(transform.GetChild(1).position.x, transform.GetChild(1).position.y, 0), transform.rotation);
+        audioPlayer.PlaySound();
+        
     }
 
     public void Move()
