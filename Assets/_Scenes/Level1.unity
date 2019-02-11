@@ -266,7 +266,7 @@ PrefabInstance:
     - target: {fileID: 1996992818183598923, guid: c5767d1bbe315614c8ccad1401ba59b3,
         type: 3}
       propertyPath: m_Name
-      value: Canvas
+      value: GameArea
       objectReference: {fileID: 0}
     - target: {fileID: 1996992818183598775, guid: c5767d1bbe315614c8ccad1401ba59b3,
         type: 3}
@@ -378,10 +378,6 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 519420031}
-    - target: {fileID: 1107052217, guid: c5767d1bbe315614c8ccad1401ba59b3, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1107052217, guid: c5767d1bbe315614c8ccad1401ba59b3, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
