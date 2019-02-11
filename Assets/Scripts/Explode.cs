@@ -8,7 +8,7 @@ public class Explode : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.tag == "Enemy")
+        if (col.CompareTag("Enemy"))
         {
             Instantiate(Explosion, transform.position, Quaternion.identity);
             Destroy(gameObject);
