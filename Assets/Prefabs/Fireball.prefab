@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5520462046753707371}
   - component: {fileID: 1093622024}
   - component: {fileID: 2061959821}
-  - component: {fileID: 2061959822}
+  - component: {fileID: 797753354}
   m_Layer: 0
   m_Name: Fireball
   m_TagString: Untagged
@@ -60,7 +60,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -76,7 +76,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.7, y: 0.7}
   m_EdgeRadius: 0
---- !u!114 &2061959822
+--- !u!114 &797753354
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -85,14 +85,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1255949191597884776}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 832555e6923f4c14e8b335791f92eb6c, type: 3}
+  m_Script: {fileID: 11500000, guid: 36434998ed415da4aa74208bb1df32a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DamageAmount:
-    UseConstant: 1
-    ConstantValue: 4
-    Variable: {fileID: 0}
-  damageType: {fileID: 11400000, guid: 9a55d42bc3b8426499b8766bb0e898b0, type: 2}
+  Explosion: {fileID: 4825416424683986384, guid: d665aa9fa3ca6d843bc82f15a52fe02c,
+    type: 3}
 --- !u!1 &9075182910639331029
 GameObject:
   m_ObjectHideFlags: 0
