@@ -25,7 +25,7 @@ public class StateController : MonoBehaviour {
     [HideInInspector] public float stateTimeElapsed;
 
     private bool aiActive = true;
-    private BoxCollider2D collider;
+    private BoxCollider2D collider2d;
 
     void OnDrawGizmos()
     {
@@ -38,7 +38,7 @@ public class StateController : MonoBehaviour {
     
     void Start ()
     {
-        collider = GetComponent<BoxCollider2D>();
+        collider2d = GetComponent<BoxCollider2D>();
         stats.DashOnCooldown = false;
         stats.FireballOnCooldown = false;
         stats.FireballSpawned = false;
@@ -83,7 +83,7 @@ public class StateController : MonoBehaviour {
 
     IEnumerator ResetDash()
     {
-        collider.enabled = false;
+        collider2d.enabled = false;
         stats.DashOnCooldown = true;
         yield return new WaitForSeconds(stats.DashCooldown);
         stats.DashOnCooldown = false;
