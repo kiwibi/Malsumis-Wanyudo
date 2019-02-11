@@ -23,6 +23,17 @@ public class DamageFeedback : MonoBehaviour
         }
     }
 
+    public void Knockback()
+    {
+        GetComponentInParent<Rigidbody2D>().velocity = new Vector2(0, 2);
+        Invoke("ResetVelocity", 0.1f);
+    }
+
+    private void ResetVelocity()
+    {
+        GetComponentInParent<Rigidbody2D>().velocity = new Vector2(0, -.5f);
+    }
+
     public void BloodSpawn()
     {
         var blood_pool = Instantiate(Blood, new Vector3(transform.position.x, transform.position.y, 0), transform.rotation, GameObject.Find("GameArea/background/blood").transform);

@@ -31,6 +31,7 @@ public class EnemyStats : Stats
     }
 
     public override void DealDamage(int value) {
+        hitFlash.Knockback();
         hitFlash.Flash();
         m_Health -= value;
     }
