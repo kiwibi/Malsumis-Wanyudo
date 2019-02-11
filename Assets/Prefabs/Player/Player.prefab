@@ -100,7 +100,7 @@ Transform:
   m_GameObject: {fileID: 975269527834966470}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_Children: []
   m_Father: {fileID: 4841397904929385670}
   m_RootOrder: 0
@@ -249,10 +249,6 @@ MonoBehaviour:
     UseConstant: 0
     ConstantValue: 0
     Variable: {fileID: 11400000, guid: 231de533d4b733e4ca5d2aa636feb325, type: 2}
-  StartingHealth:
-    UseConstant: 0
-    ConstantValue: 0
-    Variable: {fileID: 11400000, guid: 675045a708d35504399a70c74d10b1d6, type: 2}
   CurrentHealth: {fileID: 11400000, guid: 2320b313e4ec8fe4f80cb51eba84ccfc, type: 2}
 --- !u!50 &6319824282107117731
 Rigidbody2D:

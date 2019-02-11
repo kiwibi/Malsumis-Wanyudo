@@ -112,31 +112,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &37658988 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4443240946805202458, guid: 139a1257ad6a14947a361f0fa5519a53,
-    type: 3}
-  m_PrefabInstance: {fileID: 8259046093391149629}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &37658990
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 37658988}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 47217d9aa1332574db8efeb4b8c23958, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!20 &519420031 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 2989764037968836866, guid: bd8ae36c20b79714f85bc642b0ba8eb3,
@@ -433,6 +408,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1107052217, guid: c5767d1bbe315614c8ccad1401ba59b3, type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1107052217, guid: c5767d1bbe315614c8ccad1401ba59b3, type: 3}
+      propertyPath: m_AnchorMax.x
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -762,6 +741,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 473014764, guid: ccb6e6bce91a47e479b8675274e74006, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ccb6e6bce91a47e479b8675274e74006, type: 3}
 --- !u!1001 &8259046093391149629
@@ -830,20 +813,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2995990598099252652, guid: 139a1257ad6a14947a361f0fa5519a53,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2995990598099252652, guid: 139a1257ad6a14947a361f0fa5519a53,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1643740524, guid: 139a1257ad6a14947a361f0fa5519a53, type: 3}
-      propertyPath: m_SortingOrder
-      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 139a1257ad6a14947a361f0fa5519a53, type: 3}
