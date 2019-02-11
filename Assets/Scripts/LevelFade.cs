@@ -24,15 +24,16 @@ public class LevelFade : MonoBehaviour
     IEnumerator levelTransition()
     {
         StartCoroutine(Fade());
-        //Time.timeScale = 0;
+        Time.timeScale = 0;
         yield return new WaitForSecondsRealtime(BlackoutTimer.Value);
         var enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        Time.timeScale = 1;
         foreach (var enemy in enemies)
         {
             enemy.GetComponent<Stats>().DealDamage(10);
         }
         StartCoroutine(Fade());
-        //Time.timeScale = 1;
+        
     }
 
     IEnumerator Fade()
@@ -52,7 +53,10 @@ public class LevelFade : MonoBehaviour
             {
                 transitionCanvas.alpha = f;
                 yield return new WaitForSecondsRealtime(.1f);
+                if (f == 1)
+                    Debug.Log("BLACK");
             }
+            
             fadedIn = true;
         }
     }

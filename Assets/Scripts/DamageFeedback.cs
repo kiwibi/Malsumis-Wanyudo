@@ -7,14 +7,20 @@ public class DamageFeedback : MonoBehaviour
   
     public GameObject Blood;
 
+    private Animator anim;
+
     void Start()
     {
-
+        anim = GetComponent<Animator>();
     }
 
     public void Flash()
     {
-        StartCoroutine(RedFlash());
+        if (anim.name == "EnemySprite 1" || anim.name == "EnemySprite 2")
+        {
+            anim.SetBool("IsHit", true);
+            Invoke("ResetColor", 0.1f);
+        }
     }
 
     public void BloodSpawn()
@@ -23,10 +29,8 @@ public class DamageFeedback : MonoBehaviour
         Destroy(blood_pool, 5);
     }
 
-    IEnumerator RedFlash()
+    void ResetColor()
     {
-        GetComponent<SpriteRenderer>().color = Color.red;
-        yield return new WaitForSeconds(0.5f);
-        GetComponent<SpriteRenderer>().color = Color.white;
+            anim.SetBool("IsHit", false);   
     }
 }
