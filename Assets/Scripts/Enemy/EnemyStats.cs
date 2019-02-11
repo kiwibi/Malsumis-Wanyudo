@@ -37,7 +37,7 @@ public class EnemyStats : Stats
 
     public override void Die()
     {
-        Debug.Log("Enemy health: " + KillCount.Value);
+        //Debug.Log("Enemy health: " + KillCount.Value);
         KillCount.Value++;
         Destroy(gameObject);
     }

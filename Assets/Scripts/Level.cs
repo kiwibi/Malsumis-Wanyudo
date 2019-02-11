@@ -8,6 +8,7 @@ public class Level : MonoBehaviour
     public StringVariable titleScreen;
     public IntVariable currentLevel;
     public IntVariable KillCounter;
+    public IntReference fadeOutTime;
     //Clear first lvl
     public IntReference ClearCondition_1;
     //Clear second lvl
@@ -16,12 +17,14 @@ public class Level : MonoBehaviour
     public IntReference ClearCondition_3;
 
     private LevelFade LevelTransitionFade;
+    private AudioPlayer audioPlayer;
 
     void Start()
     {
         KillCounter.Value = 0;
         currentLevel.Value = 1;
         LevelTransitionFade = GetComponentInChildren<LevelFade>();
+        audioPlayer = GetComponent<AudioPlayer>();
     }
     void Update()
     {
@@ -35,23 +38,27 @@ public class Level : MonoBehaviour
             case 1:
                 if(KillCounter.Value >= ClearCondition_1.Value)
                 {
+                    audioPlayer.PlaySound();   
                     LevelTransitionFade.StartFade();
                     currentLevel.Value += 1;
-                    KillCounter.Value = 0;
+                    StartCoroutine("ResetKillCounter");
                 }
                 break;
             case 2:
                 if (KillCounter.Value >= ClearCondition_2.Value)
                 {
+                    audioPlayer.PlaySound(); 
                     LevelTransitionFade.StartFade();
                     currentLevel.Value += 1;
-                    KillCounter.Value = 0;
+                    StartCoroutine("ResetKillCounter");
                 }
                 break;
             case 3:
                 if (KillCounter.Value >= ClearCondition_3.Value)
                 {
+                    audioPlayer.PlaySound(); 
                     LevelTransitionFade.StartFade();
+                    StartCoroutine("ResetKillCounter");
                     //Disable mob spawner for bossfight
                     //or skip to boss scene
 
@@ -61,5 +68,11 @@ public class Level : MonoBehaviour
             default:
                 break;
         }
+    }
+
+    IEnumerator ResetKillCounter()
+    {
+        yield return new WaitForSeconds(fadeOutTime+0.1f);
+        KillCounter.Value = 0;
     }
 }
