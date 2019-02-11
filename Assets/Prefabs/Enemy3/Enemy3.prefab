@@ -293,7 +293,7 @@ GameObject:
   - component: {fileID: 7117373126765677405}
   - component: {fileID: 1355625696958709616}
   m_Layer: 0
-  m_Name: EnemySprite
+  m_Name: EnemySprite 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
