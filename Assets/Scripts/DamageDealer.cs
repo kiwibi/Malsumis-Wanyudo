@@ -15,6 +15,7 @@ public class DamageDealer : MonoBehaviour
             if (e.damageType.TakesDamageFrom.Contains(damageType))
             {
                 col.gameObject.GetComponent<Stats>().DealDamage(DamageAmount.Value);
+                
                 if(!gameObject.CompareTag("Alien"))
                 {
                     Destroy(gameObject);

@@ -50,5 +50,10 @@ public class LevelFade : MonoBehaviour
             }
             fadedIn = true;
         }
+        var enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        foreach (var enemy in enemies)
+        {
+            enemy.GetComponent<Stats>().DealDamage(10);
+        }
     }
 }

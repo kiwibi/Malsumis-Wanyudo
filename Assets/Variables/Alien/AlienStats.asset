@@ -16,12 +16,12 @@ MonoBehaviour:
   AlienLevel: 1
   DashKey: 306
   DashCooldown: 2
-  DashDuration: 0.6
+  DashDuration: 0.5
   DashDistance: 1
   DashSpeed: 7
   DashOnCooldown: 0
   FireballKey: 304
   FireballSpawned: 0
-  FireballOnCooldown: 1
+  FireballOnCooldown: 0
   FireballCooldown: 2
   FireballDuration: 0.1
