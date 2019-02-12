@@ -41,7 +41,7 @@ public class Level : MonoBehaviour
                     audioPlayer.PlaySound();   
                     LevelTransitionFade.StartFade();
                     currentLevel.Value += 1;
-                    StartCoroutine("ResetKillCounter");
+                    KillCounter.Value = 0;
                 }
                 break;
             case 2:
@@ -50,7 +50,7 @@ public class Level : MonoBehaviour
                     audioPlayer.PlaySound(); 
                     LevelTransitionFade.StartFade();
                     currentLevel.Value += 1;
-                    StartCoroutine("ResetKillCounter");
+                    KillCounter.Value = 0;
                 }
                 break;
             case 3:
@@ -58,7 +58,7 @@ public class Level : MonoBehaviour
                 {
                     audioPlayer.PlaySound(); 
                     LevelTransitionFade.StartFade();
-                    StartCoroutine("ResetKillCounter");
+                    KillCounter.Value = 0;
                     //Disable mob spawner for bossfight
                     //or skip to boss scene
 
@@ -68,11 +68,5 @@ public class Level : MonoBehaviour
             default:
                 break;
         }
-    }
-
-    IEnumerator ResetKillCounter()
-    {
-        yield return new WaitForSeconds(fadeOutTime+0.1f);
-        KillCounter.Value = 0;
     }
 }
