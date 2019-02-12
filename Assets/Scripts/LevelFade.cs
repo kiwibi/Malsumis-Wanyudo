@@ -45,18 +45,18 @@ public class LevelFade : MonoBehaviour
                 transitionCanvas.alpha = f;
                 yield return new WaitForSecondsRealtime(FadeInSpeed);
             }
+            transitionCanvas.alpha = 0;
             fadedIn = false;
         }
         else if (fadedIn == false)
         {
-            for (float f = 0f; f <= 1; f += 0.1f)
+            for (float f = 0f; f <= 1f; f += 0.1f)
             {
                 transitionCanvas.alpha = f;
                 yield return new WaitForSecondsRealtime(.1f);
-                if (f == 1)
-                    Debug.Log("BLACK");
+                
             }
-            
+            transitionCanvas.alpha = 1;
             fadedIn = true;
         }
     }
