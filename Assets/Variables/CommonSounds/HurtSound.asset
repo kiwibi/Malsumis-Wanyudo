@@ -10,11 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a90db3620cac3094eaa7f4ed95bfc68b, type: 3}
-  m_Name: DashSound
+  m_Name: HurtSound
   m_EditorClassIdentifier: 
   clips:
-  - {fileID: 8300000, guid: e072b052706bd2d43958848424b465e0, type: 3}
-  minVolume: 1
-  maxVolume: 1
-  minPitch: 1
-  maxPitch: 1
+  - {fileID: 8300000, guid: 67a4486a98ec09948a60b50024dbd80a, type: 3}
+  - {fileID: 8300000, guid: 1c4e2dbc72a0f0e4ba152a664e5a4f91, type: 3}
+  - {fileID: 8300000, guid: b3cd2124e0797f047aa174cf65152e56, type: 3}
+  minVolume: 0.5
+  maxVolume: 0.5
+  minPitch: 0.6
+  maxPitch: 1.4

@@ -93,6 +93,8 @@ MonoBehaviour:
     UseConstant: 0
     ConstantValue: 0
     Variable: {fileID: 11400000, guid: 072851321ab19214cbb69480fd2febfe, type: 2}
+  hurtSound: {fileID: 11400000, guid: acead7c4109f139439186be5908562b4, type: 2}
+  shootGunSound: {fileID: 11400000, guid: bad5f767c45ed524291ed012df5aa063, type: 2}
 --- !u!114 &2323681209936350383
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -183,7 +185,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4a2decec2dc2824a8446bd3c30a5b1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AudioEvent: {fileID: 11400000, guid: bad5f767c45ed524291ed012df5aa063, type: 2}
+  AudioEvent: {fileID: 11400000, guid: acead7c4109f139439186be5908562b4, type: 2}
 --- !u!82 &6346023769984674794
 AudioSource:
   m_ObjectHideFlags: 0
@@ -195,7 +197,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0

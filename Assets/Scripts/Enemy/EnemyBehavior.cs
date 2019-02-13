@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using UnityEditor;
+using UnityEngine;
 
 public class EnemyBehavior : MonoBehaviour
 {
@@ -30,6 +31,7 @@ public class EnemyBehavior : MonoBehaviour
     public void Shoot()
     {
         var bullet = Instantiate(Bullet, new Vector3(transform.GetChild(1).position.x, transform.GetChild(1).position.y, 0), transform.rotation);
+        audioPlayer.AudioEvent = stats.shootGunSound;
         audioPlayer.PlaySound();
         
     }
