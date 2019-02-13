@@ -40,7 +40,7 @@ public class DashUI : MonoBehaviour
         {
             if (!counting)
             {
-                coolDownDuration = alienStats.FireballCooldown;
+                coolDownDuration = alienStats.DashCooldown;
                 counting = true;
             }
             
