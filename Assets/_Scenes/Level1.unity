@@ -112,6 +112,32 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &98112009 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2989764037968836865, guid: bd8ae36c20b79714f85bc642b0ba8eb3,
+    type: 3}
+  m_PrefabInstance: {fileID: 2989764037806063997}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &98112010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 98112009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c69ba268f7a1cad43a8c7eafd9f29b8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: e7859b6231a9e0f4dad95b37296b0579, type: 2}
+  magnitude:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: 69e9c016be39fa5449204fce85ebeb64, type: 2}
 --- !u!20 &519420031 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 2989764037968836866, guid: bd8ae36c20b79714f85bc642b0ba8eb3,
@@ -564,6 +590,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Main Camera
+      objectReference: {fileID: 0}
+    - target: {fileID: 2989764037968836866, guid: bd8ae36c20b79714f85bc642b0ba8eb3,
+        type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2989764037968836866, guid: bd8ae36c20b79714f85bc642b0ba8eb3,
+        type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2989764037968836866, guid: bd8ae36c20b79714f85bc642b0ba8eb3,
+        type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2989764037968837117, guid: bd8ae36c20b79714f85bc642b0ba8eb3,
         type: 3}

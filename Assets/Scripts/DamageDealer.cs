@@ -20,7 +20,7 @@ public class DamageDealer : MonoBehaviour
                 {
                     if (damageType.name == "Fireball")
                     {
-                        ShakeBehaviour.Shake(1f, 0.5f);
+                        ShakeBehaviour.Shake();
                     }
                     Destroy(gameObject);
                 }
