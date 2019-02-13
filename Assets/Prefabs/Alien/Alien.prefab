@@ -167,6 +167,7 @@ MonoBehaviour:
   fireballState: {fileID: 11400000, guid: e6bbbd1c6149d3c469d24657344f1719, type: 2}
   fireball: {fileID: 1255949191597884776, guid: bd7404781a0ecab4fba83942f07b4946,
     type: 3}
+  currentLevel: {fileID: 11400000, guid: b91425eed0d66394a9e1aa9881387d53, type: 2}
   chaseTarget: {fileID: 0}
   stateTimeElapsed: 0
 --- !u!61 &4063327023794252712
