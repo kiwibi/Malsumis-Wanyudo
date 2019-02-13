@@ -16,6 +16,12 @@ public class Level : MonoBehaviour
     //Clear third and entern boss lvl
     public IntReference ClearCondition_3;
 
+    [Header("Audio")] 
+    public SimpleAudioEvent level1Transition;
+    public SimpleAudioEvent level2Transition;
+    public SimpleAudioEvent level3Transition;
+    
+
     private LevelFade LevelTransitionFade;
     private AudioPlayer audioPlayer;
 
