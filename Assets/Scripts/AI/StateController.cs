@@ -21,6 +21,9 @@ public class StateController : MonoBehaviour {
     [Header("Spawn this Fireball prefab")] 
     public GameObject fireball;
 
+    [Header("Level info")]
+    public IntVariable currentLevel;
+    
     [HideInInspector] public Transform chaseTarget;
     [HideInInspector] public float stateTimeElapsed;
 
@@ -50,6 +53,7 @@ public class StateController : MonoBehaviour {
     {
         if (!aiActive)
             return;
+        stats.AlienLevel = currentLevel.Value;
         currentState.UpdateState (this);
     }
 
