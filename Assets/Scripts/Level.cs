@@ -33,6 +33,11 @@ public class Level : MonoBehaviour
             SceneManager.LoadScene(titleScreen.Value);
         }
 
+        if (Input.GetKeyDown(KeyCode.F3))
+        {
+            currentLevel.Value = 3;
+        }
+
         switch (currentLevel.Value)
         {
             case 1:
