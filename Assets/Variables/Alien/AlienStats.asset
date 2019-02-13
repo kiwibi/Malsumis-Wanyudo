@@ -13,14 +13,14 @@ MonoBehaviour:
   m_Name: AlienStats
   m_EditorClassIdentifier: 
   AlienSpeed: 2
-  AlienLevel: 1
-  DashKey: 306
+  AlienLevel: 4
+  DashKey: 113
   DashCooldown: 2
   DashDuration: 0.5
   DashDistance: 1
   DashSpeed: 5
-  DashOnCooldown: 0
-  FireballKey: 304
+  DashOnCooldown: 1
+  FireballKey: 101
   FireballSpawned: 0
   FireballOnCooldown: 0
   FireballCooldown: 2

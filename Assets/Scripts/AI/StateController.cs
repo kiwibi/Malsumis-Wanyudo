@@ -29,6 +29,7 @@ public class StateController : MonoBehaviour {
 
     private bool aiActive = true;
     private BoxCollider2D collider2d;
+    private AudioPlayer audioPlayer;
 
     void OnDrawGizmos()
     {
@@ -47,6 +48,7 @@ public class StateController : MonoBehaviour {
         stats.FireballOnCooldown = false;
         stats.FireballSpawned = false;
         chaseTarget = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<AlienTarget>().transform;
+        audioPlayer = GetComponent<AudioPlayer>();
     }
 
     void Update()
@@ -59,6 +61,16 @@ public class StateController : MonoBehaviour {
 
     public void TransitionToState(State nextState)
     {
+        if (currentState == followState && nextState == dashState)
+        {
+            PlayDashSound();
+        }
+
+        if (currentState == followState && nextState == fireballState)
+        {
+            PlayFireballLaunchSound();
+        }
+        
         if (currentState == dashState && nextState == followState)
         {
             StartCoroutine("ResetDash");
@@ -84,6 +96,18 @@ public class StateController : MonoBehaviour {
     private void OnExitState()
     {
         stateTimeElapsed = 0;
+    }
+
+    public void PlayDashSound()
+    {
+        audioPlayer.AudioEvent = stats.dashSound;
+        audioPlayer.PlaySound();
+    }
+    
+    public void PlayFireballLaunchSound()
+    {
+        audioPlayer.AudioEvent = stats.shootFireball;
+        audioPlayer.PlaySound();
     }
 
     IEnumerator ResetDash()

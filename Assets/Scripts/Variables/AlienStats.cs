@@ -23,4 +23,9 @@ public class AlienStats : ScriptableObject
     public bool FireballOnCooldown;
     public float FireballCooldown;
     public float FireballDuration;
+
+    [Header("Alien sounds")] 
+    public SimpleAudioEvent dashSound;
+    public SimpleAudioEvent shootFireball;
+
 }
