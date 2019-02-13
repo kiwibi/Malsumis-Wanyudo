@@ -94,6 +94,7 @@ MonoBehaviour:
     ConstantValue: 0
     Variable: {fileID: 11400000, guid: 31a0965c243495747be2046b2b4ebb05, type: 2}
   hurtSound: {fileID: 11400000, guid: acead7c4109f139439186be5908562b4, type: 2}
+  deathSound: {fileID: 11400000, guid: 1ec3ad565e7758243be169113590ecad, type: 2}
   shootGunSound: {fileID: 11400000, guid: 1d702005f69923d4c9182de3fbaa70ed, type: 2}
 --- !u!114 &2323681209936350383
 MonoBehaviour:

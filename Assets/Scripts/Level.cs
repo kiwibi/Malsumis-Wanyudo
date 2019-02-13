@@ -16,6 +16,8 @@ public class Level : MonoBehaviour
     //Clear third and entern boss lvl
     public IntReference ClearCondition_3;
 
+    public IntReference playerHealth;
+
     [Header("Audio")] 
     public SimpleAudioEvent level1Transition;
     public SimpleAudioEvent level2Transition;
@@ -53,6 +55,7 @@ public class Level : MonoBehaviour
                     LevelTransitionFade.StartFade();
                     currentLevel.Value += 1;
                     KillCounter.Value = 0;
+                    playerHealth = 6;
                 }
                 break;
             case 2:
@@ -62,6 +65,7 @@ public class Level : MonoBehaviour
                     LevelTransitionFade.StartFade();
                     currentLevel.Value += 1;
                     KillCounter.Value = 0;
+                    playerHealth = 6;
                 }
                 break;
             case 3:
@@ -74,6 +78,7 @@ public class Level : MonoBehaviour
                     //or skip to boss scene
 
                     currentLevel.Value += 1;
+                    playerHealth = 6;
                 }
                 break;
             default:
