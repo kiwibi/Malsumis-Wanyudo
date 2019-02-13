@@ -277,6 +277,7 @@ MonoBehaviour:
     UseConstant: 0
     ConstantValue: 0
     Variable: {fileID: 11400000, guid: 5b353ffcb42923946a27425cde23bd8d, type: 2}
+  loseScreen: {fileID: 11400000, guid: 8ee421458fbafc245b682a5825ca1a21, type: 2}
   level1Transition: {fileID: 11400000, guid: 02d010346c23f4646adc1d54be3f884b, type: 2}
   level2Transition: {fileID: 11400000, guid: 308d59971cc509d4fbd738c5bd34651f, type: 2}
   level3Transition: {fileID: 11400000, guid: 20c2b2f8221327b47aca2219bbd52bb3, type: 2}
