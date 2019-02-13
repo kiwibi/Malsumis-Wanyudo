@@ -19,6 +19,8 @@ public class Level : MonoBehaviour
     public IntVariable playerHealth;
     public IntReference playerMaxHealth;
 
+    public StringVariable loseScreen;
+
     [Header("Audio")] 
     public SimpleAudioEvent level1Transition;
     public SimpleAudioEvent level2Transition;
@@ -37,6 +39,11 @@ public class Level : MonoBehaviour
     }
     void Update()
     {
+        if (playerHealth.Value <= 0)
+        {
+            SceneManager.LoadScene(loseScreen.Value);
+        }
+    
         if (Input.GetKey("escape"))
         {
             SceneManager.LoadScene(titleScreen.Value);
