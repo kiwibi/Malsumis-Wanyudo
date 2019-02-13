@@ -18,28 +18,27 @@ public class EnemyStats : Stats
     public SimpleAudioEvent shootGunSound;
     
     private int m_Health;
-    private DamageFeedback hitFlash;
     private AudioPlayer audioPlayer;
+    private DamageFeedback dmgFeedback;
 
     void Start()
     {
         m_Health = MaxHP;
-        hitFlash = GetComponentInChildren<DamageFeedback>();
         audioPlayer = GetComponent<AudioPlayer>();
+        dmgFeedback = GetComponentInChildren<DamageFeedback>();
     }
 
     void Update()
     {
         if(m_Health <= 0)
         {
-            hitFlash.BloodSpawn();
+            dmgFeedback.BloodSpawn();
             Die();
         }
     }
 
     public override void DealDamage(int value) {
-        hitFlash.Knockback();
-        hitFlash.Flash();
+        dmgFeedback.OnHit(false);
         m_Health -= value;
         PlayHurtSound();
     }

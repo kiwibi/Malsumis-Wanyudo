@@ -5,7 +5,7 @@ public class DamageDealer : MonoBehaviour
     public IntReference DamageAmount;
     [Tooltip("Damage type of this object.")]
     public DamageType damageType;
-
+    
     void OnTriggerEnter2D(Collider2D col)
      {
         DamageDealer e = col.gameObject.GetComponent<DamageDealer>();
@@ -18,6 +18,10 @@ public class DamageDealer : MonoBehaviour
                 
                 if(!gameObject.CompareTag("Alien"))
                 {
+                    if (damageType.name == "Fireball")
+                    {
+                        ShakeBehaviour.Shake(1f, 0.5f);
+                    }
                     Destroy(gameObject);
                 }
             }

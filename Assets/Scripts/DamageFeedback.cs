@@ -14,6 +14,14 @@ public class DamageFeedback : MonoBehaviour
         anim = GetComponent<Animator>();
     }
 
+
+    public void OnHit(bool Shake)
+    {
+       
+        Flash();
+        Knockback();
+    }
+
     public void Flash()
     {
         if (anim.name == "EnemySprite 1" || anim.name == "EnemySprite 2")
