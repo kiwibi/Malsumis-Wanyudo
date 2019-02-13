@@ -17,6 +17,7 @@ public class Level : MonoBehaviour
     public IntReference ClearCondition_3;
 
     public IntVariable playerHealth;
+    public IntReference playerMaxHealth;
 
     [Header("Audio")] 
     public SimpleAudioEvent level1Transition;
@@ -55,7 +56,7 @@ public class Level : MonoBehaviour
                     LevelTransitionFade.StartFade();
                     currentLevel.Value += 1;
                     KillCounter.Value = 0;
-                    playerHealth.Value = 6;
+                    playerHealth.Value = playerMaxHealth;
                 }
                 break;
             case 2:
@@ -65,7 +66,7 @@ public class Level : MonoBehaviour
                     LevelTransitionFade.StartFade();
                     currentLevel.Value += 1;
                     KillCounter.Value = 0;
-                    playerHealth.Value = 6;
+                    playerHealth.Value = playerMaxHealth;
                 }
                 break;
             case 3:
@@ -78,7 +79,7 @@ public class Level : MonoBehaviour
                     //or skip to boss scene
 
                     currentLevel.Value += 1;
-                    playerHealth = 6;
+                    playerHealth.Value = playerMaxHealth;
                 }
                 break;
             default:
