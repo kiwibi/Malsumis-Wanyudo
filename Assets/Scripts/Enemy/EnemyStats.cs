@@ -13,26 +13,25 @@ public class EnemyStats : Stats
     public FloatReference MaxChangeDirectionDelay;
     public IntReference MaxHP;
     private int m_Health;
-    private DamageFeedback hitFlash;
+    private DamageFeedback dmgFeedback;
 
     void Start()
     {
         m_Health = MaxHP;
-        hitFlash = GetComponentInChildren<DamageFeedback>();
+        dmgFeedback = GetComponentInChildren<DamageFeedback>();
     }
 
     void Update()
     {
         if(m_Health <= 0)
         {
-            hitFlash.BloodSpawn();
+            dmgFeedback.BloodSpawn();
             Die();
         }
     }
 
     public override void DealDamage(int value) {
-        hitFlash.Knockback();
-        hitFlash.Flash();
+        dmgFeedback.OnHit(false);
         m_Health -= value;
     }
 

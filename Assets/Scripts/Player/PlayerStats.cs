@@ -9,11 +9,12 @@ public class PlayerStats : Stats
     public FloatReference pistolCooldown;
     public IntVariable CurrentHealth;
     public AudioClip shootGun;
+    private DamageFeedback dmgFeedback;
 
     void Start()
     {
         CurrentHealth.Value = MaxHP.Value;
-        
+        dmgFeedback = GetComponentInChildren<DamageFeedback>();
     }
 
     void Update()
