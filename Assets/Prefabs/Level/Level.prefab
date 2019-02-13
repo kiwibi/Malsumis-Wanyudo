@@ -220,7 +220,7 @@ GameObject:
   - component: {fileID: 278297740731683728}
   - component: {fileID: 6412333378122395316}
   m_Layer: 0
-  m_Name: Level 1
+  m_Name: Level
   m_TagString: Level
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -259,7 +259,7 @@ MonoBehaviour:
   fadeOutTime:
     UseConstant: 0
     ConstantValue: 0
-    Variable: {fileID: 11400000, guid: 7c0e62f919766bf478350d39e83cb7f2, type: 2}
+    Variable: {fileID: 11400000, guid: af2f6aaba8d7e2d4b9dbe1ef7933f8a9, type: 2}
   ClearCondition_1:
     UseConstant: 0
     ConstantValue: 0
