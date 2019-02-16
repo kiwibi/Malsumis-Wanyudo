@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5009322686757136416}
   - component: {fileID: 1643740524}
   - component: {fileID: 37658990}
+  - component: {fileID: 8506261917751465379}
   m_Layer: 0
   m_Name: AlienSprite
   m_TagString: Untagged
@@ -99,6 +100,23 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &8506261917751465379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4443240946805202458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be99a079f1e853f4ea66753fd1a272ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 37658990}
+  currentLevel:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: b91425eed0d66394a9e1aa9881387d53, type: 2}
 --- !u!1 &5438214378953835302
 GameObject:
   m_ObjectHideFlags: 0
