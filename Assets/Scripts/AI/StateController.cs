@@ -13,10 +13,14 @@ public class StateController : MonoBehaviour {
     [Header("Show state color in editor")]
     public Transform stateVisualizer;
 
+    // TODO find a way to do this better
     [Header("Used for resetting abilities")]
     public State dashState;
     public State followState;
     public State fireballState;
+    public State bossDashState;
+    public State bossFollowState;
+    public State bossFireballState;
 
     [Header("Spawn this Fireball prefab")] 
     public GameObject fireball;
@@ -26,10 +30,12 @@ public class StateController : MonoBehaviour {
     
     [HideInInspector] public Transform chaseTarget;
     [HideInInspector] public float stateTimeElapsed;
+    [HideInInspector] public Vector3 dashStartingPosition;
 
     private bool aiActive = true;
     private BoxCollider2D collider2d;
     private AudioPlayer audioPlayer;
+
 
     void OnDrawGizmos()
     {
@@ -47,8 +53,13 @@ public class StateController : MonoBehaviour {
         stats.DashOnCooldown = false;
         stats.FireballOnCooldown = false;
         stats.FireballSpawned = false;
-        chaseTarget = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<AlienTarget>().transform;
+        FindTarget();
         audioPlayer = GetComponent<AudioPlayer>();
+    }
+
+    private void FindTarget()
+    {
+        chaseTarget = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<AlienTarget>().transform;
     }
 
     void Update()
@@ -61,21 +72,21 @@ public class StateController : MonoBehaviour {
 
     public void TransitionToState(State nextState)
     {
-        if (currentState == followState && nextState == dashState)
+        if (currentState == followState && nextState == dashState || currentState == bossFollowState && nextState == bossDashState)
         {
             PlayDashSound();
         }
 
-        if (currentState == followState && nextState == fireballState)
+        if (currentState == followState && nextState == fireballState || currentState == bossFollowState && nextState == bossFireballState)
         {
             PlayFireballLaunchSound();
         }
         
-        if (currentState == dashState && nextState == followState)
+        if (currentState == dashState && nextState == followState || currentState == bossDashState && nextState == bossFollowState)
         {
             StartCoroutine("ResetDash");
         }
-        else if(currentState == fireballState && nextState == followState)
+        else if(currentState == fireballState && nextState == followState || currentState == bossFireballState && nextState == bossFollowState)
         {
             StartCoroutine("ResetFireBall");
         }

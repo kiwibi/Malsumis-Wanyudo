@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c85b2b50a6cf514469b5fb638d6e5b1c, type: 3}
+  m_Name: BossDashState
+  m_EditorClassIdentifier: 
+  actions:
+  - {fileID: 11400000, guid: 86a0675f9b072a74f9ea1a38935c55a2, type: 2}
+  transitions:
+  - decision: {fileID: 11400000, guid: f7f249e47d90f7a46bda98c43314c3da, type: 2}
+    trueState: {fileID: 11400000, guid: 87f2d40274e8f324599ebcc8f87b9064, type: 2}
+    falseState: {fileID: 11400000, guid: 94420624caaabc64c94fd0bfd2a5c2c3, type: 2}
+  sceneGizmoColor: {r: 0.7730248, g: 0.15641688, b: 0.8962264, a: 1}

@@ -14,9 +14,14 @@ namespace Alien
         {
             stats = GetComponent<StateController>().stats;
             dash = GetComponent<AlienDash>();
+            FindTarget();
+        }
+
+        private void FindTarget()
+        {
             target = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<AlienTarget>();
         }
-    
+
         void Update()
         {
             if (followPlayer)

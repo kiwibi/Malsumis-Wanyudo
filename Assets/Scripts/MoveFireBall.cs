@@ -7,9 +7,16 @@ using UnityEngine;
 public class MoveFireBall : MonoBehaviour
 {
     public FloatReference FireballSpeed;
-    
+    public bool MoveUp = true;
     void Update()
     {
-        transform.Translate(Vector3.up * FireballSpeed * Time.deltaTime);
+        if(MoveUp)
+        {
+            transform.Translate(Vector2.up * FireballSpeed * Time.deltaTime);
+        } else
+        {
+            transform.Translate(Vector2.down * FireballSpeed * Time.deltaTime);
+        }
+
     }
 }
