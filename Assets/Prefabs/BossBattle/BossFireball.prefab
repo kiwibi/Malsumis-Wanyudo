@@ -1,5 +1,22 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &8011506245838671516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3233577930252334479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 832555e6923f4c14e8b335791f92eb6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DamageAmount:
+    UseConstant: 1
+    ConstantValue: 1
+    Variable: {fileID: 0}
+  damageType: {fileID: 11400000, guid: 9a55d42bc3b8426499b8766bb0e898b0, type: 2}
 --- !u!1001 &4445614529700311271
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10,7 +27,11 @@ PrefabInstance:
     - target: {fileID: 1255949191597884776, guid: bd7404781a0ecab4fba83942f07b4946,
         type: 3}
       propertyPath: m_Name
-      value: Fireball
+      value: BossFireball
+      objectReference: {fileID: 0}
+    - target: {fileID: 1093622024, guid: bd7404781a0ecab4fba83942f07b4946, type: 3}
+      propertyPath: FollowPlayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5520462046753707371, guid: bd7404781a0ecab4fba83942f07b4946,
         type: 3}
@@ -67,5 +88,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 797753354, guid: bd7404781a0ecab4fba83942f07b4946, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: bd7404781a0ecab4fba83942f07b4946, type: 3}
+--- !u!1 &3233577930252334479 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1255949191597884776, guid: bd7404781a0ecab4fba83942f07b4946,
+    type: 3}
+  m_PrefabInstance: {fileID: 4445614529700311271}
+  m_PrefabAsset: {fileID: 0}

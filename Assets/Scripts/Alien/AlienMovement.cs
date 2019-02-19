@@ -5,7 +5,7 @@ namespace Alien
 {
     public class AlienMovement : MonoBehaviour
     {
-        private AlienStats stats;
+        private AlienStatsObject stats;
         private AlienTarget target;
         private bool followPlayer = true;
         private AlienDash dash;

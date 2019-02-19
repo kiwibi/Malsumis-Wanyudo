@@ -185,11 +185,15 @@ MonoBehaviour:
   dashState: {fileID: 11400000, guid: b2ca57dede437ed4c9142f96de1006e4, type: 2}
   followState: {fileID: 11400000, guid: a1bc61605b454224ab1f83eddc6ef187, type: 2}
   fireballState: {fileID: 11400000, guid: e6bbbd1c6149d3c469d24657344f1719, type: 2}
+  bossDashState: {fileID: 11400000, guid: 77962d99c0f4d9d4e948673df2fe297d, type: 2}
+  bossFollowState: {fileID: 11400000, guid: 87f2d40274e8f324599ebcc8f87b9064, type: 2}
+  bossFireballState: {fileID: 11400000, guid: 25f3d900c41491941a20cb9769d0e02b, type: 2}
   fireball: {fileID: 1255949191597884776, guid: bd7404781a0ecab4fba83942f07b4946,
     type: 3}
   currentLevel: {fileID: 11400000, guid: b91425eed0d66394a9e1aa9881387d53, type: 2}
   chaseTarget: {fileID: 0}
   stateTimeElapsed: 0
+  dashStartingPosition: {x: 0, y: 0, z: 0}
 --- !u!61 &4063327023794252712
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -8,7 +8,7 @@ public class StateController : MonoBehaviour {
     [Header("State Machine")]
     public State currentState;
     public State remainState;
-    public AlienStats stats;
+    public AlienStatsObject stats;
 
     [Header("Show state color in editor")]
     public Transform stateVisualizer;
@@ -35,7 +35,7 @@ public class StateController : MonoBehaviour {
     private bool aiActive = true;
     private BoxCollider2D collider2d;
     private AudioPlayer audioPlayer;
-
+    private Light lightSource;
 
     void OnDrawGizmos()
     {
@@ -49,17 +49,19 @@ public class StateController : MonoBehaviour {
     void Start ()
     {
         collider2d = GetComponent<BoxCollider2D>();
-        collider2d.enabled = false;
+        if(!stats.isKillable)
+        {
+            collider2d.enabled = false;
+        } else
+        {
+            collider2d.enabled = true;
+        }
         stats.DashOnCooldown = false;
         stats.FireballOnCooldown = false;
         stats.FireballSpawned = false;
         FindTarget();
         audioPlayer = GetComponent<AudioPlayer>();
-    }
-
-    private void FindTarget()
-    {
-        chaseTarget = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<AlienTarget>().transform;
+        lightSource = GetComponentInChildren<Light>();
     }
 
     void Update()
@@ -68,6 +70,11 @@ public class StateController : MonoBehaviour {
             return;
         stats.AlienLevel = currentLevel.Value;
         currentState.UpdateState (this);
+    }
+
+    private void FindTarget()
+    {
+        chaseTarget = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<AlienTarget>().transform;
     }
 
     public void TransitionToState(State nextState)
@@ -121,9 +128,17 @@ public class StateController : MonoBehaviour {
         audioPlayer.PlaySound();
     }
 
+    public void SetLightColor(Color color)
+    {
+        lightSource.color = color;
+    }
+
     IEnumerator ResetDash()
     {
-        collider2d.enabled = false;
+        if(!stats.isKillable)
+        {
+            collider2d.enabled = false;
+        }
         stats.DashOnCooldown = true;
         yield return new WaitForSeconds(stats.DashCooldown);
         stats.DashOnCooldown = false;

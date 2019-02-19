@@ -14,6 +14,8 @@ namespace AI.Actions
 
         private void Follow(StateController controller)
         {
+            controller.SetLightColor(Color.white);
+
             if (controller.chaseTarget != null)
             {
                 Vector3 newAlienTarget = new Vector3(controller.chaseTarget.transform.position.x, 0, 0);
@@ -22,6 +24,11 @@ namespace AI.Actions
                 alienTarget.z = 0;
 
                 controller.transform.Translate(alienTarget * controller.stats.AlienSpeed * Time.deltaTime);
+
+                if(controller.transform.position.y <= 7)
+                {
+                    controller.transform.Translate(Vector2.up * controller.stats.AlienSpeed * Time.deltaTime);
+                }
             }
 
             if (Camera.main == null) return;

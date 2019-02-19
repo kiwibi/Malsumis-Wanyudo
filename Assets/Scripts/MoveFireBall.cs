@@ -7,15 +7,23 @@ using UnityEngine;
 public class MoveFireBall : MonoBehaviour
 {
     public FloatReference FireballSpeed;
-    public bool MoveUp = true;
+    public bool FollowPlayer = false;
+    private Vector3 targetLocation = Vector3.zero;
+    private Vector3 direction = Vector3.zero;
     void Update()
     {
-        if(MoveUp)
+        if(!FollowPlayer)
         {
             transform.Translate(Vector2.up * FireballSpeed * Time.deltaTime);
         } else
         {
-            transform.Translate(Vector2.down * FireballSpeed * Time.deltaTime);
+            if(targetLocation == Vector3.zero)
+            {
+                targetLocation = GameObject.FindGameObjectWithTag("Player").transform.position;
+                direction = (targetLocation - transform.position).normalized;
+            }
+
+            transform.Translate(direction * FireballSpeed * Time.deltaTime);
         }
 
     }

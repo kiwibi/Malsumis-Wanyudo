@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class FireballUI : MonoBehaviour
 {
-    public AlienStats alienStats;
+    public AlienStatsObject alienStats;
     public GameObject titleField;
 
     private Image background;

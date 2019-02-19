@@ -13,6 +13,7 @@ namespace AI.Actions
         }
         private void Dash(StateController controller)
         {
+            controller.SetLightColor(Color.red);
             Vector3 targetPosition = new Vector3(0, controller.transform.position.y + controller.stats.DashDistance, 0);
             controller.transform.Translate(-targetPosition * controller.stats.DashSpeed * Time.deltaTime);
         }
