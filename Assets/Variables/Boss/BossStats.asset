@@ -13,15 +13,15 @@ MonoBehaviour:
   m_Name: BossStats
   m_EditorClassIdentifier: 
   AlienSpeed: 2
-  AlienLevel: 4
+  AlienLevel: 1
   isKillable: 1
   DashKey: 113
   StartDashCooldown: 5
-  DashCooldown: 1
+  DashCooldown: 5
   DashDuration: 0.5
   DashDistance: 1
   DashSpeed: 3
-  DashOnCooldown: 0
+  DashOnCooldown: 1
   waitBeforeDash: 0.5
   FireballKey: 101
   FireballSpawned: 0
