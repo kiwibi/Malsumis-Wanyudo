@@ -56,9 +56,9 @@ public class StateController : MonoBehaviour {
         {
             collider2d.enabled = true;
         }
-        stats.DashOnCooldown = false;
-        stats.FireballOnCooldown = false;
-        stats.FireballSpawned = false;
+
+        StartCoroutine("ResetDash");
+        StartCoroutine("ResetFireBall");
         FindTarget();
         audioPlayer = GetComponent<AudioPlayer>();
         lightSource = GetComponentInChildren<Light>();
