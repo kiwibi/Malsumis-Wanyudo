@@ -18,9 +18,10 @@ public class AlienStats : Stats
         light.intensity = 5;
         AlienHealth.Value = AlienMaxHealth.Value;
         stats.FireballCooldown = stats.StartFireballCooldown;
+        stats.FireballOnCooldown = true;
         stats.DashCooldown = stats.StartDashCooldown;
+        stats.DashOnCooldown = true;
         nextSpeedUp = AlienHealth.Value-speedUpSteps;
-
     }
 
     // Update is called once per frame

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace AI.Actions
+namespace AI.Decisions
 {
     [CreateAssetMenu(menuName = "PluggableAI/Decisions/BossWaitBeforeDash")]
     public class WaitBeforeDashDecision : Decision
