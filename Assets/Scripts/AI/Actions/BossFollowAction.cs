@@ -25,7 +25,7 @@ namespace AI.Actions
 
                 controller.transform.Translate(alienTarget * controller.stats.AlienSpeed * Time.deltaTime);
 
-                if(controller.transform.position.y <= 7)
+                if(controller.transform.position.y <= controller.stats.returningLocation)
                 {
                     controller.transform.Translate(Vector2.up * controller.stats.AlienSpeed * Time.deltaTime);
                 }
