@@ -12,7 +12,7 @@ namespace AI.Actions
     
         private void Fireball(StateController controller)
         {
-        	Instantiate(controller.fireball, controller.transform.position, Quaternion.identity);
+        	var fireball = Instantiate(controller.fireball, controller.transform.position, Quaternion.identity);
             controller.stats.FireballSpawned = true;
         }
     }

@@ -8,15 +8,19 @@ public class StateController : MonoBehaviour {
     [Header("State Machine")]
     public State currentState;
     public State remainState;
-    public AlienStats stats;
+    public AlienStatsObject stats;
 
     [Header("Show state color in editor")]
     public Transform stateVisualizer;
 
+    // TODO find a way to do this better
     [Header("Used for resetting abilities")]
     public State dashState;
     public State followState;
     public State fireballState;
+    public State bossDashState;
+    public State bossFollowState;
+    public State bossFireballState;
 
     [Header("Spawn this Fireball prefab")] 
     public GameObject fireball;
@@ -26,10 +30,12 @@ public class StateController : MonoBehaviour {
     
     [HideInInspector] public Transform chaseTarget;
     [HideInInspector] public float stateTimeElapsed;
+    [HideInInspector] public Vector3 dashStartingPosition;
 
     private bool aiActive = true;
     private BoxCollider2D collider2d;
     private AudioPlayer audioPlayer;
+    private Light lightSource;
 
     void OnDrawGizmos()
     {
@@ -43,12 +49,19 @@ public class StateController : MonoBehaviour {
     void Start ()
     {
         collider2d = GetComponent<BoxCollider2D>();
-        collider2d.enabled = false;
-        stats.DashOnCooldown = false;
-        stats.FireballOnCooldown = false;
-        stats.FireballSpawned = false;
-        chaseTarget = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<AlienTarget>().transform;
+        if(!stats.isKillable)
+        {
+            collider2d.enabled = false;
+        } else
+        {
+            collider2d.enabled = true;
+        }
+
+        StartCoroutine("ResetDash");
+        StartCoroutine("ResetFireBall");
+        FindTarget();
         audioPlayer = GetComponent<AudioPlayer>();
+        lightSource = GetComponentInChildren<Light>();
     }
 
     void Update()
@@ -59,23 +72,28 @@ public class StateController : MonoBehaviour {
         currentState.UpdateState (this);
     }
 
+    private void FindTarget()
+    {
+        chaseTarget = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<AlienTarget>().transform;
+    }
+
     public void TransitionToState(State nextState)
     {
-        if (currentState == followState && nextState == dashState)
+        if (currentState == followState && nextState == dashState || currentState == bossFollowState && nextState == bossDashState)
         {
             PlayDashSound();
         }
 
-        if (currentState == followState && nextState == fireballState)
+        if (currentState == followState && nextState == fireballState || currentState == bossFollowState && nextState == bossFireballState)
         {
             PlayFireballLaunchSound();
         }
         
-        if (currentState == dashState && nextState == followState)
+        if (currentState == dashState && nextState == followState || currentState == bossDashState && nextState == bossFollowState)
         {
             StartCoroutine("ResetDash");
         }
-        else if(currentState == fireballState && nextState == followState)
+        else if(currentState == fireballState && nextState == followState || currentState == bossFireballState && nextState == bossFollowState)
         {
             StartCoroutine("ResetFireBall");
         }
@@ -110,9 +128,17 @@ public class StateController : MonoBehaviour {
         audioPlayer.PlaySound();
     }
 
+    public void SetLightColor(Color color)
+    {
+        lightSource.color = color;
+    }
+
     IEnumerator ResetDash()
     {
-        collider2d.enabled = false;
+        if(!stats.isKillable)
+        {
+            collider2d.enabled = false;
+        }
         stats.DashOnCooldown = true;
         yield return new WaitForSeconds(stats.DashCooldown);
         stats.DashOnCooldown = false;

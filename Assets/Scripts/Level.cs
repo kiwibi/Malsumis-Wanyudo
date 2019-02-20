@@ -95,11 +95,9 @@ public class Level : MonoBehaviour
                     audioPlayer.PlaySound(); 
                     LevelTransitionFade.StartFade();
                     KillCounter.Value = 0;
-                    //Disable mob spawner for bossfight
-                    //or skip to boss scene
-
-                    currentLevel.Value += 1;
                     playerHealth.Value = playerMaxHealth;
+                    currentLevel.Value += 1;
+                    SceneManager.LoadScene("BossLevel");
                 }
                 break;
             default:

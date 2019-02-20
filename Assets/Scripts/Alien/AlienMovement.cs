@@ -5,7 +5,7 @@ namespace Alien
 {
     public class AlienMovement : MonoBehaviour
     {
-        private AlienStats stats;
+        private AlienStatsObject stats;
         private AlienTarget target;
         private bool followPlayer = true;
         private AlienDash dash;
@@ -14,9 +14,14 @@ namespace Alien
         {
             stats = GetComponent<StateController>().stats;
             dash = GetComponent<AlienDash>();
+            FindTarget();
+        }
+
+        private void FindTarget()
+        {
             target = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<AlienTarget>();
         }
-    
+
         void Update()
         {
             if (followPlayer)

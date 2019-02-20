@@ -16,7 +16,7 @@ namespace Alien
         private bool AbilityUnlocked = false;
         private readonly int LevelWhenUnlocked = 2;
         private AlienMovement movement;
-        private AlienStats stats;
+        private AlienStatsObject stats;
         
         // Start is called before the first frame update
         void Start()
