@@ -11,6 +11,7 @@ public class PlayerShooting : MonoBehaviour
     private float timeBetweenShoots;
     private AudioPlayer audioPlayer;
     private BulletSpawnPoint bulletSpawnPoint;
+    private SpriteRenderer spriteRenderer;
 
     // Start is called before the first frame update
     void Start()
@@ -18,6 +19,7 @@ public class PlayerShooting : MonoBehaviour
         stats = GetComponent<PlayerStats>();
         audioPlayer = GetComponent<AudioPlayer>();
         bulletSpawnPoint = GetComponentInChildren<BulletSpawnPoint>();
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -31,7 +33,8 @@ public class PlayerShooting : MonoBehaviour
         {
             timeBetweenShoots = stats.pistolCooldown.Value;
            
-            Instantiate(Bullet, new Vector3(bulletSpawnPoint.transform.position.x, bulletSpawnPoint.transform.position.y, 0), transform.rotation);
+            var bullet = Instantiate(Bullet, new Vector3(bulletSpawnPoint.transform.position.x, bulletSpawnPoint.transform.position.y, 0), Quaternion.identity);
+            bullet.GetComponentInChildren<SpriteRenderer>().transform.rotation = spriteRenderer.transform.rotation;
             playerPistolCooldown = stats.pistolCooldown.Value;
             audioPlayer.PlaySound();
         }
