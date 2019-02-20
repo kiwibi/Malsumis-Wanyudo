@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class AlienStats : Stats
 {
-    public AlienStatsObject stats;
+    public IntVariable AlienMaxHealth;
+    public IntVariable AlienHealth;
 
     // Start is called before the first frame update
     void Start()
     {
-        stats.AlienHealth = stats.AlienMaxHealth;
+        AlienHealth.Value = AlienMaxHealth.Value;
     }
 
     // Update is called once per frame
@@ -20,8 +21,8 @@ public class AlienStats : Stats
 
     public override void DealDamage(int damage)
     {
-        stats.AlienHealth -= damage;
-        if(stats.AlienHealth <= 0)
+        AlienHealth.Value -= damage;
+        if(AlienHealth.Value <= 0)
         {
             Die();
         }

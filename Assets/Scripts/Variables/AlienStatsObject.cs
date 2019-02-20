@@ -7,8 +7,6 @@ using UnityEngine;
 public class AlienStatsObject : ScriptableObject
 {
     [Header("Alien stats")]
-    public int AlienMaxHealth;
-    public int AlienHealth;
     public float AlienSpeed;
     public int AlienLevel;
     public bool isKillable;

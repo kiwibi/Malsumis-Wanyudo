@@ -41,13 +41,13 @@ Light:
   m_Enabled: 1
   serializedVersion: 8
   m_Type: 2
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 2
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -264,7 +264,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e0114fab91a7ce4b901a503c2ffa31d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stats: {fileID: 11400000, guid: c044096cf5a628348ad07a76ae7099be, type: 2}
+  AlienMaxHealth: {fileID: 11400000, guid: 965c39f302e7b4b4da54c625ea6e9d03, type: 2}
+  AlienHealth: {fileID: 11400000, guid: b6678d3ec2abc784186af8196058ead5, type: 2}
 --- !u!61 &1475564918441375079
 BoxCollider2D:
   m_ObjectHideFlags: 0
