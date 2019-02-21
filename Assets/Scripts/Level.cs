@@ -32,6 +32,7 @@ public class Level : MonoBehaviour
 
     private LevelFade LevelTransitionFade;
     private AudioPlayer audioPlayer;
+    private pauseMenu PauseMenu;
 
     void Start()
     {
@@ -43,6 +44,7 @@ public class Level : MonoBehaviour
         currentLevel.Value = 1;
         LevelTransitionFade = GetComponentInChildren<LevelFade>();
         audioPlayer = GetComponent<AudioPlayer>();
+        PauseMenu = GetComponentInChildren<pauseMenu>();
         Time.timeScale = 0;
         LevelTransitionFade.StartScene();
     }
@@ -55,7 +57,7 @@ public class Level : MonoBehaviour
     
         if (Input.GetKey("escape"))
         {
-            SceneManager.LoadScene(titleScreen.Value);
+            PauseMenu.Pause();
         }
 
         if (Input.GetKeyDown(KeyCode.F3))

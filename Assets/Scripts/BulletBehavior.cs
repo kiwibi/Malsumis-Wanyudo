@@ -6,14 +6,24 @@ public class BulletBehavior : MonoBehaviour
 {
     public FloatVariable Speed;
     public bool BulletDirectionUp = true;
-    // Bullet direction up by default
-    private Vector3 bulletDirection = new Vector3(0, 1, 0);
+    private Vector3 targetLocation = Vector3.zero;
+    private Vector3 direction = Vector3.zero;
+
     void Update()
     {
-        if (!BulletDirectionUp)
+        if (BulletDirectionUp && targetLocation == Vector3.zero) //Player
         {
-            bulletDirection.y = -1;
+            targetLocation = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            targetLocation.z = 0;
+            direction = (targetLocation - transform.position).normalized;
         }
-       transform.Translate(bulletDirection * Time.deltaTime * Speed.Value);
+        else if (!BulletDirectionUp && targetLocation == Vector3.zero)//Enemy
+        {
+            targetLocation = GameObject.FindGameObjectWithTag("Player").transform.position;
+            direction = (targetLocation - transform.position).normalized;
+
+        }
+        transform.Translate(direction * Speed.Value * Time.deltaTime);
+
     }
 }

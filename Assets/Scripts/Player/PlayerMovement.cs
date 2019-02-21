@@ -8,9 +8,12 @@ public class PlayerMovement : MonoBehaviour
     private PlayerStats stats;
     public Animator animator;
 
+    private SpriteRenderer playerSprite;
+
     private void Start()
     {
         stats = GetComponent<PlayerStats>();
+        playerSprite = GetComponentInChildren<SpriteRenderer>();
     }
 
     void Update()
@@ -48,5 +51,19 @@ public class PlayerMovement : MonoBehaviour
             Mathf.Clamp(transform.position.y, 0.1f , screenPos.y),
             0
         );
+        if(pauseMenu.isPaused == false)
+            Rotate();
+    }
+
+
+    private void Rotate()
+    {
+        
+        Vector3 dir =transform.position - Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector3 up = new Vector3(0, 0, 1);
+        var rotation = Quaternion.LookRotation(dir, up);
+        rotation.x = 0;
+        rotation.y = 0;
+        playerSprite.transform.rotation = rotation;
     }
 }

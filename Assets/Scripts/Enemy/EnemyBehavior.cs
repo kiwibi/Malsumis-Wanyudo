@@ -8,11 +8,18 @@ public class EnemyBehavior : MonoBehaviour
     
     private EnemyStats stats;
     private AudioPlayer audioPlayer;
+    private GameObject player;
+    private SpriteRenderer enemySprite;
+    private BulletSpawn bulletSpawn;
+    
 
     void Start()
     {
         audioPlayer = GetComponent<AudioPlayer>();
         stats = GetComponent<EnemyStats>();
+        bulletSpawn = GetComponentInChildren<BulletSpawn>();
+        player = GameObject.FindGameObjectWithTag("Player");
+        enemySprite = GetComponentInChildren<SpriteRenderer>();
         var randomDirection = Random.Range(1, 3);
         if(randomDirection == 1)
         {
@@ -26,11 +33,13 @@ public class EnemyBehavior : MonoBehaviour
     void Update()
     {
         Move();
+        Rotation();
     }
 
     public void Shoot()
     {
-        var bullet = Instantiate(Bullet, new Vector3(transform.GetChild(1).position.x, transform.GetChild(1).position.y, 0), transform.rotation);
+        var bullet = Instantiate(Bullet, new Vector3(bulletSpawn.transform.position.x, bulletSpawn.transform.position.y, 0), Quaternion.identity);
+        bullet.GetComponentInChildren<SpriteRenderer>().transform.rotation = enemySprite.transform.rotation;
         audioPlayer.AudioEvent = stats.shootGunSound;
         audioPlayer.PlaySound();
         
@@ -45,5 +54,16 @@ public class EnemyBehavior : MonoBehaviour
     public void ChangeDirection()
     {
         strafeDirection *= -1;
+    }
+
+    private void Rotation()
+    {
+       
+        Vector3 dir = player.transform.position - transform.position;
+        Vector3 up = new Vector3(0, 0, 1);
+        var rotation = Quaternion.LookRotation(dir, up);
+        rotation.x = 0;
+        rotation.y = 0;
+        enemySprite.transform.rotation = rotation;
     }
 }
