@@ -51,7 +51,8 @@ public class PlayerMovement : MonoBehaviour
             Mathf.Clamp(transform.position.y, 0.1f , screenPos.y),
             0
         );
-        Rotate();
+        if(pauseMenu.isPaused == false)
+            Rotate();
     }
 
 

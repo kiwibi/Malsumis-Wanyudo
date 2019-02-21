@@ -8,6 +8,7 @@ TagManager:
   - Level
   - Alien
   - Bullet
+  - PauseMenu
   layers:
   - Default
   - TransparentFX
