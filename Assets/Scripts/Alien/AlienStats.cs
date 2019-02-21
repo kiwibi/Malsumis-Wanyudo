@@ -11,7 +11,7 @@ public class AlienStats : Stats
     private Light light;
 
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         stats = GetComponent<StateController>().stats;
         light = GetComponentInChildren<Light>();
@@ -21,19 +21,19 @@ public class AlienStats : Stats
         stats.FireballOnCooldown = true;
         stats.DashCooldown = stats.StartDashCooldown;
         stats.DashOnCooldown = true;
-        nextSpeedUp = AlienHealth.Value-speedUpSteps;
+        nextSpeedUp = AlienHealth.Value - speedUpSteps;
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+
     }
 
     public override void DealDamage(int damage)
     {
         AlienHealth.Value -= damage;
-        if(AlienHealth.Value <= 0)
+        if (AlienHealth.Value <= 0)
         {
             Die();
         }
@@ -63,7 +63,8 @@ public class AlienStats : Stats
 
     private void ChangeAttackSpeeds(float speed)
     {
-        stats.FireballCooldown -= speed;
+        stats.FireballMinCooldown -= speed;
+        stats.FireballMaxCooldown -= speed;
         stats.DashCooldown -= speed;
     }
 }

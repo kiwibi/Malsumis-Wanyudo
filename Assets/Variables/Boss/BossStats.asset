@@ -17,7 +17,7 @@ MonoBehaviour:
   isKillable: 1
   DashKey: 113
   StartDashCooldown: 5
-  DashCooldown: 4.7000003
+  DashCooldown: 5
   DashDuration: 0.5
   DashDistance: 1
   DashSpeed: 4
@@ -27,7 +27,9 @@ MonoBehaviour:
   FireballSpawned: 0
   FireballOnCooldown: 1
   StartFireballCooldown: 1
-  FireballCooldown: 0.6999999
+  FireballCooldown: 1
+  FireballMaxCooldown: 0.8
+  FireballMinCooldown: 1
   dashSound: {fileID: 11400000, guid: ff1ad0254d04a7643a248d4242b910ef, type: 2}
   shootFireball: {fileID: 11400000, guid: 897320b39b0127849b403e1aef86e0b4, type: 2}
   returningLocation: 7

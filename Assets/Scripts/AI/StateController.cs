@@ -1,9 +1,8 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
 
-public class StateController : MonoBehaviour {
+public class StateController : MonoBehaviour
+{
 
     [Header("State Machine")]
     public State currentState;
@@ -22,12 +21,12 @@ public class StateController : MonoBehaviour {
     public State bossFollowState;
     public State bossFireballState;
 
-    [Header("Spawn this Fireball prefab")] 
+    [Header("Spawn this Fireball prefab")]
     public GameObject fireball;
 
     [Header("Level info")]
     public IntVariable currentLevel;
-    
+
     [HideInInspector] public Transform chaseTarget;
     [HideInInspector] public float stateTimeElapsed;
     [HideInInspector] public Vector3 dashStartingPosition;
@@ -37,22 +36,23 @@ public class StateController : MonoBehaviour {
     private AudioPlayer audioPlayer;
     private Light lightSource;
 
-    void OnDrawGizmos()
+    private void OnDrawGizmos()
     {
-        if (currentState != null && stateVisualizer != null) 
+        if (currentState != null && stateVisualizer != null)
         {
             Gizmos.color = currentState.sceneGizmoColor;
             Gizmos.DrawWireSphere(stateVisualizer.position, 0.7f);
         }
     }
-    
-    void Start ()
+
+    private void Start()
     {
         collider2d = GetComponent<BoxCollider2D>();
-        if(!stats.isKillable)
+        if (!stats.isKillable)
         {
             collider2d.enabled = false;
-        } else
+        }
+        else
         {
             collider2d.enabled = true;
         }
@@ -64,12 +64,15 @@ public class StateController : MonoBehaviour {
         lightSource = GetComponentInChildren<Light>();
     }
 
-    void Update()
+    private void Update()
     {
         if (!aiActive)
+        {
             return;
+        }
+
         stats.AlienLevel = currentLevel.Value;
-        currentState.UpdateState (this);
+        currentState.UpdateState(this);
     }
 
     private void FindTarget()
@@ -88,20 +91,20 @@ public class StateController : MonoBehaviour {
         {
             PlayFireballLaunchSound();
         }
-        
+
         if (currentState == dashState && nextState == followState || currentState == bossDashState && nextState == bossFollowState)
         {
             StartCoroutine("ResetDash");
         }
-        else if(currentState == fireballState && nextState == followState || currentState == bossFireballState && nextState == bossFollowState)
+        else if (currentState == fireballState && nextState == followState || currentState == bossFireballState && nextState == bossFollowState)
         {
             StartCoroutine("ResetFireBall");
         }
 
-        if (nextState != remainState) 
+        if (nextState != remainState)
         {
             currentState = nextState;
-            OnExitState ();
+            OnExitState();
         }
     }
 
@@ -121,7 +124,7 @@ public class StateController : MonoBehaviour {
         audioPlayer.AudioEvent = stats.dashSound;
         audioPlayer.PlaySound();
     }
-    
+
     public void PlayFireballLaunchSound()
     {
         audioPlayer.AudioEvent = stats.shootFireball;
@@ -133,9 +136,9 @@ public class StateController : MonoBehaviour {
         lightSource.color = color;
     }
 
-    IEnumerator ResetDash()
+    private IEnumerator ResetDash()
     {
-        if(!stats.isKillable)
+        if (!stats.isKillable)
         {
             collider2d.enabled = false;
         }
@@ -144,10 +147,11 @@ public class StateController : MonoBehaviour {
         stats.DashOnCooldown = false;
     }
 
-    IEnumerator ResetFireBall()
+    private IEnumerator ResetFireBall()
     {
         stats.FireballOnCooldown = true;
         stats.FireballSpawned = false;
+        stats.FireballCooldown = Random.Range(stats.FireballMinCooldown, stats.FireballMaxCooldown);
         yield return new WaitForSeconds(stats.FireballCooldown);
         stats.FireballOnCooldown = false;
     }

@@ -1,9 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEditor;
-using UnityEngine;
+﻿using UnityEngine;
 
-[CreateAssetMenu (menuName = "Alien/AlienStats")]
+[CreateAssetMenu(menuName = "Alien/AlienStats")]
 public class AlienStatsObject : ScriptableObject
 {
     [Header("Alien stats")]
@@ -26,11 +23,13 @@ public class AlienStatsObject : ScriptableObject
     public bool FireballOnCooldown;
     public float StartFireballCooldown;
     public float FireballCooldown;
+    public float FireballMaxCooldown;
+    public float FireballMinCooldown;
 
-    [Header("Alien sounds")] 
+    [Header("Alien sounds")]
     public SimpleAudioEvent dashSound;
     public SimpleAudioEvent shootFireball;
 
-    [Header("Fix alien dropping too low")] 
+    [Header("Fix alien dropping too low")]
     public int returningLocation;
 }
