@@ -320,16 +320,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3618043756984122287, guid: c052c3438c225fd449c10f804a7ba429,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.86
-      objectReference: {fileID: 0}
-    - target: {fileID: 3618043756984122287, guid: c052c3438c225fd449c10f804a7ba429,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.76
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c052c3438c225fd449c10f804a7ba429, type: 3}
 --- !u!1001 &1935028770
@@ -404,6 +394,16 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 519420031}
+    - target: {fileID: 2178479926429987506, guid: e865cc819aa871f48aca8818a46b1975,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2798422895147150866, guid: e865cc819aa871f48aca8818a46b1975,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1163969394, guid: e865cc819aa871f48aca8818a46b1975, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0.75
@@ -730,11 +730,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1996992818183598774, guid: c5767d1bbe315614c8ccad1401ba59b3,
-        type: 3}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 519420031}
     - target: {fileID: 1107052217, guid: c5767d1bbe315614c8ccad1401ba59b3, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -761,11 +756,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1271686413, guid: c5767d1bbe315614c8ccad1401ba59b3, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 100.50293
+      value: 100.50391
       objectReference: {fileID: 0}
     - target: {fileID: 1271686413, guid: c5767d1bbe315614c8ccad1401ba59b3, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -166.99658
+      value: -166.99707
+      objectReference: {fileID: 0}
+    - target: {fileID: 1996992818183598774, guid: c5767d1bbe315614c8ccad1401ba59b3,
+        type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 519420031}
+    - target: {fileID: 3486824819467096485, guid: c5767d1bbe315614c8ccad1401ba59b3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6280055589798122767, guid: c5767d1bbe315614c8ccad1401ba59b3,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c5767d1bbe315614c8ccad1401ba59b3, type: 3}
@@ -780,6 +790,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Main Camera
+      objectReference: {fileID: 0}
+    - target: {fileID: 2989764037968836865, guid: bd8ae36c20b79714f85bc642b0ba8eb3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2989764037968837117, guid: bd8ae36c20b79714f85bc642b0ba8eb3,
         type: 3}
@@ -908,6 +923,25 @@ PrefabInstance:
     - target: {fileID: 6707414117047825478, guid: 9b05c7e614960b641a2f56234163fe5d,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1955768521, guid: 9b05c7e614960b641a2f56234163fe5d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7764192155564949127, guid: 9b05c7e614960b641a2f56234163fe5d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8364927265837461586, guid: 9b05c7e614960b641a2f56234163fe5d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8100658891325956494, guid: 9b05c7e614960b641a2f56234163fe5d,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
