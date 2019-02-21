@@ -1,11 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlayerShooting : MonoBehaviour
 {
     public GameObject Bullet;
 
+    private string fireButton = "Fire1";
     private PlayerStats stats;
     private float playerPistolCooldown;
     private float timeBetweenShoots;
@@ -14,7 +13,7 @@ public class PlayerShooting : MonoBehaviour
     private SpriteRenderer spriteRenderer;
 
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         stats = GetComponent<PlayerStats>();
         audioPlayer = GetComponent<AudioPlayer>();
@@ -23,16 +22,16 @@ public class PlayerShooting : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        if(stats.pistolCooldown.Value > 0)
+        if (stats.pistolCooldown.Value > 0)
         {
             playerPistolCooldown -= Time.deltaTime;
         }
-        if (Input.GetKey(KeyCode.Space) == true && playerPistolCooldown < 0)
+        if (Input.GetButton(fireButton) == true && playerPistolCooldown < 0)
         {
             timeBetweenShoots = stats.pistolCooldown.Value;
-           
+
             var bullet = Instantiate(Bullet, new Vector3(bulletSpawnPoint.transform.position.x, bulletSpawnPoint.transform.position.y, 0), Quaternion.identity);
             bullet.GetComponentInChildren<SpriteRenderer>().transform.rotation = spriteRenderer.transform.rotation;
             playerPistolCooldown = stats.pistolCooldown.Value;
