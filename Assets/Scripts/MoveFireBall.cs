@@ -14,7 +14,13 @@ public class MoveFireBall : MonoBehaviour
     {
         if(!FollowPlayer)
         {
-            transform.Translate(Vector2.up * FireballSpeed * Time.deltaTime);
+            if (targetLocation == Vector3.zero)
+            {
+                targetLocation = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                targetLocation.z = 0;
+                direction = (targetLocation - transform.position).normalized;
+            }
+            transform.Translate(direction * FireballSpeed * Time.deltaTime);
         } else
         {
             if(targetLocation == Vector3.zero)
