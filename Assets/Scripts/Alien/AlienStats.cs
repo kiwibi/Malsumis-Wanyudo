@@ -8,14 +8,14 @@ public class AlienStats : Stats
     private int nextSpeedUp;
     private AlienStatsObject stats;
     private readonly int speedUpSteps = 10;
-    private Light light;
+    private Light lightSource;
 
     // Start is called before the first frame update
     private void Start()
     {
         stats = GetComponent<StateController>().stats;
-        light = GetComponentInChildren<Light>();
-        light.intensity = 5;
+        lightSource = GetComponentInChildren<Light>();
+        lightSource.intensity = 5;
         AlienHealth.Value = AlienMaxHealth.Value;
         stats.FireballCooldown = stats.StartFireballCooldown;
         stats.FireballOnCooldown = true;
@@ -53,7 +53,7 @@ public class AlienStats : Stats
 
     private void DimLights(int intensity)
     {
-        light.intensity -= intensity;
+        lightSource.intensity -= intensity;
     }
 
     private void ChangeSpeed(float speed)
