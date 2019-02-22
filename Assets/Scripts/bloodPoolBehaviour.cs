@@ -9,6 +9,12 @@ public class bloodPoolBehaviour : MonoBehaviour
     void Start()
     {
         int index = Random.Range(0, Bloodpools.Length);
-        GetComponent<SpriteRenderer>().sprite = Bloodpools[index];
+        GetComponentInChildren<SpriteRenderer>().sprite = Bloodpools[index];
+        float angle = Random.Range(0.0f, 359.9f);
+        Vector3 up = new Vector3(0, 0, 1);
+        var rotation = Quaternion.AngleAxis(angle, up);
+        rotation.x = 0;
+        rotation.y = 0;
+        transform.rotation = rotation;
     }
 }

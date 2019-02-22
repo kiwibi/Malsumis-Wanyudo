@@ -45,7 +45,7 @@ public class DamageFeedback : MonoBehaviour
     public void BloodSpawn()
     {
         var blood_pool = Instantiate(Blood, new Vector3(transform.position.x, transform.position.y, 0), transform.rotation, GameObject.Find("GameArea/background/blood").transform);
-        Destroy(blood_pool, 5);
+        //Destroy(blood_pool, 5);
     }
 
     void ResetColor()
