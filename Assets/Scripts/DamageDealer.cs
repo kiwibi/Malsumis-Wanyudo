@@ -18,7 +18,7 @@ public class DamageDealer : MonoBehaviour
                 
                 if(!gameObject.CompareTag("Alien"))
                 {
-                    if (damageType.name == "Fireball")
+                    if (damageType.name == "Fireball" || damageType.name == "Enemy")
                     {
                         ShakeBehaviour.Shake();
                     }
