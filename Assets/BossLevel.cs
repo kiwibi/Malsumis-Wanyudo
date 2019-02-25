@@ -18,10 +18,6 @@ public class BossLevel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey("escape"))
-        {
-            SceneManager.LoadScene(titleScreen.Value);
-        }
         if (playerHealth.Value <= 0)
         {
             SceneManager.LoadScene(loseScreen.Value);
