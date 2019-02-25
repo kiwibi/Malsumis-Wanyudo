@@ -12,6 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c85b2b50a6cf514469b5fb638d6e5b1c, type: 3}
   m_Name: PrepareFireballState
   m_EditorClassIdentifier: 
-  actions: []
-  transitions: []
+  actions:
+  - {fileID: 11400000, guid: 3991c51cba4271c4692cad90eef5b19d, type: 2}
+  transitions:
+  - decision: {fileID: 11400000, guid: 4a5fb691c21e27f41bdaabdcb54a35e3, type: 2}
+    trueState: {fileID: 11400000, guid: e6bbbd1c6149d3c469d24657344f1719, type: 2}
+    falseState: {fileID: 11400000, guid: 94420624caaabc64c94fd0bfd2a5c2c3, type: 2}
   sceneGizmoColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}

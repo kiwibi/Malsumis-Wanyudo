@@ -12,6 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c85b2b50a6cf514469b5fb638d6e5b1c, type: 3}
   m_Name: PrepareDashState
   m_EditorClassIdentifier: 
-  actions: []
-  transitions: []
-  sceneGizmoColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  actions:
+  - {fileID: 11400000, guid: 65a7caef41c0a8b4aa098d5a97495135, type: 2}
+  transitions:
+  - decision: {fileID: 11400000, guid: ee74b599a5d939643a7e4bacf8e7aabc, type: 2}
+    trueState: {fileID: 11400000, guid: b2ca57dede437ed4c9142f96de1006e4, type: 2}
+    falseState: {fileID: 11400000, guid: 94420624caaabc64c94fd0bfd2a5c2c3, type: 2}
+  sceneGizmoColor: {r: 1, g: 0, b: 0.92387056, a: 1}
