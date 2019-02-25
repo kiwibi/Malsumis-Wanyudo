@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ShakeBehaviour : MonoBehaviour
 {
-    private Vector3 originalPos;
+    private float camSize;
     public static ShakeBehaviour instance;
 
     public FloatReference duration;
@@ -13,35 +13,40 @@ public class ShakeBehaviour : MonoBehaviour
     public static float duration_;
     public static float magnitude_;
 
+    public static bool isShaking;
 
 
     void Awake()
-    {
-        originalPos = transform.localPosition;
+    { 
         duration_ = duration.Value;
         magnitude_ = magnitude.Value;
         instance = this;
+        ShakeBehaviour.isShaking = false;
+
     }
 
     public static void Shake()
     {
-        instance.originalPos = instance.gameObject.transform.localPosition;
+        ShakeBehaviour.isShaking = true;
+        instance.camSize = Camera.main.orthographicSize;
         instance.StartCoroutine(instance.cShake(duration_, magnitude_));
     }
 
     public IEnumerator cShake(float duration, float magnitude)
     {
+        
         float endTime = Time.time + duration;
 
         while (Time.time < endTime)
         {
-            transform.localPosition = originalPos + Random.insideUnitSphere * magnitude;
+            Camera.main.orthographicSize = Random.Range(4.5f,5.0f);
 
             duration -= Time.deltaTime;
 
             yield return null;
         }
 
-        transform.localPosition = originalPos;
+        Camera.main.orthographicSize = camSize;
+        ShakeBehaviour.isShaking = false;
     }
 }

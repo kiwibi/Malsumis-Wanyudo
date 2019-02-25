@@ -17,11 +17,11 @@ public class DamageDealer : MonoBehaviour
                 col.gameObject.GetComponent<Stats>().DealDamage(DamageAmount.Value);
                 
                 if(!gameObject.CompareTag("Alien"))
-                {
-                    if (damageType.name == "Fireball" || damageType.name == "Enemy")
-                    {
-                        ShakeBehaviour.Shake();
-                    }
+                {   
+                        if (damageType.name == "Fireball" || damageType.name == "Enemy")
+                        {
+                                ShakeBehaviour.Shake();
+                        }
                     Destroy(gameObject);
                 }
             }
