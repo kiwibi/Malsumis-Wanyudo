@@ -12,7 +12,7 @@ namespace AI.Decisions
 
         private bool Dash(StateController controller)
         {
-            return controller.statsObject.AlienLevel >= 2 && !controller.statsObject.DashOnCooldown && Input.GetKeyDown(controller.statsObject.DashKey) ? true : false;
+            return Input.GetMouseButtonDown(1);
         }
     }
 }

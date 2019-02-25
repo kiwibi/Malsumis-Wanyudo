@@ -270,7 +270,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Bullet: {fileID: 7040557380576811275, guid: b7acc825cd88ae4449a4b147147f6a2d, type: 3}
-  fireButton: Fire1
 --- !u!114 &8294933538940363255
 MonoBehaviour:
   m_ObjectHideFlags: 0

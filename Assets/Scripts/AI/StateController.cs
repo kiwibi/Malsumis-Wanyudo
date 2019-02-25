@@ -7,8 +7,6 @@ public class StateController : MonoBehaviour
     public IntReference AlienMaxHealth;
     public IntVariable AlienHealth;
 
-    public AlienStats stats;
-
     [Header("State Machine")]
     public State currentState;
     public State remainState;
@@ -32,6 +30,7 @@ public class StateController : MonoBehaviour
     [Header("Level info")]
     public IntVariable currentLevel;
 
+    [HideInInspector]public AlienStats stats;
     [HideInInspector] public Transform chaseTarget;
     [HideInInspector] public float stateTimeElapsed;
     [HideInInspector] public Vector3 dashStartingPosition;
