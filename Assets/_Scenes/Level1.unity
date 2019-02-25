@@ -844,12 +844,12 @@ PrefabInstance:
     - target: {fileID: 2989764037968837117, guid: bd8ae36c20b79714f85bc642b0ba8eb3,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2989764037968837117, guid: bd8ae36c20b79714f85bc642b0ba8eb3,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2989764037968837117, guid: bd8ae36c20b79714f85bc642b0ba8eb3,
         type: 3}
