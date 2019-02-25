@@ -44,7 +44,8 @@ public class DamageFeedback : MonoBehaviour
 
     public void BloodSpawn()
     {
-        var blood_pool = Instantiate(Blood, new Vector3(transform.position.x, transform.position.y, 0), transform.rotation, GameObject.Find("GameArea/background/blood").transform);
+        var rotation = new Quaternion(0, 0, 0, 0);
+        var blood_pool = Instantiate(Blood, new Vector3(transform.position.x, transform.position.y, 0), rotation , GameObject.Find("background/blood").transform);
         //Destroy(blood_pool, 5);
     }
 

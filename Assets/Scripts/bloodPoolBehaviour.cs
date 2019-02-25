@@ -15,6 +15,6 @@ public class bloodPoolBehaviour : MonoBehaviour
         var rotation = Quaternion.AngleAxis(angle, up);
         rotation.x = 0;
         rotation.y = 0;
-        transform.rotation = rotation;
+        GetComponentInChildren<SpriteRenderer>().transform.rotation = rotation;
     }
 }
