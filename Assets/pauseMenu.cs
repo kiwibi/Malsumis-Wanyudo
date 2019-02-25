@@ -9,6 +9,14 @@ public class pauseMenu : MonoBehaviour
     public StringVariable titleScreen;
     public GameObject PauseMenuUI;
 
+    void Update()
+    {
+        if(Input.GetKey("escape"))
+        {
+            Pause();
+        }
+    }
+
     public void Resume()
     {
         PauseMenuUI.SetActive(false);

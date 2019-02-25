@@ -54,11 +54,6 @@ public class Level : MonoBehaviour
         {
             SceneManager.LoadScene(loseScreen.Value);
         }
-    
-        if (Input.GetKey("escape"))
-        {
-            PauseMenu.Pause();
-        }
 
         if (Input.GetKeyDown(KeyCode.F3))
         {
