@@ -12,6 +12,9 @@ namespace AI.Actions
     
         private void Fireball(StateController controller)
         {
+            var smallFireball = controller.GetComponentInChildren<SpawnFireball>();
+            smallFireball.spawning = false;
+            
         	var fireball = Instantiate(controller.fireball, controller.transform.position, Quaternion.identity);
             controller.statsObject.FireballSpawned = true;
         }

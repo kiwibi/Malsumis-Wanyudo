@@ -14,7 +14,8 @@ namespace AI.Actions
 
         private void Fireball(StateController controller)
         {
-            // TODO targeting
+            var smallFireball = controller.GetComponentInChildren<SpawnFireball>();
+            smallFireball.gameObject.SetActive(true);
         }
     }
 }

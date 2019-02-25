@@ -12,6 +12,8 @@ namespace AI.Actions
     
         private void Dash(StateController controller)
         {
+            var Line = controller.GetComponentInChildren<LineRenderer>();
+            Line.positionCount = 0;
             Collider2D collider = controller.GetComponent<BoxCollider2D>();
             collider.enabled = true;
             Vector3 targetPosition = new Vector3(0, controller.transform.position.y + controller.statsObject.DashDistance,
