@@ -132,6 +132,7 @@ GameObject:
   - component: {fileID: 547541005}
   - component: {fileID: 7030773161664017042}
   - component: {fileID: 6043305935348625759}
+  - component: {fileID: 1428101126407483852}
   m_Layer: 0
   m_Name: Alien
   m_TagString: Alien
@@ -178,9 +179,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c7231e3d6b56cc448411a2aeb6bbbd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AlienMaxHealth:
+    UseConstant: 0
+    ConstantValue: 60
+    Variable: {fileID: 11400000, guid: 965c39f302e7b4b4da54c625ea6e9d03, type: 2}
+  AlienHealth: {fileID: 11400000, guid: b6678d3ec2abc784186af8196058ead5, type: 2}
+  stats: {fileID: 0}
   currentState: {fileID: 11400000, guid: a1bc61605b454224ab1f83eddc6ef187, type: 2}
   remainState: {fileID: 11400000, guid: 94420624caaabc64c94fd0bfd2a5c2c3, type: 2}
-  stats: {fileID: 11400000, guid: 98046954293c27341844ac15558153f1, type: 2}
+  statsObject: {fileID: 11400000, guid: 98046954293c27341844ac15558153f1, type: 2}
   stateVisualizer: {fileID: 2995990598099252652}
   dashState: {fileID: 11400000, guid: b2ca57dede437ed4c9142f96de1006e4, type: 2}
   followState: {fileID: 11400000, guid: a1bc61605b454224ab1f83eddc6ef187, type: 2}
@@ -346,3 +353,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1428101126407483852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5438214378953835302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e0114fab91a7ce4b901a503c2ffa31d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  statsObject: {fileID: 11400000, guid: 98046954293c27341844ac15558153f1, type: 2}
+  AlienHealth: {fileID: 11400000, guid: b6678d3ec2abc784186af8196058ead5, type: 2}
+  FireballMaxCooldown: 0
+  FireballMinCooldown: 0

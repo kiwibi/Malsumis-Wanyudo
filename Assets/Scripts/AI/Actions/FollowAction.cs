@@ -15,7 +15,7 @@ namespace AI.Actions
             if (controller.chaseTarget != null)
             {
                 Vector2 alienTarget = controller.chaseTarget.position - controller.transform.position;
-                controller.transform.Translate(alienTarget * controller.stats.AlienSpeed * Time.deltaTime);
+                controller.transform.Translate(alienTarget * controller.statsObject.AlienSpeed * Time.deltaTime);
             }
 
             if (Camera.main == null) return;

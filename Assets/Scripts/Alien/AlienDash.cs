@@ -22,7 +22,7 @@ namespace Alien
         void Start()
         {
             movement = GetComponent<AlienMovement>();
-            stats = GetComponent<StateController>().stats;
+            stats = GetComponent<StateController>().statsObject;
         }
 
         // Update is called once per frame

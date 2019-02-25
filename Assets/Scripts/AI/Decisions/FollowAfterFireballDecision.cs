@@ -14,7 +14,7 @@ namespace AI.Decisions
 
         private bool Follow(StateController controller)
         {
-            return controller.stats.FireballSpawned;
+            return controller.statsObject.FireballSpawned;
         }
     }
 }

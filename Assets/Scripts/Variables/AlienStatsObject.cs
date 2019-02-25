@@ -21,7 +21,6 @@ public class AlienStatsObject : ScriptableObject
     public KeyCode FireballKey = KeyCode.E;
     public bool FireballSpawned;
     public bool FireballOnCooldown;
-    public float StartFireballCooldown;
     public float FireballCooldown;
     public float FireballMaxCooldown;
     public float FireballMinCooldown;

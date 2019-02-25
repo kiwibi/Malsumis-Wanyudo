@@ -14,9 +14,9 @@ namespace AI.Actions
         {
             Collider2D collider = controller.GetComponent<BoxCollider2D>();
             collider.enabled = true;
-            Vector3 targetPosition = new Vector3(0, controller.transform.position.y + controller.stats.DashDistance,
+            Vector3 targetPosition = new Vector3(0, controller.transform.position.y + controller.statsObject.DashDistance,
                 0);
-            controller.transform.Translate(targetPosition*controller.stats.DashSpeed* Time.deltaTime);
+            controller.transform.Translate(targetPosition*controller.statsObject.DashSpeed* Time.deltaTime);
         }
     }
 }

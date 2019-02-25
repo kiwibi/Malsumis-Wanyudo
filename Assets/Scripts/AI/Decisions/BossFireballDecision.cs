@@ -12,7 +12,7 @@ namespace AI.Decisions
 
         private bool Fireball(StateController controller)
         {
-            return !controller.stats.FireballOnCooldown;
+            return !controller.statsObject.FireballOnCooldown;
         }
     }
 }

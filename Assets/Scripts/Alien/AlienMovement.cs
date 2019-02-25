@@ -12,7 +12,7 @@ namespace Alien
 
         void Start()
         {
-            stats = GetComponent<StateController>().stats;
+            stats = GetComponent<StateController>().statsObject;
             dash = GetComponent<AlienDash>();
             FindTarget();
         }

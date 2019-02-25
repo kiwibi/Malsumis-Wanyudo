@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: BossStats
   m_EditorClassIdentifier: 
   AlienSpeed: 2
-  AlienLevel: 4
+  AlienLevel: 1
   isKillable: 1
   DashKey: 113
   StartDashCooldown: 5
-  DashCooldown: 5
+  DashCooldown: 4.8
   DashDuration: 0.5
   DashDistance: 1
   DashSpeed: 4
@@ -25,11 +25,10 @@ MonoBehaviour:
   waitBeforeDash: 0.5
   FireballKey: 101
   FireballSpawned: 0
-  FireballOnCooldown: 1
-  StartFireballCooldown: 1
-  FireballCooldown: 1.0673348
-  FireballMaxCooldown: 0.7
-  FireballMinCooldown: 1.1
+  FireballOnCooldown: 0
+  FireballCooldown: 0.97548735
+  FireballMaxCooldown: 1.2
+  FireballMinCooldown: 0.8
   dashSound: {fileID: 11400000, guid: ff1ad0254d04a7643a248d4242b910ef, type: 2}
   shootFireball: {fileID: 11400000, guid: 897320b39b0127849b403e1aef86e0b4, type: 2}
   returningLocation: 7

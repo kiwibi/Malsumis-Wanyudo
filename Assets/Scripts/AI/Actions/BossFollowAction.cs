@@ -23,11 +23,11 @@ namespace AI.Actions
                 alienTarget.y = 0;
                 alienTarget.z = 0;
 
-                controller.transform.Translate(alienTarget * controller.stats.AlienSpeed * Time.deltaTime);
+                controller.transform.Translate(alienTarget * controller.statsObject.AlienSpeed * Time.deltaTime);
 
-                if(controller.transform.position.y <= controller.stats.returningLocation)
+                if (controller.transform.position.y <= controller.statsObject.returningLocation)
                 {
-                    controller.transform.Translate(Vector2.up * controller.stats.AlienSpeed * Time.deltaTime);
+                    controller.transform.Translate(Vector2.up * controller.statsObject.AlienSpeed * Time.deltaTime);
                 }
             }
 

@@ -12,7 +12,7 @@ namespace AI.Decisions
 
         private bool Fireball(StateController controller)
         {
-            return controller.stats.AlienLevel >= 3 && !controller.stats.FireballOnCooldown && Input.GetKeyDown(controller.stats.FireballKey) ? true : false;
+            return controller.statsObject.AlienLevel >= 3 && !controller.statsObject.FireballOnCooldown && Input.GetKeyDown(controller.statsObject.FireballKey) ? true : false;
         }
     }
 }

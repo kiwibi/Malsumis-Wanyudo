@@ -2,30 +2,46 @@
 
 public class AlienStats : Stats
 {
-    public IntVariable AlienMaxHealth;
+    public AlienStatsObject statsObject;
+    public IntReference AlienMaxHealth;
     public IntVariable AlienHealth;
-
     private int nextSpeedUp;
-    private AlienStatsObject stats;
-    private readonly int speedUpSteps = 10;
+    public readonly int speedUpSteps = 10;
     private Light lightSource;
 
+    private StateController controller;
+
+    public float FireballMaxCooldown;
+    public float FireballMinCooldown;
+    private float DashCooldown;
+    private float AlienSpeed;
+
     // Start is called before the first frame update
-    private void Start()
+    void Start()
     {
-        stats = GetComponent<StateController>().stats;
+        // modify stats object
+        statsObject.FireballOnCooldown = true;
+        statsObject.DashOnCooldown = true;
+
+        // Lights on
         lightSource = GetComponentInChildren<Light>();
-        lightSource.intensity = 5;
-        AlienHealth.Value = AlienMaxHealth.Value;
-        stats.FireballCooldown = stats.StartFireballCooldown;
-        stats.FireballOnCooldown = true;
-        stats.DashCooldown = stats.StartDashCooldown;
-        stats.DashOnCooldown = true;
+        if (lightSource)
+        {
+            lightSource.intensity = 5;
+        }
+
+        // Set local variables
+        FireballMaxCooldown = statsObject.FireballMaxCooldown;
+        FireballMinCooldown = statsObject.FireballMinCooldown;
+        DashCooldown = statsObject.DashCooldown;
+        AlienSpeed = statsObject.AlienSpeed;
+
+        AlienHealth.Value = AlienMaxHealth;
         nextSpeedUp = AlienHealth.Value - speedUpSteps;
     }
 
     // Update is called once per frame
-    private void Update()
+    void Update()
     {
 
     }
@@ -58,13 +74,13 @@ public class AlienStats : Stats
 
     private void ChangeSpeed(float speed)
     {
-        stats.AlienSpeed += speed;
+        AlienSpeed += speed;
     }
 
     private void ChangeAttackSpeeds(float speed)
     {
-        stats.FireballMinCooldown -= speed;
-        stats.FireballMaxCooldown -= speed;
-        stats.DashCooldown -= speed;
+        FireballMaxCooldown -= speed;
+        FireballMinCooldown -= speed;
+        DashCooldown -= speed;
     }
 }

@@ -16,7 +16,7 @@ namespace AI.Actions
         {
             var fireball = Instantiate(controller.fireball, controller.transform.position, Quaternion.identity);
             fireball.GetComponent<MoveFireBall>().FollowPlayer = true;
-            controller.stats.FireballSpawned = true;
+            controller.statsObject.FireballSpawned = true;
         }
     }
 }

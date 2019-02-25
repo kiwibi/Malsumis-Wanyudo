@@ -12,7 +12,7 @@ namespace AI.Decisions
 
         private bool Dash(StateController controller)
         {
-            return !controller.stats.DashOnCooldown;
+            return !controller.statsObject.DashOnCooldown;
         }
     }
 }

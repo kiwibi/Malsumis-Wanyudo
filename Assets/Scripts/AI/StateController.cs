@@ -3,11 +3,16 @@ using UnityEngine;
 
 public class StateController : MonoBehaviour
 {
+    [Header("Health")]
+    public IntReference AlienMaxHealth;
+    public IntVariable AlienHealth;
+
+    public AlienStats stats;
 
     [Header("State Machine")]
     public State currentState;
     public State remainState;
-    public AlienStatsObject stats;
+    public AlienStatsObject statsObject;
 
     [Header("Show state color in editor")]
     public Transform stateVisualizer;
@@ -47,8 +52,9 @@ public class StateController : MonoBehaviour
 
     private void Start()
     {
+        stats = GetComponent<AlienStats>();
         collider2d = GetComponent<BoxCollider2D>();
-        if (!stats.isKillable)
+        if (!statsObject.isKillable)
         {
             collider2d.enabled = false;
         }
@@ -62,6 +68,8 @@ public class StateController : MonoBehaviour
         FindTarget();
         audioPlayer = GetComponent<AudioPlayer>();
         lightSource = GetComponentInChildren<Light>();
+
+        AlienHealth.Value = AlienMaxHealth.Value;
     }
 
     private void Update()
@@ -71,7 +79,7 @@ public class StateController : MonoBehaviour
             return;
         }
 
-        stats.AlienLevel = currentLevel.Value;
+        statsObject.AlienLevel = currentLevel.Value;
         currentState.UpdateState(this);
     }
 
@@ -121,13 +129,13 @@ public class StateController : MonoBehaviour
 
     public void PlayDashSound()
     {
-        audioPlayer.AudioEvent = stats.dashSound;
+        audioPlayer.AudioEvent = statsObject.dashSound;
         audioPlayer.PlaySound();
     }
 
     public void PlayFireballLaunchSound()
     {
-        audioPlayer.AudioEvent = stats.shootFireball;
+        audioPlayer.AudioEvent = statsObject.shootFireball;
         audioPlayer.PlaySound();
     }
 
@@ -138,21 +146,21 @@ public class StateController : MonoBehaviour
 
     private IEnumerator ResetDash()
     {
-        if (!stats.isKillable)
+        if (!statsObject.isKillable)
         {
             collider2d.enabled = false;
         }
-        stats.DashOnCooldown = true;
-        yield return new WaitForSeconds(stats.DashCooldown);
-        stats.DashOnCooldown = false;
+        statsObject.DashOnCooldown = true;
+        yield return new WaitForSeconds(statsObject.DashCooldown);
+        statsObject.DashOnCooldown = false;
     }
 
     private IEnumerator ResetFireBall()
     {
-        stats.FireballOnCooldown = true;
-        stats.FireballSpawned = false;
-        stats.FireballCooldown = Random.Range(stats.FireballMinCooldown, stats.FireballMaxCooldown);
-        yield return new WaitForSeconds(stats.FireballCooldown);
-        stats.FireballOnCooldown = false;
+        statsObject.FireballOnCooldown = true;
+        statsObject.FireballSpawned = false;
+        statsObject.FireballCooldown = Random.Range(stats.FireballMinCooldown, stats.FireballMaxCooldown);
+        yield return new WaitForSeconds(statsObject.FireballCooldown);
+        statsObject.FireballOnCooldown = false;
     }
 }

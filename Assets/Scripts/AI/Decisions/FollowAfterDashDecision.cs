@@ -12,7 +12,7 @@ namespace AI.Decisions
 
         private bool Follow(StateController controller)
         {
-            return controller.CheckIfCountDownElapsed(controller.stats.DashDuration);
+            return controller.CheckIfCountDownElapsed(controller.statsObject.DashDuration);
         }
     }
 }

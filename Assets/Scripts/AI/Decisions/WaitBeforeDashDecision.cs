@@ -14,7 +14,7 @@ namespace AI.Decisions
 
         private bool Follow(StateController controller)
         {
-            return controller.CheckIfCountDownElapsed(controller.stats.waitBeforeDash);
+            return controller.CheckIfCountDownElapsed(controller.statsObject.waitBeforeDash);
         }
     }
 }

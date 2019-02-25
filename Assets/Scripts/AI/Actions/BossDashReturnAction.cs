@@ -13,8 +13,8 @@ namespace AI.Actions
         }
         private void Dash(StateController controller)
         {
-            Vector3 targetPosition = new Vector3(0, controller.transform.position.y + controller.stats.DashDistance, 0);
-            controller.transform.Translate(targetPosition * controller.stats.DashSpeed * Time.deltaTime);
+            Vector3 targetPosition = new Vector3(0, controller.transform.position.y + controller.statsObject.DashDistance, 0);
+            controller.transform.Translate(targetPosition * controller.statsObject.DashSpeed * Time.deltaTime);
         }
     }
 }
