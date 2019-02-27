@@ -7,8 +7,8 @@ public class LevelFade : MonoBehaviour
     public IntReference BlackoutTimer;
     public FloatReference FadeInSpeed;
 
-    public SpriteRenderer AlienPicture;
-    public Animator alien_anim;
+    //public SpriteRenderer AlienPicture;
+    //public Animator alien_anim;
 
     private bool fadedIn;
     private CanvasGroup transitionCanvas;
@@ -17,7 +17,7 @@ public class LevelFade : MonoBehaviour
     void Start()
     {
         transitionCanvas = GetComponent<CanvasGroup>();
-        alien_anim = GetComponentInChildren<Animator>();
+        //alien_anim = GetComponentInChildren<Animator>();
         fadedIn = false;
     }
 
@@ -45,35 +45,25 @@ public class LevelFade : MonoBehaviour
 
     IEnumerator levelTransition()
     {
-        alien_anim.Play("Alien_transition1", -1, 0f);
+        //alien_anim.Play("Alien_transition1", -1, 0f);
         StartCoroutine(Fade());
         yield return new WaitForSecondsRealtime(BlackoutTimer.Value);
-        var enemies = GameObject.FindGameObjectsWithTag("Enemy");
-        var bullets = GameObject.FindGameObjectsWithTag("Bullet");
-        foreach (var enemy in enemies)
-        {
-            enemy.GetComponent<Stats>().DealDamage(10);
-        }
-        foreach (var bullet in bullets)
-        {
-            Destroy(bullet);
-        }
         StartCoroutine(Fade());
         
     }
 
     IEnumerator Fade()
     {
-        Color _tmpColor = AlienPicture.GetComponentInChildren<SpriteRenderer>().color;
+        //Color _tmpColor = AlienPicture.GetComponentInChildren<SpriteRenderer>().color;
         if (fadedIn == true)
         {
             for (float f = 1f; f >= 0; f -= 0.1f)
             {
                 transitionCanvas.alpha = f;
-                GetComponentInChildren<SpriteRenderer>().color = new Color(_tmpColor.r, _tmpColor.g, _tmpColor.b, f);
+              //  GetComponentInChildren<SpriteRenderer>().color = new Color(_tmpColor.r, _tmpColor.g, _tmpColor.b, f);
                 yield return new WaitForSecondsRealtime(FadeInSpeed);
             }
-            GetComponentInChildren<SpriteRenderer>().color = new Color(_tmpColor.r, _tmpColor.g, _tmpColor.b, 0);
+            //GetComponentInChildren<SpriteRenderer>().color = new Color(_tmpColor.r, _tmpColor.g, _tmpColor.b, 0);
             transitionCanvas.alpha = 0;
             fadedIn = false;
         }
@@ -82,11 +72,11 @@ public class LevelFade : MonoBehaviour
             for (float f = 0f; f <= 1f; f += 0.1f)
             {
                 transitionCanvas.alpha = f;
-                GetComponentInChildren<SpriteRenderer>().color = new Color(_tmpColor.r, _tmpColor.g, _tmpColor.b, f);
+               // GetComponentInChildren<SpriteRenderer>().color = new Color(_tmpColor.r, _tmpColor.g, _tmpColor.b, f);
                 yield return new WaitForSecondsRealtime(.1f);
                 
             }
-            GetComponentInChildren<SpriteRenderer>().color = new Color(_tmpColor.r, _tmpColor.g, _tmpColor.b, 1);
+            //GetComponentInChildren<SpriteRenderer>().color = new Color(_tmpColor.r, _tmpColor.g, _tmpColor.b, 1);
             transitionCanvas.alpha = 1;
             fadedIn = true;
         }
