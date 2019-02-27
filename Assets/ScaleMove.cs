@@ -45,7 +45,7 @@ public class ScaleMove : MonoBehaviour
         }
         else if (Vector3.Distance(background.transform.position,targetPos) < 0.1f)
         {
-             
+            
         }
     }
 }
