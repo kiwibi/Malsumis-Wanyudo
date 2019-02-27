@@ -16,7 +16,7 @@ MonoBehaviour:
   AlienLevel: 3
   isKillable: 0
   DashKey: 113
-  StartDashCooldown: 0
+  StartDashCooldown: 3
   DashCooldown: 3
   DashDuration: 0.4
   DashDistance: 1
@@ -25,8 +25,8 @@ MonoBehaviour:
   waitBeforeDash: 0
   FireballKey: 101
   FireballSpawned: 0
-  FireballOnCooldown: 0
-  FireballCooldown: 5.0000005
+  FireballOnCooldown: 1
+  FireballCooldown: 5
   FireballMaxCooldown: 5
   FireballMinCooldown: 5
   dashSound: {fileID: 11400000, guid: ff1ad0254d04a7643a248d4242b910ef, type: 2}
