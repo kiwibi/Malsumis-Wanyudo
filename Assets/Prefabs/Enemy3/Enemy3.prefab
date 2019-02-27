@@ -67,31 +67,31 @@ MonoBehaviour:
   MinShootDelay:
     UseConstant: 0
     ConstantValue: 0
-    Variable: {fileID: 11400000, guid: 62a3c4b670d60e942b47a6c0959fce8a, type: 2}
+    Variable: {fileID: 11400000, guid: 06c48d2f57b36f344a243ca0cb737123, type: 2}
   MaxShootDelay:
     UseConstant: 0
     ConstantValue: 0
-    Variable: {fileID: 11400000, guid: 8003623cac99af14a827216d6f35dea0, type: 2}
+    Variable: {fileID: 11400000, guid: 6cb57dab05a3e264cbbcd6dad30b1983, type: 2}
   Speed:
     UseConstant: 0
     ConstantValue: 0
-    Variable: {fileID: 11400000, guid: 3400088141b632642b83d5d52cf4c6f8, type: 2}
+    Variable: {fileID: 11400000, guid: 8ba182c1580336b46b61724f74453c8a, type: 2}
   StrafeSpeed:
     UseConstant: 0
     ConstantValue: 0
-    Variable: {fileID: 11400000, guid: 4e59f4baf98b45b4284187549e8b5ece, type: 2}
+    Variable: {fileID: 11400000, guid: 7b1007c40adff32408fb3f640c681d1b, type: 2}
   MinChangeDirectionDelay:
     UseConstant: 0
     ConstantValue: 0
-    Variable: {fileID: 11400000, guid: dad9591af810f924c9016cb468aa8c68, type: 2}
+    Variable: {fileID: 11400000, guid: a27c5306fd817c640bbd95365f6dcbe8, type: 2}
   MaxChangeDirectionDelay:
     UseConstant: 0
     ConstantValue: 0
-    Variable: {fileID: 11400000, guid: ec12b2e336087ef44ae2e391ee2392b8, type: 2}
+    Variable: {fileID: 11400000, guid: b60331e727e641840901c28ea7fb987d, type: 2}
   MaxHP:
     UseConstant: 0
     ConstantValue: 0
-    Variable: {fileID: 11400000, guid: 31a0965c243495747be2046b2b4ebb05, type: 2}
+    Variable: {fileID: 11400000, guid: ce81e9a9dc146e54686cc7df67beef2d, type: 2}
   hurtSound: {fileID: 11400000, guid: acead7c4109f139439186be5908562b4, type: 2}
   deathSound: {fileID: 11400000, guid: 1ec3ad565e7758243be169113590ecad, type: 2}
   shootGunSound: {fileID: 11400000, guid: 9daa8b36b0824f04bb18a678870c1861, type: 2}
