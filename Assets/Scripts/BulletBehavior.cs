@@ -8,7 +8,16 @@ public class BulletBehavior : MonoBehaviour
     public bool BulletDirectionUp = true;
     private Vector3 targetLocation = Vector3.zero;
     private Vector3 direction = Vector3.zero;
+    private Light lights;
+    
+    void Start()
+    {
+        transform.position = new Vector3(transform.position.x, transform.position.y, -0.8f);
+        lights = GetComponent<Light>();
 
+        StartCoroutine("Flash");
+    }
+    
     void Update()
     {
         if (BulletDirectionUp && targetLocation == Vector3.zero) //Player
@@ -24,6 +33,12 @@ public class BulletBehavior : MonoBehaviour
 
         }
         transform.Translate(direction * Speed.Value * Time.deltaTime);
+    }
 
+    private IEnumerator Flash()
+    {
+        lights.enabled = true;
+        yield return new WaitForSeconds(0.05f);
+        lights.enabled = false;
     }
 }

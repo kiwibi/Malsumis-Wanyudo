@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7040557380576811272}
   - component: {fileID: 7040557380576811276}
   - component: {fileID: 4577538175915436752}
+  - component: {fileID: 552722401}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Bullet
@@ -103,6 +104,44 @@ MonoBehaviour:
     ConstantValue: 0
     Variable: {fileID: 11400000, guid: 3dba26913e4e8624c88d68f805beef5a, type: 2}
   damageType: {fileID: 11400000, guid: 96dc293d24e66474288d0e3d0570e4d9, type: 2}
+--- !u!108 &552722401
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7040557380576811275}
+  m_Enabled: 1
+  serializedVersion: 8
+  m_Type: 2
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 3
+  m_Range: 3
+  m_SpotAngle: 30
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 0
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
 --- !u!1 &8633283247747339623
 GameObject:
   m_ObjectHideFlags: 0
