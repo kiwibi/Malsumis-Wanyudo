@@ -7,6 +7,7 @@ public class CorruptedHeart : MonoBehaviour
 {
     public static CorruptedHeart instance;
 
+
     private Image image;
     // Start is called before the first frame update
     void Start()
@@ -17,6 +18,8 @@ public class CorruptedHeart : MonoBehaviour
 
     public static void Darken()
     {
-        instance.image.color = new Color(instance.image.color.r - 0.02f, instance.image.color.g, instance.image.color.b);       
+        //var bar = GameObject.Find("UI/Corruption/Fill Area/Fill").GetComponent<Image>();
+        instance.image.color = new Color(instance.image.color.r - 0.01f, instance.image.color.g, instance.image.color.b);
+        //bar.color = new Color(bar.color.r, bar.color.g, bar.color.b);
     }
 }
