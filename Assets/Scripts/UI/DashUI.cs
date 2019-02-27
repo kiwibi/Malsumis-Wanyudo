@@ -10,6 +10,7 @@ public class DashUI : MonoBehaviour
     
     private Image background;
     private Text textField;
+    private ScaleMove startAnimation;
     
     private bool counting = false;
     private float coolDownDuration = 0;
@@ -18,6 +19,7 @@ public class DashUI : MonoBehaviour
     {
         background = GetComponent<Image>();
         textField = GetComponentInChildren<Text>();
+        startAnimation = GetComponent<ScaleMove>();
     }
 
     // Update is called once per frame
@@ -28,12 +30,14 @@ public class DashUI : MonoBehaviour
             background.enabled = false;
             textField.enabled = false;
             titleField.GetComponent<Text>().enabled = false;
+            startAnimation.enabled = false;
         }
         else
         {
             background.enabled = true;
             textField.enabled = true;
             titleField.GetComponent<Text>().enabled = true;
+            startAnimation.enabled = true;
         }
 
         if (alienStats.DashOnCooldown)

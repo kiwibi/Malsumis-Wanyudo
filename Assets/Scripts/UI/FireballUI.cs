@@ -10,6 +10,8 @@ public class FireballUI : MonoBehaviour
 
     private Image background;
     private Text textField;
+
+    private ScaleMove startAnimation;
     
     private bool counting = false;
     private float coolDownDuration = 0;
@@ -18,6 +20,7 @@ public class FireballUI : MonoBehaviour
     {
         background = GetComponent<Image>();
         textField = GetComponentInChildren<Text>();
+        startAnimation = GetComponent<ScaleMove>();
     }
 
     // Update is called once per frame
@@ -28,12 +31,14 @@ public class FireballUI : MonoBehaviour
             background.enabled = false;
             textField.enabled = false;
             titleField.GetComponent<Text>().enabled = false;
+            startAnimation.enabled = false;
         }
         else
         {
             background.enabled = true;
             textField.enabled = true;
             titleField.GetComponent<Text>().enabled = true;
+            startAnimation.enabled = true;
         }
         
         if (alienStats.FireballOnCooldown)
