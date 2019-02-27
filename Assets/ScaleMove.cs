@@ -36,7 +36,6 @@ public class ScaleMove : MonoBehaviour
     {
         if (Vector3.Distance(background.transform.position, targetPos) > 0.1f)
         {
-            pauseMenu.isPaused = true;
             //move
             float step = speed * 1.5f * Time.unscaledDeltaTime;
             background.transform.position = Vector3.MoveTowards(background.transform.position, targetPos, step);
@@ -46,7 +45,7 @@ public class ScaleMove : MonoBehaviour
         }
         else if (Vector3.Distance(background.transform.position,targetPos) < 0.1f)
         {
-            pauseMenu.isPaused = false;   
+             
         }
     }
 }
