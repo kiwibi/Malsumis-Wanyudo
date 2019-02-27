@@ -13,6 +13,8 @@ namespace AI.Actions
         private void Dash(StateController controller)
         {
             var Line = controller.GetComponentInChildren<LineRenderer>();
+            var animator = controller.GetComponentInChildren<Animator>();
+            animator.SetBool("IsDashing", true);
             Line.positionCount = 0;
             Collider2D collider = controller.GetComponent<BoxCollider2D>();
             collider.enabled = true;

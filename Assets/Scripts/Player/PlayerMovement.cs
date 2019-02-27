@@ -49,7 +49,7 @@ public class PlayerMovement : MonoBehaviour
 
         transform.position = new Vector3(
 
-            Mathf.Clamp(transform.position.x, 4, screenPos.x-3),
+            Mathf.Clamp(transform.position.x, 0.1f, screenPos.x),
             Mathf.Clamp(transform.position.y, 0.1f, screenPos.y),
             0
         );

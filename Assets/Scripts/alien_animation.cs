@@ -20,6 +20,7 @@ public class alien_animation : MonoBehaviour
                 anim.SetBool("Stage2", true);
                 break;
             case 3:
+                anim.SetBool("Stage3", true);
                 break;
         }
     }

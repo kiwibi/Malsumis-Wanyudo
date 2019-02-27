@@ -15,25 +15,33 @@ public class pauseMenu : MonoBehaviour
         {
             Pause();
         }
+
+        if(isPaused == true)
+        {
+            Time.timeScale = 0;
+        }
+        else
+        {
+            Time.timeScale = 1;
+        }
     }
 
     public void Resume()
     {
         PauseMenuUI.SetActive(false);
-        Time.timeScale = 1f;
         isPaused = false;
     }
 
     public void Pause()
     {
         PauseMenuUI.SetActive(true);
-        Time.timeScale = 0;
         isPaused = true;
     }
 
     public void Menu()
     {
         Time.timeScale = 1f;
+        isPaused = false;
         SceneManager.LoadScene(titleScreen.Value); 
     }
 }
