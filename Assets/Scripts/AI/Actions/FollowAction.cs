@@ -12,6 +12,8 @@ namespace AI.Actions
 
         private void Follow(StateController controller)
         {
+            controller.hasTarget = false;
+            
             if (controller.chaseTarget != null)
             {
                 Vector2 alienTarget = controller.chaseTarget.position - controller.transform.position;

@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: AlienStats
   m_EditorClassIdentifier: 
   AlienSpeed: 2
-  AlienLevel: 1
+  AlienLevel: 3
   isKillable: 0
   DashKey: 113
   StartDashCooldown: 0
   DashCooldown: 3
-  DashDuration: 0.5
+  DashDuration: 0.4
   DashDistance: 1
   DashSpeed: 5
   DashOnCooldown: 0
@@ -26,8 +26,7 @@ MonoBehaviour:
   FireballKey: 101
   FireballSpawned: 0
   FireballOnCooldown: 0
-  StartFireballCooldown: 5
-  FireballCooldown: 5
+  FireballCooldown: 5.0000005
   FireballMaxCooldown: 5
   FireballMinCooldown: 5
   dashSound: {fileID: 11400000, guid: ff1ad0254d04a7643a248d4242b910ef, type: 2}

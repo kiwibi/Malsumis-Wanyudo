@@ -14,9 +14,9 @@ namespace AI.Actions
 
         private void Dash(StateController controller)
         {
-            // TODO show dash targeting
             var Line = controller.GetComponentInChildren<LineRenderer>();
             Line.positionCount = 2;
+            Line.material = controller.DashMaterial;
             Line.SetPosition(0, controller.transform.position);
             Line.SetPosition(1, controller.transform.position + controller.transform.up*10);
         }

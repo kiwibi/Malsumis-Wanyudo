@@ -16,9 +16,15 @@ namespace AI.Actions
             Line.positionCount = 0;
             Collider2D collider = controller.GetComponent<BoxCollider2D>();
             collider.enabled = true;
-            Vector3 targetPosition = new Vector3(0, controller.transform.position.y + controller.statsObject.DashDistance,
-                0);
-            controller.transform.Translate(targetPosition*controller.statsObject.DashSpeed* Time.deltaTime);
+
+            if (!controller.hasTarget)
+            {
+                controller.targetPos = new Vector3(0,
+                    controller.transform.position.y + controller.statsObject.DashDistance,
+                    0);
+            }
+
+            controller.transform.Translate(controller.targetPos*controller.statsObject.DashSpeed* Time.deltaTime);
         }
     }
 }

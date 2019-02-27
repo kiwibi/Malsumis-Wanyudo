@@ -27,6 +27,10 @@ public class StateController : MonoBehaviour
     [Header("Spawn this Fireball prefab")]
     public GameObject fireball;
 
+    [Header("Materials for line renderer")]
+    public Material FireballMaterial;
+    public Material DashMaterial;
+    
     [Header("Level info")]
     public IntVariable currentLevel;
 
@@ -40,6 +44,9 @@ public class StateController : MonoBehaviour
     private AudioPlayer audioPlayer;
     private Light lightSource;
 
+    public Vector3 targetPos;
+    public bool hasTarget;
+    
     private void OnDrawGizmos()
     {
         if (currentState != null && stateVisualizer != null)

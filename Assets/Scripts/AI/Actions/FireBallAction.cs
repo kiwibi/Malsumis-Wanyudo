@@ -12,6 +12,9 @@ namespace AI.Actions
     
         private void Fireball(StateController controller)
         {
+            var Line = controller.GetComponentInChildren<LineRenderer>();
+            Line.positionCount = 0;
+            
             var smallFireball = controller.GetComponentInChildren<SpawnFireball>();
             smallFireball.spawning = false;
             
