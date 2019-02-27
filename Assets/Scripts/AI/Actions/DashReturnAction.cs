@@ -13,6 +13,10 @@ namespace AI.Actions
         }
         private void Dash(StateController controller)
         {
+            var animator = controller.GetComponentInChildren<Animator>();
+            if (animator == null)
+                Debug.Log("null animator");
+            animator.SetBool("IsDashing", false);
             if (!controller.hasTarget)
             {
                 controller.targetPos = new Vector3(0, controller.transform.position.y - controller.statsObject.DashDistance, 0);

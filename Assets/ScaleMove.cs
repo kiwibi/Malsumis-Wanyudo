@@ -7,8 +7,6 @@ public class ScaleMove : MonoBehaviour
 {
     private Image background;
 
-    private bool reachedEnd = false;
-
     private Vector3 targetPos;
     
     private Vector3 TargetScale;
