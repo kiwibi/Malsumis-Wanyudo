@@ -4,16 +4,15 @@ using UnityEngine;
 
 public class LineEffect : MonoBehaviour
 {
-    public float alpha;
-    public float target;
-    public float speed;
+    private float alpha = 1;
+    private float target = 0;
+    private float speed = 2f;
     private LineRenderer line;
     // Start is called before the first frame update
     void Start()
     {
         line = GetComponent<LineRenderer>();
         line.material = new Material(Shader.Find("Sprites/Default"));
-        target = 1f;
     }
 
     // Update is called once per frame
