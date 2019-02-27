@@ -103,6 +103,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3658388542955452976}
   - component: {fileID: 1329522158984743167}
+  - component: {fileID: 105700435}
   m_Layer: 0
   m_Name: Line
   m_TagString: Untagged
@@ -218,6 +219,18 @@ LineRenderer:
     generateLightingData: 0
   m_UseWorldSpace: 1
   m_Loop: 0
+--- !u!114 &105700435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1618677070774830835}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acc728a94b8ce9048993561cad6b78eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4443240946805202458
 GameObject:
   m_ObjectHideFlags: 0
