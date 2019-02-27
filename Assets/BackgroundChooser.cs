@@ -6,12 +6,14 @@ public class BackgroundChooser : MonoBehaviour
 {
 
     public IntVariable currentLevel;
-    private SpriteRenderer spriteRender;
-    public Sprite[] BGsprites;
+    public GameObject level1;
+    public GameObject level2;
+    public GameObject level3;
+
     // Start is called before the first frame update
     void Start()
     {
-        spriteRender = GetComponent<SpriteRenderer>();
+    
     }
     // Update is called once per frame
     void Update()
@@ -19,13 +21,17 @@ public class BackgroundChooser : MonoBehaviour
         switch(currentLevel.Value)
         {
             case 1:
-                spriteRender.sprite = BGsprites[0];
+                level1.SetActive(true);
+                level2.SetActive(false);
+                level3.SetActive(false);
                 break;
             case 2:
-                spriteRender.sprite = BGsprites[1];
+                level1.SetActive(false);
+                level2.SetActive(true);
                 break;
             case 3:
-                //spriteRender.sprite = BGsprites[2];
+                level2.SetActive(false);
+                level3.SetActive(true);
                 break;
         }
     }
