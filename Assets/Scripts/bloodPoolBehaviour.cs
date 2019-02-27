@@ -17,4 +17,10 @@ public class bloodPoolBehaviour : MonoBehaviour
         rotation.y = 0;
         GetComponentInChildren<SpriteRenderer>().transform.rotation = rotation;
     }
+
+    void Update()
+    {
+        
+        transform.position = transform.position + Vector3.down * 0.5f * Time.deltaTime;
+    }
 }
