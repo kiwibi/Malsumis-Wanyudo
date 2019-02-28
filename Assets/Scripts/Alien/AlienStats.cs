@@ -16,6 +16,8 @@ public class AlienStats : Stats
     private float DashCooldown;
     private float AlienSpeed;
 
+    private Animator anim;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -38,6 +40,8 @@ public class AlienStats : Stats
 
         AlienHealth.Value = AlienMaxHealth;
         nextSpeedUp = AlienHealth.Value - speedUpSteps;
+
+        anim = GetComponentInChildren<Animator>();
     }
 
     // Update is called once per frame
@@ -54,6 +58,8 @@ public class AlienStats : Stats
             Die();
         }
 
+        anim.SetTrigger("IsHit");
+        
         if (AlienHealth.Value <= nextSpeedUp)
         {
             nextSpeedUp -= speedUpSteps;

@@ -49,31 +49,30 @@ public class Level : MonoBehaviour
         {
             currentLevel.Value = 3;
         }
-        switch (currentLevel.Value)
-        {
-            case 1:
-                if(KillCounter.Value >= ClearCondition_1.Value)
-                {
-                    levelCleared.SetActive(true);
-                    StartCoroutine(TransitionScene("Transition1"));
 
-                }
-                break;
-            case 2:
-                if (KillCounter.Value >= ClearCondition_2.Value)
-                {
-                    StartCoroutine(TransitionScene("Transition2"));
-                }
-                break;
-            case 3:
-                if (KillCounter.Value >= ClearCondition_3.Value)
-                {
-                    levelCleared.SetActive(true);
-                    StartCoroutine(TransitionScene("BossLevel"));
-                }
-                break;
-            default:
-                break;
+        if (currentLevel.Value == 1)
+        {
+            if (KillCounter.Value >= ClearCondition_1.Value)
+            {
+                levelCleared.SetActive(true);
+                StartCoroutine(TransitionScene("Transition1"));
+            }
+        }
+        else if (currentLevel.Value == 2)
+        {
+            if (KillCounter.Value >= ClearCondition_2.Value)
+            {
+                levelCleared.SetActive(true);
+                StartCoroutine(TransitionScene("Transition2"));
+            }
+        }
+        else if (currentLevel.Value == 3)
+        {
+            if (KillCounter.Value >= ClearCondition_3.Value)
+            {
+                levelCleared.SetActive(true);
+                StartCoroutine(TransitionScene("BossLevel"));
+            }
         }
     }
 
