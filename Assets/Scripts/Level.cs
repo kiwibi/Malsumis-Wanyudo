@@ -35,6 +35,10 @@ public class Level : MonoBehaviour
         KillCounter.Value = 0;
         currentLevel.Value = 1;
         audioPlayer = GetComponent<AudioPlayer>();
+        if (levelCleared == null)
+        {
+            Debug.LogError("Level clear not set");
+        }
     }
     void Update()
     {
