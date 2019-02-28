@@ -21,6 +21,8 @@ public class Level : MonoBehaviour
 
     public StringVariable loseScreen;
 
+    public GameObject levelCleared;
+
     [Header("Audio")] 
     public SimpleAudioEvent level1Transition;
     public SimpleAudioEvent level2Transition;
@@ -50,33 +52,37 @@ public class Level : MonoBehaviour
             case 1:
                 if(KillCounter.Value >= ClearCondition_1.Value)
                 {
-                    audioPlayer.PlaySound();
-                    currentLevel.Value += 1;
-                    KillCounter.Value = 0;
-                    playerHealth.Value = playerMaxHealth;
+                    levelCleared.SetActive(true);
+                    StartCoroutine(TransitionScene("Transition1"));
+
                 }
                 break;
             case 2:
                 if (KillCounter.Value >= ClearCondition_2.Value)
                 {
-                    audioPlayer.PlaySound();  
-                    currentLevel.Value += 1;
-                    KillCounter.Value = 0;
-                    playerHealth.Value = playerMaxHealth;
+                    StartCoroutine(TransitionScene("Transition2"));
                 }
                 break;
             case 3:
                 if (KillCounter.Value >= ClearCondition_3.Value)
                 {
-                    audioPlayer.PlaySound(); 
-                    KillCounter.Value = 0;
-                    playerHealth.Value = playerMaxHealth;
-                    currentLevel.Value += 1;
-                    SceneManager.LoadScene("BossLevel");
+                    levelCleared.SetActive(true);
+                    StartCoroutine(TransitionScene("BossLevel"));
                 }
                 break;
             default:
                 break;
         }
+    }
+
+    private IEnumerator TransitionScene(string scene)
+    {
+        pauseMenu.isPaused = true;
+        yield return new WaitForSecondsRealtime(2);
+        SceneManager.LoadScene(scene);
+        pauseMenu.isPaused = false;
+        currentLevel.Value += 1;
+        playerHealth.Value = playerMaxHealth; // Should not be needed here
+        
     }
 }
