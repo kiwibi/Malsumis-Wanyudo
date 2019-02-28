@@ -58,7 +58,8 @@ public class AlienStats : Stats
             Die();
         }
 
-        anim.SetTrigger("IsHit");
+        anim.SetBool("IsHit", true);
+        Invoke("ResetColor", 0.1f);
         
         if (AlienHealth.Value <= nextSpeedUp)
         {
@@ -88,5 +89,10 @@ public class AlienStats : Stats
         FireballMaxCooldown -= speed;
         FireballMinCooldown -= speed;
         DashCooldown -= speed;
+    }
+    
+    void ResetColor()
+    {
+        anim.SetBool("IsHit", false);   
     }
 }
