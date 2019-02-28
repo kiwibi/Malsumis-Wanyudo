@@ -54,8 +54,8 @@ public class DashUI : MonoBehaviour
         }
         else
         {
-            background.color = Color.yellow;
-            textField.text = alienStats.DashKey.ToString();
+            background.color = Color.white;
+            textField.text = "";
             counting = false;
         }
     }

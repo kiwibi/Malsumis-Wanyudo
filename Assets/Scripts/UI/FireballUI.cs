@@ -55,8 +55,8 @@ public class FireballUI : MonoBehaviour
         }
         else
         {
-            background.color = Color.red;
-            textField.text = alienStats.FireballKey.ToString();
+            background.color = Color.white;
+            textField.text = "";
             counting = false;
         }
     }

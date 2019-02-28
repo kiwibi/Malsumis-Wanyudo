@@ -33,6 +33,7 @@ public class transition : MonoBehaviour
     IEnumerator changeScene()
     {
         yield return new WaitForSecondsRealtime(1.5f);
+        fading = false;
         SceneManager.LoadScene("Level1");
     }
 }
