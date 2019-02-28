@@ -82,7 +82,6 @@ public class Level : MonoBehaviour
         SceneManager.LoadScene(scene);
         pauseMenu.isPaused = false;
         currentLevel.Value += 1;
-        //KillCounter.Value = 0;
         playerHealth.Value = playerMaxHealth; // Should not be needed here
         
     }
