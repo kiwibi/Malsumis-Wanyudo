@@ -10,11 +10,16 @@ public class BossLevel : MonoBehaviour
     public StringVariable winScreen;
     public IntVariable playerHealth;
     public IntVariable alienHealth;
+    public Animator anim;
     
     // Start is called before the first frame update
     void Start()
     {
-        
+        if (anim == null)
+        {
+            Debug.LogError("Missing animator");
+        }
+     anim.SetBool("Stage3", true);
     }
 
     // Update is called once per frame

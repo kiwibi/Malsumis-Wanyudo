@@ -48,3 +48,4 @@ MonoBehaviour:
   winScreen: {fileID: 11400000, guid: a781b3332190a4f439a50627b257a6a0, type: 2}
   playerHealth: {fileID: 11400000, guid: 2320b313e4ec8fe4f80cb51eba84ccfc, type: 2}
   alienHealth: {fileID: 11400000, guid: b6678d3ec2abc784186af8196058ead5, type: 2}
+  anim: {fileID: 0}
