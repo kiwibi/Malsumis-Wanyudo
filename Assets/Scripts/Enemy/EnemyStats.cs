@@ -39,7 +39,7 @@ public class EnemyStats : Stats
     }
 
     public override void DealDamage(int value) {
-        dmgFeedback.OnHit(false);
+        dmgFeedback.OnHit();
         m_Health -= value;
         if (m_Health <= 0)
         {

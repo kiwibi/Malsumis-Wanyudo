@@ -15,7 +15,7 @@ public class DamageFeedback : MonoBehaviour
     }
 
 
-    public void OnHit(bool Shake)
+    public void OnHit()
     {
        
         Flash();
@@ -24,10 +24,10 @@ public class DamageFeedback : MonoBehaviour
 
     public void Flash()
     {
-        if (anim.name == "EnemySprite 1" || anim.name == "EnemySprite 2")
+        if (anim.name == "EnemySprite 1" || anim.name == "EnemySprite 2" || anim.name == "PlayerSprite")
         {
             anim.SetBool("IsHit", true);
-            Invoke("ResetColor", 0.1f);
+            Invoke("ResetColor", 0.05f);
         }
     }
 

@@ -16,7 +16,7 @@ public class ScaleMove : MonoBehaviour
     void Start()
     {
         background = GetComponent<Image>();
-        speed = 50;
+        speed = 30;
         //movement
         targetPos = background.transform.position;
         Vector3 screenPos = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width / 2, Screen.height / 2, 0));
@@ -38,7 +38,7 @@ public class ScaleMove : MonoBehaviour
             float step = speed * 1.5f * Time.unscaledDeltaTime;
             background.transform.position = Vector3.MoveTowards(background.transform.position, targetPos, step);
             //Scale
-            step = speed / 9 * Time.unscaledDeltaTime;
+            step = speed / 12 * Time.unscaledDeltaTime;
             background.transform.localScale = Vector3.MoveTowards(background.transform.localScale, TargetScale, step);
         }
         else if (Vector3.Distance(background.transform.position,targetPos) < 0.1f)

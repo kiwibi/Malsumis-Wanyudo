@@ -28,6 +28,7 @@ public class PlayerStats : Stats
 
     public override void DealDamage(int value)
     {
+        dmgFeedback.OnHit();
         CurrentHealth.Value -= value;
     }
 

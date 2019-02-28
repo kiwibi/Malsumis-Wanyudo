@@ -37,7 +37,12 @@ public class DashUI : MonoBehaviour
             background.enabled = true;
             textField.enabled = true;
             titleField.GetComponent<Text>().enabled = true;
-            startAnimation.enabled = true;
+            if(alienStats.AlienLevel == 3)
+                startAnimation.enabled = false;
+            else
+            {
+                startAnimation.enabled = true;
+            }
         }
 
         if (alienStats.DashOnCooldown)
