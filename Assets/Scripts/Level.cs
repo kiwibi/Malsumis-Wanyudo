@@ -32,8 +32,6 @@ public class Level : MonoBehaviour
 
     void Start()
     {
-        KillCounter.Value = 0;
-        currentLevel.Value = 1;
         audioPlayer = GetComponent<AudioPlayer>();
         if (levelCleared == null)
         {
