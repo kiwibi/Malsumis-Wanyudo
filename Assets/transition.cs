@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class transition : MonoBehaviour
 {
+    public static bool fading;
+
     private LevelFade fadeEffects;
     // Update is called once per frame
     void Start()
@@ -13,9 +15,11 @@ public class transition : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetButtonDown("Fire1"))
+        if (Input.anyKeyDown && fading != true)
         {
-            //skip forward or leave scene
+            
+            fading = true;
+            fadeEffects.StartFade();
         }
     }
 }
