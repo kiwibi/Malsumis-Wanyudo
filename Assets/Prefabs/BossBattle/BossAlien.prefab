@@ -139,7 +139,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 21300000, guid: 96537970ace08e24c846d6eca1f2ff63, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 637c1358751de6e4a8215e648852b193, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -242,7 +242,6 @@ MonoBehaviour:
     ConstantValue: 0
     Variable: {fileID: 11400000, guid: 965c39f302e7b4b4da54c625ea6e9d03, type: 2}
   AlienHealth: {fileID: 11400000, guid: b6678d3ec2abc784186af8196058ead5, type: 2}
-  stats: {fileID: 0}
   currentState: {fileID: 11400000, guid: 87f2d40274e8f324599ebcc8f87b9064, type: 2}
   remainState: {fileID: 11400000, guid: 94420624caaabc64c94fd0bfd2a5c2c3, type: 2}
   statsObject: {fileID: 11400000, guid: c044096cf5a628348ad07a76ae7099be, type: 2}
@@ -255,10 +254,15 @@ MonoBehaviour:
   bossFireballState: {fileID: 11400000, guid: 25f3d900c41491941a20cb9769d0e02b, type: 2}
   fireball: {fileID: 3233577930252334479, guid: b14a6813a41bf0c4b8604367c1d06fed,
     type: 3}
+  FireballMaterial: {fileID: 0}
+  DashMaterial: {fileID: 0}
   currentLevel: {fileID: 11400000, guid: b91425eed0d66394a9e1aa9881387d53, type: 2}
+  stats: {fileID: 0}
   chaseTarget: {fileID: 0}
   stateTimeElapsed: 0
   dashStartingPosition: {x: 0, y: 0, z: 0}
+  targetPos: {x: 0, y: 0, z: 0}
+  hasTarget: 0
 --- !u!114 &3798695269495349210
 MonoBehaviour:
   m_ObjectHideFlags: 0
