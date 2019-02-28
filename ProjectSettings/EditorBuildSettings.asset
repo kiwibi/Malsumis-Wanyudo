@@ -26,4 +26,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Scenes/Transition2.unity
     guid: 83a1c601525b09d48811a97ea6f82053
+  - enabled: 1
+    path: Assets/_Scenes/WinScene.unity
+    guid: 47ae0e4fb53496446be6520f0c0428c3
+  - enabled: 1
+    path: Assets/_Scenes/BossGameOver.unity
+    guid: 1bf95fa007e96364390b0bc7411fa1ca
   m_configObjects: {}

@@ -7,7 +7,9 @@ public class BossLevel : MonoBehaviour
 {
     public StringVariable loseScreen;
     public StringVariable titleScreen;
+    public StringVariable winScreen;
     public IntVariable playerHealth;
+    public IntVariable alienHealth;
     
     // Start is called before the first frame update
     void Start()
@@ -22,6 +24,10 @@ public class BossLevel : MonoBehaviour
         {
             SceneManager.LoadScene(loseScreen.Value);
         }
-        
+
+        if (alienHealth.Value <= 0)
+        {
+            SceneManager.LoadScene(winScreen.Value);
+        }
     }
 }
