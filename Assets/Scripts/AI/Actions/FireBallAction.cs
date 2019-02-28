@@ -3,7 +3,7 @@
 namespace AI.Actions
 {
     [CreateAssetMenu (menuName = "PluggableAI/Actions/FireballAction")]
-    public class FireballAction : Action
+    public class FireBallAction : Action
     {
         public override void Act (StateController controller)
         {
