@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class transition : MonoBehaviour
 {
     public static bool fading;
+    public IntVariable currentLevel;
 
     private flashingText[] fadeEffects;
 
@@ -15,6 +16,8 @@ public class transition : MonoBehaviour
     void Start()
     {
         fadeEffects = GetComponentsInChildren<flashingText>();
+        
+        Debug.LogError("currentLevel missing");
     }
 
     void Update()
@@ -34,6 +37,14 @@ public class transition : MonoBehaviour
     {
         yield return new WaitForSecondsRealtime(1.5f);
         fading = false;
-        SceneManager.LoadScene("Level1");
+        if (currentLevel.Value > 3)
+        {
+            SceneManager.LoadScene("BossLevel");
+        }
+        else
+        {
+            SceneManager.LoadScene("Level1");
+        }
+
     }
 }

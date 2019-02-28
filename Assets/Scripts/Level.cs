@@ -55,7 +55,7 @@ public class Level : MonoBehaviour
             if (KillCounter.Value >= ClearCondition_1.Value)
             {
                 levelCleared.SetActive(true);
-                StartCoroutine(TransitionScene("Transition1"));
+                StartCoroutine(TransitionScene("Transition1", 2));
             }
         }
         else if (currentLevel.Value == 2)
@@ -63,7 +63,7 @@ public class Level : MonoBehaviour
             if (KillCounter.Value >= ClearCondition_2.Value)
             {
                 levelCleared.SetActive(true);
-                StartCoroutine(TransitionScene("Transition2"));
+                StartCoroutine(TransitionScene("Transition2", 3));
             }
         }
         else if (currentLevel.Value == 3)
@@ -71,19 +71,19 @@ public class Level : MonoBehaviour
             if (KillCounter.Value >= ClearCondition_3.Value)
             {
                 levelCleared.SetActive(true);
-                StartCoroutine(TransitionScene("BossLevel"));
+                StartCoroutine(TransitionScene("Transition3", 4));
             }
         }
     }
 
-    private IEnumerator TransitionScene(string scene)
+    private IEnumerator TransitionScene(string scene, int level)
     {
         pauseMenu.isPaused = true;
         yield return new WaitForSecondsRealtime(2);
         SceneManager.LoadScene(scene);
         pauseMenu.isPaused = false;
-        currentLevel.Value += 1;
         playerHealth.Value = playerMaxHealth; // Should not be needed here
-        
+        currentLevel.Value = level;
+
     }
 }
