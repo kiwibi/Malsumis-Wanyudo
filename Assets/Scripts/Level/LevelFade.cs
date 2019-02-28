@@ -7,9 +7,6 @@ public class LevelFade : MonoBehaviour
     public IntReference BlackoutTimer;
     public FloatReference FadeInSpeed;
 
-    //public SpriteRenderer AlienPicture;
-    //public Animator alien_anim;
-
     private bool fadedIn;
     private CanvasGroup transitionCanvas;
     
