@@ -44,7 +44,7 @@ RenderSettings:
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 11
-  m_GIWorkflowMode: 1
+  m_GIWorkflowMode: 0
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -201,11 +201,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8670752760360395797, guid: 6009d1e40db63224d97175d9bf199981,
+    - target: {fileID: 4664267459303946421, guid: 6009d1e40db63224d97175d9bf199981,
         type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
+      propertyPath: levelCleared
+      value: 
+      objectReference: {fileID: 1425567954}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6009d1e40db63224d97175d9bf199981, type: 3}
 --- !u!20 &519420031 stripped
@@ -301,6 +301,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f697b220a597ca045831133bdcb34b74, type: 3}
+--- !u!1 &1425567954 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8585993848390560077, guid: 721687391730b314ab62b0f11acedf3c,
+    type: 3}
+  m_PrefabInstance: {fileID: 598705949382213893}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1745741285 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6940514867228395127, guid: 4734ddfc8e31cd6478d7be1bbe3eed88,
@@ -826,6 +832,11 @@ PrefabInstance:
     - target: {fileID: 5332596825281080594, guid: 721687391730b314ab62b0f11acedf3c,
         type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8585993848390560077, guid: 721687391730b314ab62b0f11acedf3c,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
