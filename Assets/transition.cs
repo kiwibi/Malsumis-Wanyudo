@@ -16,8 +16,12 @@ public class transition : MonoBehaviour
     void Start()
     {
         fadeEffects = GetComponentsInChildren<flashingText>();
-        
-        Debug.LogError("currentLevel missing");
+
+        if (currentLevel == null)
+        {
+            Debug.LogError("currentLevel missing");
+        }
+
     }
 
     void Update()
