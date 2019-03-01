@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc7286fcf02db8e45aa0490c2d269030, type: 3}
   m_Name: AlienStats
   m_EditorClassIdentifier: 
-  AlienSpeed: 2
+  AlienSpeed: 3
   AlienLevel: 3
   isKillable: 0
   DashKey: 113
@@ -25,7 +25,7 @@ MonoBehaviour:
   waitBeforeDash: 0
   FireballKey: 101
   FireballSpawned: 0
-  FireballOnCooldown: 1
+  FireballOnCooldown: 0
   FireballCooldown: 5
   FireballMaxCooldown: 5
   FireballMinCooldown: 5
