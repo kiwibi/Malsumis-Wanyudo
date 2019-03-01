@@ -408,7 +408,9 @@ MonoBehaviour:
   remainState: {fileID: 11400000, guid: 94420624caaabc64c94fd0bfd2a5c2c3, type: 2}
   statsObject: {fileID: 11400000, guid: 98046954293c27341844ac15558153f1, type: 2}
   stateVisualizer: {fileID: 2995990598099252652}
-  dashState: {fileID: 11400000, guid: ef62db16393a86240b47a054ee3d4fab, type: 2}
+  dashState: {fileID: 11400000, guid: b2ca57dede437ed4c9142f96de1006e4, type: 2}
+  prepareDashState: {fileID: 11400000, guid: 9eea156c54c1c564b817b56a07b965b8, type: 2}
+  returnDashState: {fileID: 11400000, guid: ef62db16393a86240b47a054ee3d4fab, type: 2}
   followState: {fileID: 11400000, guid: a1bc61605b454224ab1f83eddc6ef187, type: 2}
   fireballState: {fileID: 11400000, guid: e6bbbd1c6149d3c469d24657344f1719, type: 2}
   bossDashState: {fileID: 11400000, guid: 77962d99c0f4d9d4e948673df2fe297d, type: 2}

@@ -18,6 +18,8 @@ public class StateController : MonoBehaviour
     // TODO find a way to do this better
     [Header("Used for resetting abilities")]
     public State dashState;
+    public State prepareDashState;
+    public State returnDashState;
     public State followState;
     public State fireballState;
     public State bossDashState;
@@ -30,11 +32,11 @@ public class StateController : MonoBehaviour
     [Header("Materials for line renderer")]
     public Material FireballMaterial;
     public Material DashMaterial;
-    
+
     [Header("Level info")]
     public IntVariable currentLevel;
 
-    [HideInInspector]public AlienStats stats;
+    [HideInInspector] public AlienStats stats;
     [HideInInspector] public Transform chaseTarget;
     [HideInInspector] public float stateTimeElapsed;
     [HideInInspector] public Vector3 dashStartingPosition;
@@ -46,7 +48,7 @@ public class StateController : MonoBehaviour
 
     public Vector3 targetPos;
     public bool hasTarget;
-    
+
     private void OnDrawGizmos()
     {
         if (currentState != null && stateVisualizer != null)
@@ -96,7 +98,7 @@ public class StateController : MonoBehaviour
 
     public void TransitionToState(State nextState)
     {
-        if (currentState == followState && nextState == dashState || currentState == bossFollowState && nextState == bossDashState)
+        if (currentState == prepareDashState && nextState == dashState || currentState == bossFollowState && nextState == bossDashState)
         {
             PlayDashSound();
         }
@@ -106,7 +108,7 @@ public class StateController : MonoBehaviour
             PlayFireballLaunchSound();
         }
 
-        if (currentState == dashState && nextState == followState || currentState == bossDashState && nextState == bossFollowState)
+        if (currentState == returnDashState && nextState == followState || currentState == bossDashState && nextState == bossFollowState)
         {
             StartCoroutine("ResetDash");
         }
