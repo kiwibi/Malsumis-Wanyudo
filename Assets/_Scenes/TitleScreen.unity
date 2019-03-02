@@ -9610,7 +9610,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.10145959, g: 0.19836387, b: 0.2264151, a: 0}
+  m_BackGroundColor: {r: 0.20784314, g: 0.25490198, b: 0.37254903, a: 0}
   m_projectionMatrixMode: 1
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
@@ -9725,6 +9725,75 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d70cc298114d775429754394fdc4a5fe, type: 3}
+--- !u!1001 &2520939715096558844
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4030436222510472833, guid: c8b14a2e0ef640c4ba1587bc04d4855f,
+        type: 3}
+      propertyPath: m_Name
+      value: MenuCursor
+      objectReference: {fileID: 0}
+    - target: {fileID: 4030436222510472835, guid: c8b14a2e0ef640c4ba1587bc04d4855f,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 9.087947
+      objectReference: {fileID: 0}
+    - target: {fileID: 4030436222510472835, guid: c8b14a2e0ef640c4ba1587bc04d4855f,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.1898723
+      objectReference: {fileID: 0}
+    - target: {fileID: 4030436222510472835, guid: c8b14a2e0ef640c4ba1587bc04d4855f,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.13206677
+      objectReference: {fileID: 0}
+    - target: {fileID: 4030436222510472835, guid: c8b14a2e0ef640c4ba1587bc04d4855f,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4030436222510472835, guid: c8b14a2e0ef640c4ba1587bc04d4855f,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4030436222510472835, guid: c8b14a2e0ef640c4ba1587bc04d4855f,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4030436222510472835, guid: c8b14a2e0ef640c4ba1587bc04d4855f,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4030436222510472835, guid: c8b14a2e0ef640c4ba1587bc04d4855f,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4030436222510472835, guid: c8b14a2e0ef640c4ba1587bc04d4855f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4030436222510472835, guid: c8b14a2e0ef640c4ba1587bc04d4855f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4030436222510472835, guid: c8b14a2e0ef640c4ba1587bc04d4855f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c8b14a2e0ef640c4ba1587bc04d4855f, type: 3}
 --- !u!114 &7186636502784726835 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7186636502784726835, guid: d70cc298114d775429754394fdc4a5fe,
