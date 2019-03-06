@@ -5,9 +5,14 @@ using UnityEngine;
 public class bloodPoolBehaviour : MonoBehaviour
 {
     public Sprite[] Bloodpools;
-    // Start is called before the first frame update
+    private AudioPlayer audioPlayer;
+    public SimpleAudioEvent deathSound;
+    private bool played;
+
     void Start()
     {
+        audioPlayer = GetComponent<AudioPlayer>();
+        /////
         int index = Random.Range(0, Bloodpools.Length);
         GetComponentInChildren<SpriteRenderer>().sprite = Bloodpools[index];
         float angle = Random.Range(0.0f, 359.9f);
@@ -20,7 +25,17 @@ public class bloodPoolBehaviour : MonoBehaviour
 
     void Update()
     {
-        
+        if(played == false)
+        {
+            PlayDeathSound();
+            played = true;
+        }
         transform.position = transform.position + Vector3.down * 0.5f * Time.deltaTime;
+    }
+
+    public void PlayDeathSound()
+    {
+        audioPlayer.AudioEvent = deathSound;
+        audioPlayer.PlaySound();
     }
 }
