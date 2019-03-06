@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class transition : MonoBehaviour
 {
-    public static bool fading;
     public IntVariable currentLevel;
 
     // Update is called once per frame
@@ -22,24 +21,16 @@ public class transition : MonoBehaviour
 
     void Update()
     {
-        if (Input.anyKeyDown && fading != true)
+        if (Input.anyKeyDown)
         {
-            StartCoroutine(changeScene());
+            if (currentLevel.Value > 3)
+            {
+                SceneManager.LoadScene("BossLevel");
+            }
+            else
+            {
+                SceneManager.LoadScene("Level1");
+            }
         }
-    }
-
-    IEnumerator changeScene()
-    {
-        yield return new WaitForSecondsRealtime(0.1f);
-        fading = false;
-        if (currentLevel.Value > 3)
-        {
-            SceneManager.LoadScene("BossLevel");
-        }
-        else
-        {
-            SceneManager.LoadScene("Level1");
-        }
-
     }
 }
