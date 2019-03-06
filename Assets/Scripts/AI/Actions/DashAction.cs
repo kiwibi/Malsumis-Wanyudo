@@ -34,6 +34,11 @@ namespace AI.Actions
                         closestEnemyDist = distance;
                         var direction = enemy.transform.position - controller.transform.position;
                         controller.targetPos = direction * controller.statsObject.DashDistance;
+                        Vector3 up = new Vector3(0, 0, -1);
+                        var rotation = Quaternion.LookRotation(direction, up);
+                        rotation.x = 0;
+                        rotation.y = 0;
+                        controller.GetComponentInChildren<SpriteRenderer>().transform.rotation = rotation;
                     }
                 }
 
