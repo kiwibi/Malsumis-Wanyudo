@@ -15,7 +15,6 @@ public class EnemyStats : Stats
     
     [Header("Sounds")]
     public SimpleAudioEvent hurtSound;
-    public SimpleAudioEvent deathSound;
     public SimpleAudioEvent shootGunSound;
     
     private int m_Health;
@@ -41,14 +40,7 @@ public class EnemyStats : Stats
     public override void DealDamage(int value) {
         dmgFeedback.OnHit();
         m_Health -= value;
-        if (m_Health <= 0)
-        {
-            PlayDeathSound();
-        }
-        else
-        {
-            PlayHurtSound();
-        }
+        PlayHurtSound();
     }
     
     
@@ -58,16 +50,9 @@ public class EnemyStats : Stats
         audioPlayer.PlaySound();
     }
 
-    public void PlayDeathSound()
-    {
-        audioPlayer.AudioEvent = deathSound;
-        audioPlayer.PlaySound();
-    }
-
     public override void Die()
     {
         KillCount.Value++;
         Destroy(gameObject);
-        //Debug.Log("Enemy health: " + KillCount.Value);
     }
 }
