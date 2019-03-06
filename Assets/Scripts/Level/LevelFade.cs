@@ -44,7 +44,6 @@ public class LevelFade : MonoBehaviour
         StartCoroutine(Fade());
         yield return new WaitForSecondsRealtime(BlackoutTimer.Value);
         StartCoroutine(Fade());
-        transition.fading = false;
         
     }
 
