@@ -21,7 +21,7 @@ MonoBehaviour:
   DashDuration: 0.4
   DashDistance: 1
   DashSpeed: 5
-  DashOnCooldown: 0
+  DashOnCooldown: 1
   waitBeforeDash: 0
   FireballKey: 101
   FireballSpawned: 0
