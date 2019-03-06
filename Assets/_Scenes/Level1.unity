@@ -334,6 +334,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2652309353226456882, guid: c052c3438c225fd449c10f804a7ba429,
+        type: 3}
+      propertyPath: InvincibleFrameTime.UseConstant
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2652309353226456882, guid: c052c3438c225fd449c10f804a7ba429,
+        type: 3}
+      propertyPath: InvincibleFrameTime.Variable
+      value: 
+      objectReference: {fileID: 11400000, guid: a90dc7948c509004586a684e8d5a0ac4,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c052c3438c225fd449c10f804a7ba429, type: 3}
 --- !u!1001 &1936118654
