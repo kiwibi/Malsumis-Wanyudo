@@ -9,9 +9,17 @@ public class SpawnFireball : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (spawning &&  transform.localScale.x < 2)
+        if (spawning)
         {
-            transform.localScale += new Vector3(0.05f, 0.05f, 0);
+            if (transform.localScale.x < 0.5f)
+            {
+
+                transform.localScale += new Vector3(0.01f, 0.01f, 0);
+            }
+            else
+            {
+                transform.localScale = new Vector3(0.3f, 0.3f, 0);
+            }
         }
         else
         {
