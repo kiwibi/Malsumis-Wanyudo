@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Net.WebSockets;
+using UnityEngine;
 
 namespace AI.Actions
 {
@@ -19,12 +20,34 @@ namespace AI.Actions
             Collider2D collider = controller.GetComponent<BoxCollider2D>();
             collider.enabled = true;
 
+            var enemies = GameObject.FindGameObjectsWithTag("Enemy");
+
+
+            if (!controller.hasTarget)
+            {
+                float closestEnemyDist = 100;
+                foreach (var enemy in enemies)
+                {
+                    var distance = Vector3.Distance(enemy.transform.position, controller.transform.position);
+                    if (distance < closestEnemyDist)
+                    {
+                        closestEnemyDist = distance;
+                        var direction = enemy.transform.position - controller.transform.position;
+                        controller.targetPos = direction * controller.statsObject.DashDistance;
+                    }
+                }
+
+                controller.hasTarget = true;
+            }
+            
+            /*
             if (!controller.hasTarget)
             {
                 controller.targetPos = new Vector3(0,
                     controller.transform.position.y + controller.statsObject.DashDistance,
                     0);
             }
+            */
 
             controller.transform.Translate(controller.targetPos*controller.statsObject.DashSpeed* Time.deltaTime);
         }
