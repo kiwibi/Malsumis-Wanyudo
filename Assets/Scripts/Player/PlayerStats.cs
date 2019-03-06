@@ -7,12 +7,16 @@ public class PlayerStats : Stats
     public IntReference MaxHP;
     public FloatReference speed;
     public FloatReference pistolCooldown;
+    public FloatReference InvincibleFrameTime;
     public IntVariable CurrentHealth;
     public AudioClip shootGun;
     private DamageFeedback dmgFeedback;
 
+    private bool IsHit;
+
     void Start()
     {
+        IsHit = false;
         CurrentHealth.Value = MaxHP.Value;
         dmgFeedback = GetComponentInChildren<DamageFeedback>();
     }
@@ -28,12 +32,23 @@ public class PlayerStats : Stats
 
     public override void DealDamage(int value)
     {
-        dmgFeedback.OnHit();
-        CurrentHealth.Value -= value;
+        if (IsHit == false)
+        {
+            dmgFeedback.Flash();
+            StartCoroutine(InvincibilityFrame());
+            CurrentHealth.Value -= value;
+        }
     }
 
     public override void Die()
     {
         Destroy(gameObject);
+    }
+
+    IEnumerator InvincibilityFrame()
+    {
+        IsHit = true;
+        yield return new WaitForSecondsRealtime(InvincibleFrameTime.Value);
+        IsHit = false;
     }
 }
