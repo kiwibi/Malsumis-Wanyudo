@@ -40,6 +40,7 @@ public class EnemyBehavior : MonoBehaviour
     {
         var bullet = Instantiate(Bullet, new Vector3(bulletSpawn.transform.position.x, bulletSpawn.transform.position.y, 0), Quaternion.identity);
         bullet.GetComponentInChildren<SpriteRenderer>().transform.rotation = enemySprite.transform.rotation;
+        bullet.GetComponent<BulletBehavior>().direction = GetComponentInChildren<SpriteRenderer>().transform.up;
         audioPlayer.AudioEvent = stats.shootGunSound;
         audioPlayer.PlaySound();
         
@@ -60,7 +61,7 @@ public class EnemyBehavior : MonoBehaviour
     {
        
         Vector3 dir = player.transform.position - transform.position;
-        Vector3 up = new Vector3(0, 0, 1);
+        Vector3 up = new Vector3(0, 0, -1);
         var rotation = Quaternion.LookRotation(dir, up);
         rotation.x = 0;
         rotation.y = 0;

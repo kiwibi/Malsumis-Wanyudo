@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Experimental.U2D;
 
 public class PlayerShooting : MonoBehaviour
 {
@@ -34,6 +35,7 @@ public class PlayerShooting : MonoBehaviour
 
             var bullet = Instantiate(Bullet, new Vector3(bulletSpawnPoint.transform.position.x, bulletSpawnPoint.transform.position.y, 0), Quaternion.identity);
             bullet.GetComponentInChildren<SpriteRenderer>().transform.rotation = spriteRenderer.transform.rotation;
+            bullet.GetComponent<BulletBehavior>().direction = GetComponentInChildren<SpriteRenderer>().transform.up;
             playerPistolCooldown = stats.pistolCooldown.Value;
             audioPlayer.PlaySound();
         }

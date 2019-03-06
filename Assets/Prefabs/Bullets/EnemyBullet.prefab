@@ -71,7 +71,7 @@ SpriteRenderer:
   m_Sprite: {fileID: 21300000, guid: 9ef2aa8f861d4b24ea4b9ea4862e09f8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
-  m_FlipY: 1
+  m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 5.24, y: 6.01}
   m_AdaptiveModeThreshold: 0.5
@@ -165,7 +165,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: {fileID: 11400000, guid: 5358b2475ae807847ad2232fe149545e, type: 2}
-  BulletDirectionUp: 0
+  direction: {x: 0, y: 0, z: 0}
 --- !u!114 &3513742817989155722
 MonoBehaviour:
   m_ObjectHideFlags: 0
