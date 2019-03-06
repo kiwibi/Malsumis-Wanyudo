@@ -23,6 +23,8 @@ namespace AI.Actions
             if (Camera.main == null) return;
             Vector3 screenPos = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, 10));
 
+            controller.GetComponentInChildren<SpriteRenderer>().transform.rotation = Quaternion.identity;
+            
             controller.transform.position = new Vector3(
 
                 Mathf.Clamp(controller.transform.position.x, 0.1f, screenPos.x),
