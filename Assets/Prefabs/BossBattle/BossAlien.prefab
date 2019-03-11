@@ -42,8 +42,8 @@ Light:
   serializedVersion: 8
   m_Type: 2
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 5
-  m_Range: 10
+  m_Intensity: 10
+  m_Range: 3
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
@@ -263,6 +263,7 @@ MonoBehaviour:
   chaseTarget: {fileID: 0}
   stateTimeElapsed: 0
   dashStartingPosition: {x: 0, y: 0, z: 0}
+  spriteRenderer: {fileID: 0}
   targetPos: {x: 0, y: 0, z: 0}
   hasTarget: 0
 --- !u!114 &3798695269495349210
@@ -325,7 +326,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DamageAmount:
     UseConstant: 1
-    ConstantValue: 3
+    ConstantValue: 2
     Variable: {fileID: 0}
   damageType: {fileID: 11400000, guid: 088b07274c7e6a14eaf71718e376ff89, type: 2}
 --- !u!114 &1471154475417815572

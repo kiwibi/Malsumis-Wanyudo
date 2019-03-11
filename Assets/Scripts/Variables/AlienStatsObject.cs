@@ -26,6 +26,9 @@ public class AlienStatsObject : ScriptableObject
     [Header("BOSS: Fireball Ability")]
     public float FireballMaxCooldown;
     public float FireballMinCooldown;
+    public int fireBalls;
+    public int fireballAngle;
+    public int fireballSpread;
 
     [Header("BOSS: Dash Ability")]
     public float waitBeforeDash;

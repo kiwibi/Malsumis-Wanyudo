@@ -25,11 +25,14 @@ MonoBehaviour:
   FireballKey: 101
   FireballSpawned: 0
   FireballOnCooldown: 1
-  FireballCooldown: 1
+  FireballCooldown: 0.9
   FireballMaxCooldown: 1
   FireballMinCooldown: 1
+  fireBalls: 5
+  fireballAngle: -60
+  fireballSpread: 30
   waitBeforeDash: 0.5
-  dashColor: {r: 1, g: 0.3820755, b: 0.3820755, a: 0}
+  dashColor: {r: 1, g: 0.015686274, b: 0.6269707, a: 0}
   returningLocation: 7
   dashSound: {fileID: 11400000, guid: ff1ad0254d04a7643a248d4242b910ef, type: 2}
   shootFireball: {fileID: 11400000, guid: 897320b39b0127849b403e1aef86e0b4, type: 2}
