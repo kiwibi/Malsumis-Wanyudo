@@ -3,11 +3,12 @@
 [CreateAssetMenu(menuName = "Alien/AlienStats")]
 public class AlienStatsObject : ScriptableObject
 {
-    [Header("Alien stats")]
+    [Header("1-3 Levels: Alien Stats")]
     public float AlienSpeed;
     public int AlienLevel;
     public bool isKillable;
-    [Header("Dash Ability")]
+
+    [Header("1-3 Levels: Dash Ability")]
     public KeyCode DashKey = KeyCode.Q;
     public float StartDashCooldown;
     public float DashCooldown;
@@ -15,20 +16,25 @@ public class AlienStatsObject : ScriptableObject
     public float DashDistance;
     public float DashSpeed;
     public bool DashOnCooldown;
-    public float waitBeforeDash;
 
-    [Header("Fireball Ability")]
+    [Header("1-3 Levels: Fireball Ability")]
     public KeyCode FireballKey = KeyCode.E;
     public bool FireballSpawned;
     public bool FireballOnCooldown;
     public float FireballCooldown;
+
+    [Header("BOSS: Fireball Ability")]
     public float FireballMaxCooldown;
     public float FireballMinCooldown;
+
+    [Header("BOSS: Dash Ability")]
+    public float waitBeforeDash;
+    public Color dashColor;
+
+    [Header("BOSS: Fix boss dropping too low")]
+    public int returningLocation;
 
     [Header("Alien sounds")]
     public SimpleAudioEvent dashSound;
     public SimpleAudioEvent shootFireball;
-
-    [Header("Fix alien dropping too low")]
-    public int returningLocation;
 }

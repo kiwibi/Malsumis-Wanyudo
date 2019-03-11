@@ -1,10 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace AI.Actions
 {
-    [CreateAssetMenu(menuName = "PluggableAI/Actions/BossFollow")]
+    [CreateAssetMenu(menuName = "PluggableAI/Actions/Boss/BossFollow")]
     public class BossFollowAction : Action
     {
         public override void Act(StateController controller)
@@ -31,7 +29,11 @@ namespace AI.Actions
                 }
             }
 
-            if (Camera.main == null) return;
+            if (Camera.main == null)
+            {
+                return;
+            }
+
             Vector3 screenPos = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, 10));
 
             controller.transform.position = new Vector3(
@@ -40,6 +42,13 @@ namespace AI.Actions
                 Mathf.Clamp(controller.transform.position.y, 0.1f, screenPos.y),
                 0
             );
+
+            // Rotate towards player
+            Quaternion rotation =
+                Quaternion.LookRotation(GameObject.FindGameObjectWithTag("Player").transform.position - controller.transform.position, new Vector3(0, 0, -1));
+            rotation.x = 0;
+            rotation.y = 0;
+            controller.spriteRenderer.transform.rotation = rotation;
         }
     }
 }

@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace AI.Actions
 {
@@ -13,8 +11,8 @@ namespace AI.Actions
         }
         private void Dash(StateController controller)
         {
-            Vector3 targetPosition = new Vector3(0, controller.transform.position.y + controller.statsObject.DashDistance, 0);
-            controller.transform.Translate(targetPosition * controller.statsObject.DashSpeed * Time.deltaTime);
+            Vector3 direction = controller.dashStartingPosition - controller.transform.position;
+            controller.transform.Translate(direction * controller.statsObject.DashSpeed * Time.deltaTime);
         }
     }
 }

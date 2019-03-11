@@ -2,7 +2,7 @@
 
 namespace AI.Decisions
 {
-    [CreateAssetMenu(menuName = "PluggableAI/Decisions/BossDash")]
+    [CreateAssetMenu(menuName = "PluggableAI/Decisions/Boss/BossDash")]
     public class BossDashDecision : Decision
     {
         public override bool Decide(StateController controller)

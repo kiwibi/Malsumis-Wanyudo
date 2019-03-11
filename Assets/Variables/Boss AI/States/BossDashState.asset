@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c85b2b50a6cf514469b5fb638d6e5b1c, type: 3}
-  m_Name: BossPrepareDashState
+  m_Name: BossDashState
   m_EditorClassIdentifier: 
   actions:
-  - {fileID: 11400000, guid: 3b0572fe21cfa3e409bb6e0ee6a758b9, type: 2}
+  - {fileID: 11400000, guid: 86a0675f9b072a74f9ea1a38935c55a2, type: 2}
   transitions:
-  - decision: {fileID: 11400000, guid: 80947c38d31892e48a63e2267bf8c34d, type: 2}
-    trueState: {fileID: 11400000, guid: d9f9fe11bb610ba4fa0654880166b98a, type: 2}
+  - decision: {fileID: 11400000, guid: 581c0ddd50ea73c45ad7cb17e5f6e318, type: 2}
+    trueState: {fileID: 11400000, guid: 77962d99c0f4d9d4e948673df2fe297d, type: 2}
     falseState: {fileID: 11400000, guid: 94420624caaabc64c94fd0bfd2a5c2c3, type: 2}
-  sceneGizmoColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  sceneGizmoColor: {r: 0.4276561, g: 0.026432898, b: 0.509434, a: 1}

@@ -1,10 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace AI.Actions
 {
-    [CreateAssetMenu(menuName = "PluggableAI/Actions/BossFireball")]
+    [CreateAssetMenu(menuName = "PluggableAI/Actions/Boss/BossFireball")]
     public class BossFireballAction : Action
     {
         public override void Act(StateController controller)

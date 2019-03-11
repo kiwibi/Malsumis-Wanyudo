@@ -40,11 +40,13 @@ public class StateController : MonoBehaviour
     [HideInInspector] public Transform chaseTarget;
     [HideInInspector] public float stateTimeElapsed;
     [HideInInspector] public Vector3 dashStartingPosition;
+    [HideInInspector] public SpriteRenderer spriteRenderer;
 
     private bool aiActive = true;
     private BoxCollider2D collider2d;
     private AudioPlayer audioPlayer;
     private Light lightSource;
+    private Vector3 dashTarget;
 
     public Vector3 targetPos;
     public bool hasTarget;
@@ -76,6 +78,7 @@ public class StateController : MonoBehaviour
         FindTarget();
         audioPlayer = GetComponent<AudioPlayer>();
         lightSource = GetComponentInChildren<Light>();
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
 
         AlienHealth.Value = AlienMaxHealth.Value;
     }
@@ -150,6 +153,18 @@ public class StateController : MonoBehaviour
     public void SetLightColor(Color color)
     {
         lightSource.color = color;
+    }
+
+    public void SetDashTarget(Vector3 target)
+    {
+        dashTarget = target;
+        dashStartingPosition = transform.position;
+        dashStartingPosition.z = 0;
+    }
+
+    public Vector3 GetDashPosition()
+    {
+        return dashTarget;
     }
 
     private IEnumerator ResetDash()

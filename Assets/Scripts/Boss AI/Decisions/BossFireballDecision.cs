@@ -2,7 +2,7 @@
 
 namespace AI.Decisions
 {
-    [CreateAssetMenu(menuName = "PluggableAI/Decisions/BossFireball")]
+    [CreateAssetMenu(menuName = "PluggableAI/Decisions/Boss/BossFireball")]
     public class BossFireballDecision : Decision
     {
         public override bool Decide(StateController controller)

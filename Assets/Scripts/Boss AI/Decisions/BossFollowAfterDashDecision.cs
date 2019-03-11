@@ -2,8 +2,8 @@
 
 namespace AI.Decisions
 {
-    [CreateAssetMenu(menuName = "PluggableAI/Decisions/FollowAfterDash")]
-    public class FollowAfterDashDecision : Decision
+    [CreateAssetMenu(menuName = "PluggableAI/Decisions/Boss/FollowAfterDash")]
+    public class BossFollowAfterDashDecision : Decision
     {
         public override bool Decide(StateController controller)
         {
@@ -12,6 +12,7 @@ namespace AI.Decisions
 
         private bool Follow(StateController controller)
         {
+
             return controller.CheckIfCountDownElapsed(controller.statsObject.DashDuration);
         }
     }
