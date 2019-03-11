@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(EnemyStats))]
@@ -9,7 +8,7 @@ public class EnemyAI : MonoBehaviour
     private EnemyStats stats;
     private EnemyBehavior behavior;
 
-    void Start()
+    private void Start()
     {
         stats = GetComponent<EnemyStats>();
         behavior = GetComponent<EnemyBehavior>();
@@ -17,7 +16,7 @@ public class EnemyAI : MonoBehaviour
         StartCoroutine(ChangeDirectionDecision());
     }
 
-    IEnumerator ShootDecision()
+    private IEnumerator ShootDecision()
     {
         while (true)
         {
@@ -26,11 +25,11 @@ public class EnemyAI : MonoBehaviour
         }
     }
 
-    IEnumerator ChangeDirectionDecision()
+    private IEnumerator ChangeDirectionDecision()
     {
         while (true)
         {
-            yield return new WaitForSeconds(Random.Range(stats.MinShootDelay.Value, stats.MaxShootDelay.Value));
+            yield return new WaitForSeconds(Random.Range(stats.MinChangeDirectionDelay.Value, stats.MaxChangeDirectionDelay.Value));
             behavior.ChangeDirection();
         }
     }
