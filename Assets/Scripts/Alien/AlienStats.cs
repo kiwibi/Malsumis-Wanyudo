@@ -6,7 +6,7 @@ public class AlienStats : Stats
     public IntReference AlienMaxHealth;
     public IntVariable AlienHealth;
     private int nextSpeedUp;
-    public readonly int speedUpSteps = 30;
+    public readonly int speedUpSteps = 20;
     private Light lightSource;
 
     private StateController controller;
