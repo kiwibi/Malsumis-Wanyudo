@@ -141,16 +141,16 @@ RectTransform:
   m_GameObject: {fileID: 784886976}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 40, y: 40, z: 2.3766}
+  m_LocalScale: {x: 40, y: 40, z: 0}
   m_Children: []
   m_Father: {fileID: 598705950742073860}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -881.5679, y: 444.99933}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.07410813, y: 0.49999994}
+  m_AnchoredPosition: {x: -887.25, y: 444.65}
+  m_SizeDelta: {x: 3.5, y: 4.6}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &784886980
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -177,8 +177,8 @@ MonoBehaviour:
   clearLevel3: {fileID: 11400000, guid: 170435ce370a8784c960f29ab5b90f21, type: 2}
   CurrentHealth: {fileID: 11400000, guid: 2320b313e4ec8fe4f80cb51eba84ccfc, type: 2}
   HeartColor: {fileID: 11400000, guid: e0400bff596bb374cbd250a5fd8610b1, type: 2}
-  endColor: {r: 0.3207547, g: 0.3207547, b: 0.3207547, a: 0}
-  startColor: {r: 1, g: 1, b: 1, a: 0}
+  endColor: {r: 0.3207547, g: 0.3207547, b: 0.3207547, a: 1}
+  startColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!212 &1818866823
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -215,7 +215,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 10
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: c31e53869067d454b96e3b57af55e837, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -532,7 +532,7 @@ GameObject:
   - component: {fileID: 1439385517486082998}
   - component: {fileID: 1439385517486082996}
   - component: {fileID: 1439385517486082997}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -786,7 +786,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1439385517879592324}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -824,7 +824,7 @@ GameObject:
   - component: {fileID: 1439385518110303754}
   - component: {fileID: 1439385518110303752}
   - component: {fileID: 1439385518110303753}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1238,7 +1238,7 @@ GameObject:
   - component: {fileID: 1439385519117959686}
   - component: {fileID: 1439385519117959684}
   - component: {fileID: 1439385519117959685}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: HP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1512,7 +1512,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}

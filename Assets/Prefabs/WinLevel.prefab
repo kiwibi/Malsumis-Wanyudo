@@ -45,3 +45,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   KillCounter: {fileID: 11400000, guid: 71c942f071e849b45bba7b9df64489eb, type: 2}
   currentLevel: {fileID: 11400000, guid: b91425eed0d66394a9e1aa9881387d53, type: 2}
+  heartColor: {fileID: 11400000, guid: e0400bff596bb374cbd250a5fd8610b1, type: 2}

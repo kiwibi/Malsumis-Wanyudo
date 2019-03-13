@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
+﻿using UnityEngine;
 
 public class CorruptedHeart : MonoBehaviour
 {
@@ -15,7 +12,7 @@ public class CorruptedHeart : MonoBehaviour
     private Animator HeartBeat;
     public IntVariable CurrentHealth;
     public FloatVariable HeartColor;
-    public Color endColor;
+    private Color colorChange;
     public Color startColor;
     
     private SpriteRenderer heart;
@@ -24,10 +21,11 @@ public class CorruptedHeart : MonoBehaviour
     {
         heart = GetComponent<SpriteRenderer>();
         HeartBeat = GetComponent<Animator>();
-        heart.color = Color.Lerp(startColor, endColor, 
-           HeartColor.Value);
+        heart.color = startColor;
+        //heart.color = Color.Lerp(startColor, endColor, HeartColor.Value);
 
         totalKills = clearLevel1.Value + clearLevel2.Value + clearLevel3.Value;
+        colorChange = new Color(1.5f, 1.5f, 1.5f, 0);
     }
 
     void Update()
@@ -50,12 +48,13 @@ public class CorruptedHeart : MonoBehaviour
                 HeartBeat.speed = 1;
                 break;
         }
+
+        Darken();
     }
 
-    public void Darken()
+    private void Darken()
     {
-
         HeartColor.Value = (currentKillCount.Value / totalKills);
-        heart.color = Color.Lerp(startColor, endColor, HeartColor.Value);
+        heart.color = startColor - colorChange * HeartColor.Value;
     }
 }
