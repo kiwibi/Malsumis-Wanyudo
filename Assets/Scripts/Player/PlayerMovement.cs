@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
     public Animator animator;
 
     private SpriteRenderer playerSprite;
+    public float padding;
 
     private void Start()
     {
@@ -49,8 +50,8 @@ public class PlayerMovement : MonoBehaviour
 
         transform.position = new Vector3(
 
-            Mathf.Clamp(transform.position.x, 0.1f, screenPos.x),
-            Mathf.Clamp(transform.position.y, 0.1f, screenPos.y),
+            Mathf.Clamp(transform.position.x, padding, screenPos.x - padding),
+            Mathf.Clamp(transform.position.y, padding*2, screenPos.y - padding/2),
             0
         );
         if (pauseMenu.isPaused == false)

@@ -210,6 +210,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 257601261}
+  padding: 1
 --- !u!114 &2652309353226456882
 MonoBehaviour:
   m_ObjectHideFlags: 0
