@@ -234,6 +234,10 @@ MonoBehaviour:
     UseConstant: 0
     ConstantValue: 0
     Variable: {fileID: 11400000, guid: 231de533d4b733e4ca5d2aa636feb325, type: 2}
+  InvincibleFrameTime:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: a90dc7948c509004586a684e8d5a0ac4, type: 2}
   CurrentHealth: {fileID: 11400000, guid: 2320b313e4ec8fe4f80cb51eba84ccfc, type: 2}
   shootGun: {fileID: 8300000, guid: 77531b0a8f6bf8943a66bf6a5f215ae4, type: 3}
 --- !u!50 &6319824282107117731
