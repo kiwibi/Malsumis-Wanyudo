@@ -31,6 +31,14 @@ namespace AI.Actions
                 Mathf.Clamp(controller.transform.position.y, 0.1f, screenPos.y),
                 0
             );
+            
+            // Rotate towards mouse
+            Vector3 dir = controller.transform.position - Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Quaternion rotation =
+                Quaternion.LookRotation(dir, new Vector3(0, 0, 1));
+            rotation.x = 0;
+            rotation.y = 0;
+            controller.spriteRenderer.transform.rotation = rotation;
         }
     }
 }
