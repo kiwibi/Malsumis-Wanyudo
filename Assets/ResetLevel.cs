@@ -13,6 +13,6 @@ public class ResetLevel : MonoBehaviour
     {
                 KillCounter.Value = 0;
                 currentLevel.Value = 1;
-                heartColor.Value = 0;
+                heartColor.Value = 0.0f;
     }
 }
