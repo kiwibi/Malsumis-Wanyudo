@@ -9,7 +9,7 @@ public class FillSprite : MonoBehaviour
 
     private float checkPoint1;
     private float checkPoint2;
-    private float checkPoint3;
+    //private float checkPoint3;
 
     public IntVariable Currentlevel;
     public IntVariable CurrentKillCount;
@@ -19,7 +19,7 @@ public class FillSprite : MonoBehaviour
         fillArea = GetComponent<Image>();
         checkPoint1 = 0.29f;
         checkPoint2 = 0.57f;
-        checkPoint3 = 1f;
+        //checkPoint3 = 1f;
     }
 
     void Update()

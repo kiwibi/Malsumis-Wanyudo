@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Timeline;
 
 public class SelectMusicTrack : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class SelectMusicTrack : MonoBehaviour
     public AudioClip level1;
     public AudioClip level2;
     public AudioClip level3;
+    public AudioClip level4intro;
     public AudioClip level4;
     private AudioSource audioSource;
     
@@ -26,7 +28,7 @@ public class SelectMusicTrack : MonoBehaviour
             audioSource.clip = level3;
         } else
         {
-            audioSource.clip = level4;
+            audioSource.clip = level4intro;
         }
 
         audioSource.Play();
@@ -36,6 +38,20 @@ public class SelectMusicTrack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (currentLevel.Value > 3)
+        {
+            if (audioSource.clip == level4intro)
+            {
+                audioSource.loop = false;
+                float trackProgress = audioSource.time / level4intro.length;
+
+                if (trackProgress > 0.99f)
+                {
+                    audioSource.clip = level4;
+                    audioSource.loop = true;
+                    audioSource.Play();
+                }  
+            }
+        }
     }
 }
