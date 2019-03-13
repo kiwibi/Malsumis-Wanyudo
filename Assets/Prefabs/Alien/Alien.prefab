@@ -358,11 +358,12 @@ GameObject:
   m_Component:
   - component: {fileID: 2995990598099252652}
   - component: {fileID: 1235160240}
-  - component: {fileID: 4063327023794252712}
+  - component: {fileID: 6872808038416071065}
+  - component: {fileID: 1428101126407483852}
   - component: {fileID: 547541005}
   - component: {fileID: 7030773161664017042}
+  - component: {fileID: 4063327023794252712}
   - component: {fileID: 6043305935348625759}
-  - component: {fileID: 1428101126407483852}
   m_Layer: 0
   m_Name: Alien
   m_TagString: Alien
@@ -425,34 +426,53 @@ MonoBehaviour:
   chaseTarget: {fileID: 0}
   stateTimeElapsed: 0
   dashStartingPosition: {x: 0, y: 0, z: 0}
+  spriteRenderer: {fileID: 0}
   targetPos: {x: 0, y: 0, z: 0}
   hasTarget: 0
---- !u!61 &4063327023794252712
-BoxCollider2D:
+--- !u!114 &6872808038416071065
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5438214378953835302}
   m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6041c4918a48244f8f4839988696fff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  KillCounter:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: 71c942f071e849b45bba7b9df64489eb, type: 2}
+  ClearCondition_1:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: 7c0e62f919766bf478350d39e83cb7f2, type: 2}
+  ClearCondition_2:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: 70fa65d5a5393184488a5b361420d336, type: 2}
+--- !u!114 &1428101126407483852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5438214378953835302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e0114fab91a7ce4b901a503c2ffa31d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  statsObject: {fileID: 11400000, guid: 98046954293c27341844ac15558153f1, type: 2}
+  AlienMaxHealth:
+    UseConstant: 1
+    ConstantValue: 0
+    Variable: {fileID: 0}
+  AlienHealth: {fileID: 11400000, guid: b6678d3ec2abc784186af8196058ead5, type: 2}
+  FireballMaxCooldown: 0
+  FireballMinCooldown: 0
 --- !u!114 &547541005
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -483,6 +503,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AudioEvent: {fileID: 11400000, guid: ff1ad0254d04a7643a248d4242b910ef, type: 2}
+--- !u!61 &4063327023794252712
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5438214378953835302}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!82 &6043305935348625759
 AudioSource:
   m_ObjectHideFlags: 0
@@ -579,23 +625,3 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1428101126407483852
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5438214378953835302}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e0114fab91a7ce4b901a503c2ffa31d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  statsObject: {fileID: 11400000, guid: 98046954293c27341844ac15558153f1, type: 2}
-  AlienMaxHealth:
-    UseConstant: 1
-    ConstantValue: 0
-    Variable: {fileID: 0}
-  AlienHealth: {fileID: 11400000, guid: b6678d3ec2abc784186af8196058ead5, type: 2}
-  FireballMaxCooldown: 0
-  FireballMinCooldown: 0

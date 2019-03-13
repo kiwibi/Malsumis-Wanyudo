@@ -82,11 +82,8 @@ public class Level : MonoBehaviour
     {
         // Wait for player to kill rest of the enemies
         yield return new WaitForSeconds(delay);
-        levelCleared.SetActive(true);
-        pauseMenu.isPaused = true;
-        
-        // Wait to transition
-        yield return new WaitForSecondsRealtime(2);
+        //levelCleared.SetActive(true);
+        //pauseMenu.isPaused = true;
         SceneManager.LoadScene(scene);
         pauseMenu.isPaused = false;
         playerHealth.Value = playerMaxHealth; // Should not be needed here
