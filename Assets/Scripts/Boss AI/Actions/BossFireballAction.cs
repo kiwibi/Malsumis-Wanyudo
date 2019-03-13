@@ -12,7 +12,18 @@ namespace AI.Actions
 
         private void Fireball(StateController controller)
         {
-            int beginningAngle = controller.statsObject.fireballAngle; //-60;
+            int randomInt = Random.Range(0, 2);
+            int beginningAngle = 0;
+            if (randomInt == 1)
+            {
+                beginningAngle = controller.statsObject.fireballAngle;
+            }
+            else
+            {
+                beginningAngle = controller.statsObject.fireballAngle2;
+            }
+            
+            
             int fireBallSpread = controller.statsObject.fireballSpread; // 30
             for (int fireBallNumber = 0; fireBallNumber < controller.statsObject.fireBalls; fireBallNumber++) // 5
             {
