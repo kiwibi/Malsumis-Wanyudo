@@ -51,7 +51,7 @@ public class PlayerMovement : MonoBehaviour
         transform.position = new Vector3(
 
             Mathf.Clamp(transform.position.x, padding, screenPos.x - padding),
-            Mathf.Clamp(transform.position.y, padding*2, screenPos.y - padding/2),
+            Mathf.Clamp(transform.position.y, padding, screenPos.y - padding),
             0
         );
         if (pauseMenu.isPaused == false)
