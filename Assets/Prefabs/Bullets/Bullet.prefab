@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 7040557380576811275}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.00664, y: 0.18617, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4423131541500771722}
   m_Father: {fileID: 0}
@@ -70,8 +70,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.05, y: 0.1}
-  m_Size: {x: 0.7, y: 1.5}
+  m_Offset: {x: -0.09, y: 0.21}
+  m_Size: {x: 0.27, y: 0.55}
   m_Direction: 0
 --- !u!114 &7040557380576811276
 MonoBehaviour:
@@ -86,7 +86,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: {fileID: 11400000, guid: f47fbb1b580ee82438968a247c5fca89, type: 2}
-  BulletDirectionUp: 1
+  direction: {x: 0, y: 0, z: 0}
 --- !u!114 &4577538175915436752
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -168,7 +168,7 @@ Transform:
   m_GameObject: {fileID: 8633283247747339623}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 7040557380576811279}
   m_RootOrder: 0
