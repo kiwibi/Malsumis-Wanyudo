@@ -9,6 +9,7 @@ public class CorruptedHeart : MonoBehaviour
 
     private Animator HeartBeat;
     public IntVariable CurrentHealth;
+    public FloatVariable HeartColor;
 
     private SpriteRenderer heart;
     // Start is called before the first frame update
@@ -17,6 +18,7 @@ public class CorruptedHeart : MonoBehaviour
         heart = GetComponent<SpriteRenderer>();
         HeartBeat = GetComponent<Animator>();
         instance = this;
+        heart.color = Color.Lerp(Color.red, Color.black, instance.HeartColor.Value);
     }
 
     void Update()
@@ -43,8 +45,7 @@ public class CorruptedHeart : MonoBehaviour
 
     public static void Darken()
     {
-        //var bar = GameObject.Find("UI/Corruption/Fill Area/Fill").GetComponent<Image>();
-        instance.heart.color = new Color(instance.heart.color.r - 0.01f, instance.heart.color.g, instance.heart.color.b);
-        //bar.color = new Color(bar.color.r, bar.color.g, bar.color.b);
+        instance.HeartColor.Value += 0.01f;
+        instance.heart.color = Color.Lerp(Color.red, Color.black, instance.HeartColor.Value);
     }
 }
