@@ -44,9 +44,8 @@ public class DamageFeedback : MonoBehaviour
 
     public void BloodSpawn()
     {
-        CorruptedHeart.Darken();
         var rotation = new Quaternion(0, 0, 0, 0);
-        var blood_pool = Instantiate(Blood, new Vector3(transform.position.x, transform.position.y, 0), rotation);
+        Instantiate(Blood, new Vector3(transform.position.x, transform.position.y, 0), rotation);
     }
 
     void ResetColor()

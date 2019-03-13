@@ -6,18 +6,25 @@ public class EnemySpawner : MonoBehaviour
 {
     public FloatReference MinSpawnDelay;
     public FloatReference MaxSpawnDelay;
+    public IntVariable NumberOfEnemies1;
+    public IntVariable NumberOfEnemies2;
+    public IntVariable NumberOfEnemies3;
+    public IntVariable CurrentLevel;
+    
     public GameObject Enemy1;
     public GameObject Enemy2;
     public GameObject Enemy3;
-    public BoolReference SpawnerOn;
+    public BoolVariable SpawnerOn;
     public SpawnPoint[] spawnPoints;
 
     private Level level;
 
     IEnumerator Start()
     {
+        SpawnerOn.Value = true;
         level = GameObject.FindGameObjectWithTag("Level").GetComponent<Level>();
         spawnPoints = GetComponentsInChildren<SpawnPoint>();
+        
         while (SpawnerOn.Value)
         {
             yield return new WaitForSeconds(Random.Range(MinSpawnDelay.Value, MaxSpawnDelay.Value));

@@ -188,7 +188,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1955768522
 Transform:
   m_ObjectHideFlags: 0
@@ -454,12 +454,14 @@ MonoBehaviour:
     UseConstant: 0
     ConstantValue: 0
     Variable: {fileID: 11400000, guid: 9ed7d89678579a44585fc12873ef79b9, type: 2}
+  NumberOfEnemies1: {fileID: 11400000, guid: 7c0e62f919766bf478350d39e83cb7f2, type: 2}
+  NumberOfEnemies2: {fileID: 11400000, guid: 70fa65d5a5393184488a5b361420d336, type: 2}
+  NumberOfEnemies3: {fileID: 11400000, guid: 170435ce370a8784c960f29ab5b90f21, type: 2}
+  CurrentLevel: {fileID: 11400000, guid: b91425eed0d66394a9e1aa9881387d53, type: 2}
   Enemy1: {fileID: 2323681209936350376, guid: 0eaa51a2a4affe54a956b13bffc2f0fe, type: 3}
   Enemy2: {fileID: 2323681209936350376, guid: 1e7cf1912aae260458e38b16523e382c, type: 3}
   Enemy3: {fileID: 2323681209936350376, guid: 1bf2992d4b4602c4ca5c2a3f4f0520d7, type: 3}
-  SpawnerOn:
-    UseConstant: 1
-    ConstantValue: 1
+  SpawnerOn: {fileID: 11400000, guid: 650ada8fc881aa14b9f703641631c48f, type: 2}
   spawnPoints: []
 --- !u!1 &6769685241431166502
 GameObject:
@@ -563,7 +565,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6886965293769641712
 Transform:
   m_ObjectHideFlags: 0
@@ -606,7 +608,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7594412444048604899
 Transform:
   m_ObjectHideFlags: 0
@@ -649,7 +651,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7201618247697217861
 Transform:
   m_ObjectHideFlags: 0

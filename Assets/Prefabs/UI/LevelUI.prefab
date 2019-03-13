@@ -171,7 +171,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90624c2451ac39a4eb0cf738b18e36df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentKillCount: {fileID: 11400000, guid: 71c942f071e849b45bba7b9df64489eb, type: 2}
+  clearLevel1: {fileID: 11400000, guid: 7c0e62f919766bf478350d39e83cb7f2, type: 2}
+  clearLevel2: {fileID: 11400000, guid: 70fa65d5a5393184488a5b361420d336, type: 2}
+  clearLevel3: {fileID: 11400000, guid: 170435ce370a8784c960f29ab5b90f21, type: 2}
   CurrentHealth: {fileID: 11400000, guid: 2320b313e4ec8fe4f80cb51eba84ccfc, type: 2}
+  HeartColor: {fileID: 11400000, guid: e0400bff596bb374cbd250a5fd8610b1, type: 2}
+  endColor: {r: 0.3207547, g: 0.3207547, b: 0.3207547, a: 0}
+  startColor: {r: 1, g: 1, b: 1, a: 0}
 --- !u!212 &1818866823
 SpriteRenderer:
   m_ObjectHideFlags: 0

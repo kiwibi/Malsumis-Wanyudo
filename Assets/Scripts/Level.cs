@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class Level : MonoBehaviour
 {
+    public BoolVariable SpawnerOn;
     public StringVariable titleScreen;
     public IntVariable currentLevel;
     public IntVariable KillCounter;
@@ -22,6 +23,7 @@ public class Level : MonoBehaviour
     public StringVariable loseScreen;
 
     public GameObject levelCleared;
+    public float transitionDelay;
 
     [Header("Audio")] 
     public SimpleAudioEvent level1Transition;
@@ -54,31 +56,36 @@ public class Level : MonoBehaviour
         {
             if (KillCounter.Value >= ClearCondition_1.Value)
             {
-                levelCleared.SetActive(true);
-                StartCoroutine(TransitionScene("Transition1", 2));
+                SpawnerOn.Value = false;
+                StartCoroutine(TransitionScene(transitionDelay, "Transition1", 2));
             }
         }
         else if (currentLevel.Value == 2)
         {
             if (KillCounter.Value >= ClearCondition_2.Value)
             {
-                levelCleared.SetActive(true);
-                StartCoroutine(TransitionScene("Transition2", 3));
+                SpawnerOn.Value = false;
+                StartCoroutine(TransitionScene(transitionDelay,"Transition2", 3));
             }
         }
         else if (currentLevel.Value == 3)
         {
             if (KillCounter.Value >= ClearCondition_3.Value)
             {
-                levelCleared.SetActive(true);
-                StartCoroutine(TransitionScene("Transition3", 4));
+                SpawnerOn.Value = false;
+                StartCoroutine(TransitionScene(transitionDelay,"Transition3", 4));
             }
         }
     }
 
-    private IEnumerator TransitionScene(string scene, int level)
+    private IEnumerator TransitionScene(float delay, string scene, int level)
     {
+        // Wait for player to kill rest of the enemies
+        yield return new WaitForSeconds(delay);
+        levelCleared.SetActive(true);
         pauseMenu.isPaused = true;
+        
+        // Wait to transition
         yield return new WaitForSecondsRealtime(2);
         SceneManager.LoadScene(scene);
         pauseMenu.isPaused = false;

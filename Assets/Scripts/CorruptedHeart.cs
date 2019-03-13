@@ -5,20 +5,29 @@ using UnityEngine.UI;
 
 public class CorruptedHeart : MonoBehaviour
 {
-    public static CorruptedHeart instance;
+    public IntVariable currentKillCount;
+    public IntVariable clearLevel1;
+    public IntVariable clearLevel2;
+    public IntVariable clearLevel3;
+    
+    private float totalKills;
 
     private Animator HeartBeat;
     public IntVariable CurrentHealth;
     public FloatVariable HeartColor;
-
+    public Color endColor;
+    public Color startColor;
+    
     private SpriteRenderer heart;
     // Start is called before the first frame update
     void Start()
     {
         heart = GetComponent<SpriteRenderer>();
         HeartBeat = GetComponent<Animator>();
-        instance = this;
-        heart.color = Color.Lerp(Color.red, Color.black, instance.HeartColor.Value);
+        heart.color = Color.Lerp(startColor, endColor, 
+           HeartColor.Value);
+
+        totalKills = clearLevel1.Value + clearLevel2.Value + clearLevel3.Value;
     }
 
     void Update()
@@ -43,9 +52,10 @@ public class CorruptedHeart : MonoBehaviour
         }
     }
 
-    public static void Darken()
+    public void Darken()
     {
-        instance.HeartColor.Value += 0.01f;
-        instance.heart.color = Color.Lerp(Color.red, Color.black, instance.HeartColor.Value);
+
+        HeartColor.Value = (currentKillCount.Value / totalKills);
+        heart.color = Color.Lerp(startColor, endColor, HeartColor.Value);
     }
 }
