@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class FireballUI : MonoBehaviour
 {
+    public static bool animated;
+
     public AlienStatsObject alienStats;
     public GameObject titleField;
 
@@ -18,6 +20,7 @@ public class FireballUI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        FireballUI.animated = false;
         background = GetComponent<Image>();
         textField = GetComponentInChildren<Text>();
         startAnimation = GetComponent<ScaleMove>();
@@ -38,7 +41,14 @@ public class FireballUI : MonoBehaviour
             background.enabled = true;
             textField.enabled = true;
             titleField.GetComponent<Text>().enabled = true;
-            startAnimation.enabled = true;
+            if(FireballUI.animated == true)
+            {
+                startAnimation.enabled = false;
+            }
+            else
+            {
+                startAnimation.enabled = true;
+            }
         }
         
         if (alienStats.FireballOnCooldown)

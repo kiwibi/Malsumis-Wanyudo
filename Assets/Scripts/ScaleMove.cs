@@ -12,6 +12,7 @@ public class ScaleMove : MonoBehaviour
     private Vector3 TargetScale;
 
     private float speed;
+
     // Start is  called before the first frame update
     void Start()
     {
@@ -43,7 +44,7 @@ public class ScaleMove : MonoBehaviour
         }
         else if (Vector3.Distance(background.transform.position,targetPos) < 0.1f)
         {
-            
-        }
+            FireballUI.animated = true;
+}
     }
 }

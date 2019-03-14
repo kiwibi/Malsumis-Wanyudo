@@ -754,6 +754,16 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1439385518806006247, guid: 721687391730b314ab62b0f11acedf3c,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 182
+      objectReference: {fileID: 0}
+    - target: {fileID: 1439385518806006247, guid: 721687391730b314ab62b0f11acedf3c,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -294
+      objectReference: {fileID: 0}
     - target: {fileID: 1439385518281213373, guid: 721687391730b314ab62b0f11acedf3c,
         type: 3}
       propertyPath: m_FontData.m_Font
@@ -776,6 +786,11 @@ PrefabInstance:
       propertyPath: m_FontData.m_FontStyle
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 902178586, guid: 721687391730b314ab62b0f11acedf3c, type: 3}
+      propertyPath: fillAmount
+      value: 
+      objectReference: {fileID: 11400000, guid: 0786d8c41fe1c364087e158612308ceb,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 721687391730b314ab62b0f11acedf3c, type: 3}
 --- !u!1 &735933741416703993 stripped
