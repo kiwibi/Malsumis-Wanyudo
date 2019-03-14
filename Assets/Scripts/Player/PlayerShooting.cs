@@ -25,19 +25,22 @@ public class PlayerShooting : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        if (stats.pistolCooldown.Value > 0)
+        if (pauseMenu.isPaused != true)
         {
-            playerPistolCooldown -= Time.deltaTime;
-        }
-        if (Input.GetButton(fireButton) == true && playerPistolCooldown < 0)
-        {
-            timeBetweenShoots = stats.pistolCooldown.Value;
+            if (stats.pistolCooldown.Value > 0)
+            {
+                playerPistolCooldown -= Time.deltaTime;
+            }
+            if (Input.GetButton(fireButton) == true && playerPistolCooldown < 0)
+            {
+                timeBetweenShoots = stats.pistolCooldown.Value;
 
-            var bullet = Instantiate(Bullet, new Vector3(bulletSpawnPoint.transform.position.x, bulletSpawnPoint.transform.position.y, 0), Quaternion.identity);
-            bullet.GetComponentInChildren<SpriteRenderer>().transform.rotation = spriteRenderer.transform.rotation;
-            bullet.GetComponent<BulletBehavior>().direction = GetComponentInChildren<SpriteRenderer>().transform.up;
-            playerPistolCooldown = stats.pistolCooldown.Value;
-            audioPlayer.PlaySound();
+                var bullet = Instantiate(Bullet, new Vector3(bulletSpawnPoint.transform.position.x, bulletSpawnPoint.transform.position.y, 0), Quaternion.identity);
+                bullet.GetComponentInChildren<SpriteRenderer>().transform.rotation = spriteRenderer.transform.rotation;
+                bullet.GetComponent<BulletBehavior>().direction = GetComponentInChildren<SpriteRenderer>().transform.up;
+                playerPistolCooldown = stats.pistolCooldown.Value;
+                audioPlayer.PlaySound();
+            }
         }
     }
 }
