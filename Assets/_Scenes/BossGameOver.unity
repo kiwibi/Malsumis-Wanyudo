@@ -10065,98 +10065,20 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1764636099}
-    - target: {fileID: 2854780515777057303, guid: 378a859465b6bc04c80b251413841395,
-        type: 3}
-      propertyPath: m_Colors.m_HighlightedColor.r
-      value: 0.5613208
-      objectReference: {fileID: 0}
-    - target: {fileID: 2854780515777057303, guid: 378a859465b6bc04c80b251413841395,
-        type: 3}
-      propertyPath: m_Colors.m_HighlightedColor.g
-      value: 0.6390631
-      objectReference: {fileID: 0}
-    - target: {fileID: 2854780515777057303, guid: 378a859465b6bc04c80b251413841395,
-        type: 3}
-      propertyPath: m_Colors.m_HighlightedColor.b
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6123850345651399652, guid: 378a859465b6bc04c80b251413841395,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1764636099}
-    - target: {fileID: 6123850345651399652, guid: 378a859465b6bc04c80b251413841395,
-        type: 3}
-      propertyPath: m_Colors.m_HighlightedColor.r
-      value: 0.5801887
-      objectReference: {fileID: 0}
-    - target: {fileID: 6123850345651399652, guid: 378a859465b6bc04c80b251413841395,
-        type: 3}
-      propertyPath: m_Colors.m_HighlightedColor.g
-      value: 0.6708764
-      objectReference: {fileID: 0}
-    - target: {fileID: 6123850345651399652, guid: 378a859465b6bc04c80b251413841395,
-        type: 3}
-      propertyPath: m_Colors.m_HighlightedColor.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8844603221601232145, guid: 378a859465b6bc04c80b251413841395,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -115.31
-      objectReference: {fileID: 0}
-    - target: {fileID: 8844603221601232145, guid: 378a859465b6bc04c80b251413841395,
+    - target: {fileID: 2686567289037220325, guid: 378a859465b6bc04c80b251413841395,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -124.8
+      value: -123
       objectReference: {fileID: 0}
-    - target: {fileID: 5004644499021867700, guid: 378a859465b6bc04c80b251413841395,
+    - target: {fileID: 2686567289037220325, guid: 378a859465b6bc04c80b251413841395,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 117.78
-      objectReference: {fileID: 0}
-    - target: {fileID: 5004644499021867700, guid: 378a859465b6bc04c80b251413841395,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 160
-      objectReference: {fileID: 0}
-    - target: {fileID: 5004644499021867700, guid: 378a859465b6bc04c80b251413841395,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -124.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 3653976022421297688, guid: 378a859465b6bc04c80b251413841395,
-        type: 3}
-      propertyPath: m_FontData.m_Font
-      value: 
-      objectReference: {fileID: 12800000, guid: a75888b054d467f4684a27249d9f8ebb,
-        type: 3}
-    - target: {fileID: 5108459041710430546, guid: 378a859465b6bc04c80b251413841395,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -1.2355957
-      objectReference: {fileID: 0}
-    - target: {fileID: 5108459041710430546, guid: 378a859465b6bc04c80b251413841395,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 130
-      objectReference: {fileID: 0}
-    - target: {fileID: 6145284032327983441, guid: 378a859465b6bc04c80b251413841395,
-        type: 3}
-      propertyPath: m_FontData.m_Font
-      value: 
-      objectReference: {fileID: 12800000, guid: a75888b054d467f4684a27249d9f8ebb,
-        type: 3}
-    - target: {fileID: 1642675131196896819, guid: 378a859465b6bc04c80b251413841395,
-        type: 3}
-      propertyPath: m_FontData.m_Font
-      value: 
-      objectReference: {fileID: 12800000, guid: a75888b054d467f4684a27249d9f8ebb,
-        type: 3}
-    - target: {fileID: 1642675131196896819, guid: 378a859465b6bc04c80b251413841395,
-        type: 3}
-      propertyPath: m_Text
-      value: Fight Again
+      value: 0.82648
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 378a859465b6bc04c80b251413841395, type: 3}

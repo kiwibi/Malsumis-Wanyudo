@@ -94,6 +94,11 @@ public class StateController : MonoBehaviour
         currentState.UpdateState(this);
     }
 
+    public void Disable()
+    {
+        aiActive = false;
+    }
+
     private void FindTarget()
     {
         chaseTarget = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<AlienTarget>().transform;

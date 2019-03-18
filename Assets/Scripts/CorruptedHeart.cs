@@ -25,7 +25,7 @@ public class CorruptedHeart : MonoBehaviour
         //heart.color = Color.Lerp(startColor, endColor, HeartColor.Value);
 
         totalKills = clearLevel1.Value + clearLevel2.Value + clearLevel3.Value;
-        colorChange = new Color(1.5f, 1.5f, 1.5f, 0);
+        colorChange = new Color(0.8f, 0.8f, 0.8f, 0);
     }
 
     void Update()
@@ -55,6 +55,7 @@ public class CorruptedHeart : MonoBehaviour
     private void Darken()
     {
         HeartColor.Value = (currentKillCount.Value / totalKills);
-        heart.color = startColor - colorChange * HeartColor.Value;
+        var color = (startColor - colorChange * HeartColor.Value);
+        heart.color = new Color(color.r, color.g, color.b, 1);
     }
 }
