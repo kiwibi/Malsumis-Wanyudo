@@ -7,6 +7,7 @@ public class Evolve : MonoBehaviour
     public IntReference KillCounter;
     public IntReference ClearCondition_1;
     public IntReference ClearCondition_2;
+    public float delay;
 
     private Animator anim;
     // Start is called before the first frame update
@@ -20,12 +21,24 @@ public class Evolve : MonoBehaviour
     {
         if (KillCounter >= ClearCondition_1)
         {
-            anim.SetBool( "Evolve1", true);
+            StartCoroutine(Evolve1());
         }
 
         if (KillCounter >= ClearCondition_2)
         {
-            anim.SetBool( "Evolve2", true);
+            StartCoroutine(Evolve2());
         }
+    }
+
+    private IEnumerator Evolve1()
+    {
+        yield return new WaitForSeconds(delay);
+        anim.SetBool( "Evolve1", true);
+    }
+    
+    private IEnumerator Evolve2()
+    {
+        yield return new WaitForSeconds(delay);
+        anim.SetBool( "Evolve2", true);
     }
 }
