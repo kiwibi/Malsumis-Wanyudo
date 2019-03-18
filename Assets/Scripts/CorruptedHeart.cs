@@ -3,9 +3,9 @@
 public class CorruptedHeart : MonoBehaviour
 {
     public IntVariable currentKillCount;
-    public IntVariable clearLevel1;
-    public IntVariable clearLevel2;
-    public IntVariable clearLevel3;
+    public IntReference clearLevel1;
+    public IntReference clearLevel2;
+    public IntReference clearLevel3;
     
     private float totalKills;
 

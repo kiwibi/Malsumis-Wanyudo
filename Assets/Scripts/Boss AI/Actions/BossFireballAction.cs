@@ -17,10 +17,12 @@ namespace AI.Actions
             if (randomInt == 1)
             {
                 beginningAngle = controller.statsObject.fireballAngle;
+                controller.statsObject.fireBalls = 5;
             }
             else
             {
                 beginningAngle = controller.statsObject.fireballAngle2;
+                controller.statsObject.fireBalls = 4;
             }
             
             
