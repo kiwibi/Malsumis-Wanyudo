@@ -16,7 +16,7 @@ public class DamageDealer : MonoBehaviour
             {
                 col.gameObject.GetComponent<Stats>().DealDamage(DamageAmount.Value);
                 
-                if(!gameObject.CompareTag("Alien"))
+                if(!gameObject.CompareTag("Alien") || !gameObject.CompareTag("Fireball"))
                 {   
                         if (damageType.name == "Enemy")
                         {
