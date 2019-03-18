@@ -16,11 +16,17 @@ public class alien_animation : MonoBehaviour
     {
         switch(currentLevel.Value)
         {
+            case 1:
+                anim.SetInteger("Level", 1);
+                break;
             case 2:
-                anim.SetBool("Stage2", true);
+                anim.SetInteger("Level", 2);
                 break;
             case 3:
-                anim.SetBool("Stage3", true);
+                anim.SetInteger("Level", 3);
+                break;
+            case 4: 
+                anim.SetInteger("Level", 4);
                 break;
         }
     }

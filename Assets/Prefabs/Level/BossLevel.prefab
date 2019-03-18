@@ -46,6 +46,7 @@ MonoBehaviour:
   loseScreen: {fileID: 11400000, guid: 6c002858e3634304ab788e8ce6350768, type: 2}
   titleScreen: {fileID: 11400000, guid: d6272eb98a0c2dd45978b9a2a1df39ba, type: 2}
   winScreen: {fileID: 11400000, guid: a781b3332190a4f439a50627b257a6a0, type: 2}
+  currentLevel: {fileID: 11400000, guid: b91425eed0d66394a9e1aa9881387d53, type: 2}
   playerHealth: {fileID: 11400000, guid: 2320b313e4ec8fe4f80cb51eba84ccfc, type: 2}
   alienHealth: {fileID: 11400000, guid: b6678d3ec2abc784186af8196058ead5, type: 2}
   anim: {fileID: 0}

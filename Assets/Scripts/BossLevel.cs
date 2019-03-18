@@ -8,6 +8,7 @@ public class BossLevel : MonoBehaviour
     public StringVariable loseScreen;
     public StringVariable titleScreen;
     public StringVariable winScreen;
+    public IntVariable currentLevel;
     public IntVariable playerHealth;
     public IntVariable alienHealth;
     public Animator anim;
@@ -19,7 +20,8 @@ public class BossLevel : MonoBehaviour
         {
             Debug.LogError("Missing animator");
         }
-     anim.SetBool("Stage3", true);
+
+        currentLevel.Value = 4;
     }
 
     // Update is called once per frame
