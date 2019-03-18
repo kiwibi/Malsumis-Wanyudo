@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: BossStats
   m_EditorClassIdentifier: 
   AlienSpeed: 2
-  AlienLevel: 1
+  AlienLevel: 4
   isKillable: 1
   DashKey: 113
   StartDashCooldown: 3
@@ -25,12 +25,12 @@ MonoBehaviour:
   FireballKey: 101
   FireballSpawned: 0
   FireballOnCooldown: 1
-  FireballCooldown: 0.90000004
+  FireballCooldown: 0.79999995
   FireballMaxCooldown: 1
   FireballMinCooldown: 1
-  fireBalls: 6
+  fireBalls: 4
   fireballAngle: -60
-  fireballSpread: 30
+  fireballSpread: 25
   fireballAngle2: -45
   waitBeforeDash: 0.5
   dashColor: {r: 1, g: 0.11792451, b: 0.6620083, a: 0}
