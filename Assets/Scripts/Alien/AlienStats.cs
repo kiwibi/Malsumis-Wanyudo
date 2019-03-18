@@ -15,6 +15,7 @@ public class AlienStats : Stats
     public float FireballMinCooldown;
     private float DashCooldown;
     private float AlienSpeed;
+    private StateController stateController;
 
     private Animator anim;
 
@@ -42,12 +43,12 @@ public class AlienStats : Stats
         nextSpeedUp = AlienHealth.Value - speedUpSteps;
 
         anim = GetComponentInChildren<Animator>();
+        stateController = GetComponent<StateController>();
     }
 
     // Update is called once per frame
     void Update()
     {
-
     }
 
     public override void DealDamage(int damage)
@@ -71,7 +72,9 @@ public class AlienStats : Stats
 
     public override void Die()
     {
-        Destroy(gameObject);
+        stateController.Disable();
+        anim.SetBool("Die", true);
+        //Destroy(gameObject);
     }
 
     private void DimLights(int intensity)

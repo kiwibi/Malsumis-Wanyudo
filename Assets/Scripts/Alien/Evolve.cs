@@ -8,12 +8,14 @@ public class Evolve : MonoBehaviour
     public IntReference ClearCondition_1;
     public IntReference ClearCondition_2;
     public float delay;
+    private StateController stateController;
 
     private Animator anim;
     // Start is called before the first frame update
     void Start()
     {
         anim = GetComponentInChildren<Animator>();
+       stateController = GetComponent<StateController>();
     }
 
     // Update is called once per frame
@@ -26,6 +28,7 @@ public class Evolve : MonoBehaviour
 
         if (KillCounter >= ClearCondition_2)
         {
+            
             StartCoroutine(Evolve2());
         }
     }
