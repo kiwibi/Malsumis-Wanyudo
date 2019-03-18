@@ -18,7 +18,7 @@ public class DamageDealer : MonoBehaviour
                 
                 if(!gameObject.CompareTag("Alien"))
                 {   
-                        if (damageType.name == "Fireball" || damageType.name == "Enemy")
+                        if (damageType.name == "Enemy")
                         {
                                 ShakeBehaviour.Shake();
                         }
@@ -26,20 +26,5 @@ public class DamageDealer : MonoBehaviour
                 }
             }
         }
-        /*
-        if (m_owner != col.gameObject && col.gameObject.tag != "Alien")
-        {
-            if (col.gameObject.tag == "Enemy")
-            {
-                col.gameObject.GetComponent<EnemyStats>().DealDamage(DamageAmount.Value);
-                Destroy(gameObject);
-            }
-            if (col.gameObject.tag == "Player")
-            {
-                col.gameObject.GetComponent<PlayerStats>().DealDamage(DamageAmount.Value);
-                Destroy(gameObject);
-            }
-        }
-        */
     }
 }
