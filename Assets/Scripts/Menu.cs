@@ -6,9 +6,15 @@ using UnityEngine.SceneManagement;
 public class Menu : MonoBehaviour
 {
     public StringVariable Level1;
+    public StringVariable Controls;
     public void StartGame()
     {
         SceneManager.LoadScene(Level1.Value);
+    }
+
+    public void ControlScreen()
+    {
+        SceneManager.LoadScene(Controls.Value);
     }
 
     public void Quit()
