@@ -22,8 +22,6 @@ namespace AI.Actions
 
             if (Camera.main == null) return;
             Vector3 screenPos = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, 10));
-
-            controller.GetComponentInChildren<SpriteRenderer>().transform.rotation = Quaternion.identity;
             
             controller.transform.position = new Vector3(
 
@@ -31,8 +29,17 @@ namespace AI.Actions
                 Mathf.Clamp(controller.transform.position.y, 0.1f, screenPos.y),
                 0
             );
-            
+
             // Rotate towards mouse
+            if (pauseMenu.isPaused == false)
+            {
+                Rotate(controller);
+            }
+            
+        }
+
+        private void Rotate(StateController controller)
+        {
             Vector3 dir = controller.transform.position - Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Quaternion rotation =
                 Quaternion.LookRotation(dir, new Vector3(0, 0, 1));

@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 3333358491074530295}
   - component: {fileID: 3009448526364430480}
   - component: {fileID: 936891412}
+  - component: {fileID: 2511549171959502359}
   m_Layer: 0
   m_Name: Explosion
-  m_TagString: Untagged
+  m_TagString: Fireball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -45,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abf25eaa446900b46940979458b05b21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyAfterSeconds: 3
+  destroyAfterSeconds: 1.5
 --- !u!82 &936891412
 AudioSource:
   m_ObjectHideFlags: 0
@@ -142,6 +143,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2511549171959502359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4825416424683986384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9258f72ad487c994597e885987a661da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8763401627531802855
 GameObject:
   m_ObjectHideFlags: 0
@@ -156,7 +169,7 @@ GameObject:
   - component: {fileID: 677103597}
   m_Layer: 0
   m_Name: Explosion
-  m_TagString: Untagged
+  m_TagString: Fireball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
