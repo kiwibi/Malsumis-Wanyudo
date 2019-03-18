@@ -25,6 +25,7 @@ public class StateController : MonoBehaviour
     public State bossDashState;
     public State bossFollowState;
     public State bossFireballState;
+    public State fanOfFireState;
 
     [Header("Spawn this Fireball prefab")]
     public GameObject fireball;
@@ -124,6 +125,13 @@ public class StateController : MonoBehaviour
         {
             StartCoroutine("ResetFireBall");
         }
+        else
+        {
+            if (currentState == fanOfFireState && nextState == bossFollowState)
+            {
+                StartCoroutine("ResetFanOfFire)");
+            }
+        }
 
         if (nextState != remainState)
         {
@@ -172,6 +180,36 @@ public class StateController : MonoBehaviour
         return dashTarget;
     }
 
+    public void SpawnFireBall()
+    {
+        for (int fireballNumber = 0; fireballNumber < statsObject.FanOfFireFireBalls; fireballNumber++)
+        {
+            var ball = Instantiate(fireball, transform.position, Quaternion.identity);
+            fireball.transform.rotation = Quaternion.AngleAxis(statsObject.FanOfFireStartAngle + (statsObject.FanOfFireAngle * fireballNumber), Vector3.back);
+        }
+        statsObject.FanOfFireDone = true;
+        //StartCoroutine(SpawnFireBalls());
+    }
+
+    private IEnumerator SpawnFireBalls()
+    {
+        for (int fireballNumber = 0; fireballNumber < statsObject.FanOfFireFireBalls; fireballNumber++)
+        {
+            var ball = Instantiate(fireball, transform.position, Quaternion.identity);
+            fireball.transform.rotation = Quaternion.AngleAxis(statsObject.FanOfFireStartAngle + (statsObject.FanOfFireAngle * fireballNumber), Vector3.back);
+            yield return new WaitForSeconds(1f);
+        }
+        
+        for (int fireballNumber = statsObject.FanOfFireFireBalls; fireballNumber > 0; fireballNumber++)
+        {
+            var ball = Instantiate(fireball, transform.position, Quaternion.identity);
+            yield return new WaitForSeconds(1f);
+            fireball.transform.rotation = Quaternion.AngleAxis(statsObject.FanOfFireStartAngle + (statsObject.FanOfFireAngle * fireballNumber), Vector3.back);
+        }
+        
+        statsObject.FanOfFireDone = true;
+    }
+
     private IEnumerator ResetDash()
     {
         if (!statsObject.isKillable)
@@ -190,5 +228,13 @@ public class StateController : MonoBehaviour
         statsObject.FireballCooldown = Random.Range(stats.FireballMinCooldown, stats.FireballMaxCooldown);
         yield return new WaitForSeconds(statsObject.FireballCooldown);
         statsObject.FireballOnCooldown = false;
+    }
+
+    private IEnumerator ResetFanOfFire()
+    {
+        statsObject.FanOfFireDone = false;
+        statsObject.FanOfFireOnCooldown = true;
+        yield return new WaitForSeconds(statsObject.FanOfFireCooldown);
+        statsObject.FanOfFireOnCooldown = false;
     }
 }

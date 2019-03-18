@@ -67,6 +67,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BossFireball
       objectReference: {fileID: 0}
+    - target: {fileID: 1093622024, guid: bd7404781a0ecab4fba83942f07b4946, type: 3}
+      propertyPath: FollowPlayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5520462046753707371, guid: bd7404781a0ecab4fba83942f07b4946,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -85,22 +89,22 @@ PrefabInstance:
     - target: {fileID: 5520462046753707371, guid: bd7404781a0ecab4fba83942f07b4946,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5520462046753707371, guid: bd7404781a0ecab4fba83942f07b4946,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5520462046753707371, guid: bd7404781a0ecab4fba83942f07b4946,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 5520462046753707371, guid: bd7404781a0ecab4fba83942f07b4946,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 5520462046753707371, guid: bd7404781a0ecab4fba83942f07b4946,
         type: 3}
@@ -121,10 +125,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1093622024, guid: bd7404781a0ecab4fba83942f07b4946, type: 3}
-      propertyPath: FollowPlayer
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8365841906681749382, guid: bd7404781a0ecab4fba83942f07b4946,
         type: 3}
