@@ -12,7 +12,7 @@ namespace AI.Decisions
 
         private bool Fireball(StateController controller)
         {
-            return Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.E);
+            return Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.RightShift);
         }
     }
 }

@@ -12,7 +12,7 @@ namespace AI.Decisions
 
         private bool Dash(StateController controller)
         {
-            return Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.Q);
+            return Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.RightControl);
         }
     }
 }
