@@ -22,7 +22,6 @@ public class Level : MonoBehaviour
 
     public StringVariable loseScreen;
 
-    public GameObject levelCleared;
     public float transitionDelay;
 
     [Header("Audio")] 
@@ -35,10 +34,6 @@ public class Level : MonoBehaviour
     void Start()
     {
         audioPlayer = GetComponent<AudioPlayer>();
-        if (levelCleared == null)
-        {
-            Debug.LogError("Level clear not set");
-        }
     }
     void Update()
     {
