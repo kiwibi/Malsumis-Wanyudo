@@ -2,6 +2,7 @@
 
 public class AlienStats : Stats
 {
+    public GameObject blood;
     public AlienStatsObject statsObject;
     public IntReference AlienMaxHealth;
     public IntVariable AlienHealth;
@@ -74,6 +75,7 @@ public class AlienStats : Stats
     {
         stateController.Disable();
         anim.SetBool("Die", true);
+        Instantiate(blood, transform.position, Quaternion.identity);
         //Destroy(gameObject);
     }
 

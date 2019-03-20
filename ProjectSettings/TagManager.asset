@@ -10,6 +10,7 @@ TagManager:
   - Bullet
   - PauseMenu
   - Fireball
+  - Shield
   layers:
   - Default
   - TransparentFX

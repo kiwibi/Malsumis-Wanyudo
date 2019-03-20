@@ -41,6 +41,7 @@ public class AlienStatsObject : ScriptableObject
     public bool FanOfFireDone;
     public int FanOfFireAngle;
     public int FanOfFireStartAngle;
+    public int FanOfFireEndAngle;
     public int FanOfFireFireBalls;
     
     [Header("BOSS: Fix boss dropping too low")]

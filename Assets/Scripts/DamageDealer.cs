@@ -12,6 +12,12 @@ public class DamageDealer : MonoBehaviour
         if (damageDealer != null)
         {
             //Debug.Log(damageType.name + " hit: " + damageDealer.damageType.name);
+            if (col.CompareTag("Shield") && gameObject.CompareTag("Bullet"))
+            {
+                Destroy(gameObject);
+                return;
+            }
+            
             if (damageDealer.damageType.TakesDamageFrom.Contains(damageType))
             {
                 col.gameObject.GetComponent<Stats>().DealDamage(DamageAmount.Value);
@@ -22,6 +28,7 @@ public class DamageDealer : MonoBehaviour
                     {
                         ShakeBehaviour.Shake();
                     }
+                    
                     if (!gameObject.CompareTag("Fireball"))
                     {
                         Destroy(gameObject);

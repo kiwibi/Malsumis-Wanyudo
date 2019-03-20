@@ -12,7 +12,12 @@ namespace AI.Decisions
 
         private bool FanOfFire(StateController controller)
         {
-            return !controller.statsObject.FanOfFireOnCooldown;
+            if (controller.AlienHealth.Value <= controller.AlienMaxHealth.Value / 2)
+            {
+                return !controller.statsObject.FanOfFireOnCooldown;
+            }
+
+            return false;
         }
     }
 }

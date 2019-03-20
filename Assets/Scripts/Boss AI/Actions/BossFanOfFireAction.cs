@@ -12,8 +12,16 @@ namespace AI.Actions
 
         private void BossFanOfFire(StateController controller)
         {
-                controller.SpawnFireBall();
+            if (!controller.FanOfFireOnDelay)
+            {
+                controller.StartCoroutine(controller.FireBalls());
+            }
 
+
+                if (controller.statsObject.FanOfFireFireBalls < controller.fireBallsSpawned)
+                {
+                    controller.statsObject.FanOfFireDone = true;
+                }
         }
     }
 }
