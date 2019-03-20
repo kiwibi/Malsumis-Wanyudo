@@ -35,6 +35,15 @@ public class AlienStatsObject : ScriptableObject
     public float waitBeforeDash;
     public Color dashColor;
 
+    [Header("BOSS: Fan Of Fire")] 
+    public bool FanOfFireOnCooldown;
+    public float FanOfFireCooldown;
+    public bool FanOfFireDone;
+    public int FanOfFireAngle;
+    public int FanOfFireStartAngle;
+    public int FanOfFireEndAngle;
+    public int FanOfFireFireBalls;
+    
     [Header("BOSS: Fix boss dropping too low")]
     public int returningLocation;
 

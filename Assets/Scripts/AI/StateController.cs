@@ -1,5 +1,7 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class StateController : MonoBehaviour
 {
@@ -25,7 +27,8 @@ public class StateController : MonoBehaviour
     public State bossDashState;
     public State bossFollowState;
     public State bossFireballState;
-
+    public State fanOfFireState;
+    
     [Header("Spawn this Fireball prefab")]
     public GameObject fireball;
 
@@ -47,6 +50,9 @@ public class StateController : MonoBehaviour
     private AudioPlayer audioPlayer;
     private Light lightSource;
     private Vector3 dashTarget;
+    private DisableShield shield;
+    public int fireBallsSpawned;
+    public bool FanOfFireOnDelay;
 
     public Vector3 targetPos;
     public bool hasTarget;
@@ -79,8 +85,15 @@ public class StateController : MonoBehaviour
         audioPlayer = GetComponent<AudioPlayer>();
         lightSource = GetComponentInChildren<Light>();
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        shield = GetComponentInChildren<DisableShield>();
 
         AlienHealth.Value = AlienMaxHealth.Value;
+        
+        // Reset fan of fire
+        statsObject.FanOfFireDone = false;
+        statsObject.FanOfFireOnCooldown = false;
+        fireBallsSpawned = 0;
+        shield.SetState(false);
     }
 
     private void Update()
@@ -123,6 +136,10 @@ public class StateController : MonoBehaviour
         else if (currentState == fireballState && nextState == followState || currentState == bossFireballState && nextState == bossFollowState)
         {
             StartCoroutine("ResetFireBall");
+        }
+        else if (currentState == fanOfFireState && nextState == bossFollowState)
+        {
+                StartCoroutine(ResetFanOfFire());
         }
 
         if (nextState != remainState)
@@ -172,6 +189,29 @@ public class StateController : MonoBehaviour
         return dashTarget;
     }
 
+    public IEnumerator FireBalls()
+    {
+        shield.SetState(true);
+        FanOfFireOnDelay = true;
+        var ball = Instantiate(fireball, transform.position, Quaternion.identity);
+        fireBallsSpawned++;
+        if (fireBallsSpawned < statsObject.FanOfFireFireBalls / 2)
+        {
+            ball.transform.rotation = Quaternion.AngleAxis(statsObject.FanOfFireStartAngle - (statsObject.FanOfFireAngle * fireBallsSpawned), Vector3.back);
+        }
+        else
+        {
+            var offset = fireBallsSpawned - statsObject.FanOfFireFireBalls / 2;
+            ball.transform.rotation =
+                Quaternion.AngleAxis(statsObject.FanOfFireEndAngle + (statsObject.FanOfFireAngle * offset),
+                    Vector3.back);
+            ball.GetComponentInChildren<SpriteRenderer>().transform.rotation = ball.transform.rotation;
+        }
+        yield return new WaitForSecondsRealtime(0.2f);
+        FanOfFireOnDelay = false;
+
+    }
+
     private IEnumerator ResetDash()
     {
         if (!statsObject.isKillable)
@@ -190,5 +230,15 @@ public class StateController : MonoBehaviour
         statsObject.FireballCooldown = Random.Range(stats.FireballMinCooldown, stats.FireballMaxCooldown);
         yield return new WaitForSeconds(statsObject.FireballCooldown);
         statsObject.FireballOnCooldown = false;
+    }
+
+    private IEnumerator ResetFanOfFire()
+    {
+        statsObject.FanOfFireDone = false;
+        statsObject.FanOfFireOnCooldown = true;
+        fireBallsSpawned = 0;
+        shield.SetState(false);
+        yield return new WaitForSeconds(statsObject.FanOfFireCooldown);
+        statsObject.FanOfFireOnCooldown = false;
     }
 }
