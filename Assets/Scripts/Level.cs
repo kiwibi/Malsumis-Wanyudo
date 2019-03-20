@@ -22,7 +22,6 @@ public class Level : MonoBehaviour
 
     public StringVariable loseScreen;
 
-    public GameObject levelCleared;
     public float transitionDelay;
 
     [Header("Audio")] 
@@ -35,10 +34,7 @@ public class Level : MonoBehaviour
     void Start()
     {
         audioPlayer = GetComponent<AudioPlayer>();
-        if (levelCleared == null)
-        {
-            Debug.LogError("Level clear not set");
-        }
+        KillCounter.Value = 0;
     }
     void Update()
     {
@@ -62,7 +58,7 @@ public class Level : MonoBehaviour
         }
         else if (currentLevel.Value == 2)
         {
-            if (KillCounter.Value >= ClearCondition_2.Value)
+            if (KillCounter.Value >= ClearCondition_1.Value)
             {
                 SpawnerOn.Value = false;
                 StartCoroutine(TransitionScene(transitionDelay,"Transition2", 3));
@@ -70,7 +66,7 @@ public class Level : MonoBehaviour
         }
         else if (currentLevel.Value == 3)
         {
-            if (KillCounter.Value >= ClearCondition_3.Value)
+            if (KillCounter.Value >= ClearCondition_1.Value)
             {
                 SpawnerOn.Value = false;
                 StartCoroutine(TransitionScene(transitionDelay,"Transition3", 4));

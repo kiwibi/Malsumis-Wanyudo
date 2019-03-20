@@ -8,6 +8,7 @@ public class bloodPoolBehaviour : MonoBehaviour
     private AudioPlayer audioPlayer;
     public SimpleAudioEvent deathSound;
     private bool played;
+    public IntVariable currentLevel;
 
     void Start()
     {
@@ -30,7 +31,8 @@ public class bloodPoolBehaviour : MonoBehaviour
             PlayDeathSound();
             played = true;
         }
-        transform.position = transform.position + Vector3.down * 0.5f * Time.deltaTime;
+        if(currentLevel.Value != 4)
+            transform.position = transform.position + Vector3.down * 0.5f * Time.deltaTime;
     }
 
     public void PlayDeathSound()
