@@ -7,6 +7,7 @@ public class Menu : MonoBehaviour
 {
     public StringVariable Level1;
     public StringVariable Controls;
+    public StringVariable Credit;
     public void StartGame()
     {
         SceneManager.LoadScene(Level1.Value);
@@ -20,5 +21,10 @@ public class Menu : MonoBehaviour
     public void Quit()
     {
         Application.Quit();
+    }
+
+    public void Credits()
+    {
+        SceneManager.LoadScene(Credit.Value);
     }
 }

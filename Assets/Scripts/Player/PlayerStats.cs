@@ -26,6 +26,7 @@ public class PlayerStats : Stats
         //Debug.Log("Player health: " + CurrentHealth.Value);
         if (CurrentHealth.Value <= 0)
         {
+            dmgFeedback.BloodSpawn();
             Die();
         }
     }
