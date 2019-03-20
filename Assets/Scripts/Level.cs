@@ -36,15 +36,15 @@ public class Level : MonoBehaviour
         audioPlayer = GetComponent<AudioPlayer>();
         if(currentLevel.Value == 1)
         {
-            currentLevel.Value = 0;
+            KillCounter.Value = 0;
         }
         else if(currentLevel.Value == 2)
         {
-            currentLevel.Value = 50;
+            KillCounter.Value = 50;
         }
         else if (currentLevel.Value == 3)
         {
-            currentLevel.Value = 100;
+            KillCounter.Value = 100;
         }
     }
     void Update()

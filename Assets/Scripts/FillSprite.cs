@@ -31,10 +31,10 @@ public class FillSprite : MonoBehaviour
                 fillArea.fillAmount = CurrentKillCount.Value * 0.0058f;
                 break;
             case 2:
-                fillArea.fillAmount = checkPoint1 + ((CurrentKillCount.Value) * 0.0056f);
+                fillArea.fillAmount = checkPoint1 + ((CurrentKillCount.Value - 50) * 0.0056f);
                 break;
             case 3:
-                fillArea.fillAmount = checkPoint2 + ((CurrentKillCount.Value) * 0.0086f);
+                fillArea.fillAmount = checkPoint2 + ((CurrentKillCount.Value - 100) * 0.0086f);
                 break;
         }
     }
