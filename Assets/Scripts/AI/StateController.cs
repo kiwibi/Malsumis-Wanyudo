@@ -211,7 +211,7 @@ public class StateController : MonoBehaviour
                     Vector3.back);
             ball.GetComponentInChildren<SpriteRenderer>().transform.rotation = ball.transform.rotation;
         }
-        yield return new WaitForSecondsRealtime(0.2f);
+        yield return new WaitForSecondsRealtime(statsObject.FireRateFanOfFire);
         FanOfFireOnDelay = false;
 
     }
