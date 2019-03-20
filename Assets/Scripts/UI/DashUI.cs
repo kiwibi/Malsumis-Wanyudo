@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class DashUI : MonoBehaviour
 {
+    public static bool animated;
+
     public AlienStatsObject alienStats;
     public GameObject titleField;
     
@@ -17,6 +19,7 @@ public class DashUI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        DashUI.animated = false;
         background = GetComponent<Image>();
         textField = GetComponentInChildren<Text>();
         startAnimation = GetComponent<ScaleMove>();
@@ -37,8 +40,10 @@ public class DashUI : MonoBehaviour
             background.enabled = true;
             textField.enabled = true;
             titleField.GetComponent<Text>().enabled = true;
-            if(alienStats.AlienLevel == 3)
+            if (DashUI.animated == true)
+            {
                 startAnimation.enabled = false;
+            }
             else
             {
                 startAnimation.enabled = true;

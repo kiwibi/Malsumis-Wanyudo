@@ -13,7 +13,6 @@ public class FillSprite : MonoBehaviour
 
     public IntVariable Currentlevel;
     public IntVariable CurrentKillCount;
-    public FloatVariable fillAmount;
 
     void Start()
     {
@@ -25,25 +24,18 @@ public class FillSprite : MonoBehaviour
 
     void Update()
     {
-        fillAmount.Value = fillProgress();
-        fillArea.fillAmount = fillAmount.Value;   
-    }
-
-    float fillProgress()
-    {
         switch (Currentlevel.Value)
         {
             case 1:
 
-                fillAmount.Value = CurrentKillCount.Value * 0.0058f;
+                fillArea.fillAmount = CurrentKillCount.Value * 0.0058f;
                 break;
             case 2:
-                fillAmount.Value = checkPoint1 + ((CurrentKillCount.Value - 50) * 0.0056f);
+                fillArea.fillAmount = checkPoint1 + ((CurrentKillCount.Value) * 0.0056f);
                 break;
             case 3:
-                fillAmount.Value = checkPoint2 + ((CurrentKillCount.Value - 100) * 0.0086f);
+                fillArea.fillAmount = checkPoint2 + ((CurrentKillCount.Value) * 0.0086f);
                 break;
         }
-        return fillAmount.Value;
     }
 }
