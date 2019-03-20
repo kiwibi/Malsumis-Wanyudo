@@ -12,15 +12,14 @@ public class Evolve : MonoBehaviour
     public SimpleAudioEvent evolve1;
     public SimpleAudioEvent evolve2;
 
-    private AudioPlayer audioPlayer;
-
+    private AudioSource audioSource;
 
     private Animator anim;
     // Start is called before the first frame update
     void Start()
     {
         anim = GetComponentInChildren<Animator>();
-        audioPlayer = GetComponent<AudioPlayer>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -28,13 +27,13 @@ public class Evolve : MonoBehaviour
     {
         if (currentLevel == 1 && KillCounter >= ClearCondition_1)
         {
-
+            evolve1.Play(audioSource);
             StartCoroutine(Evolve1());
         }
 
         if (currentLevel == 2 && KillCounter >= ClearCondition_2)
         {
-            
+            evolve2.Play(audioSource);
             StartCoroutine(Evolve2());
         }
     }
@@ -43,15 +42,12 @@ public class Evolve : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
         anim.SetBool( "Evolve1", true);
-        audioPlayer.AudioEvent = evolve1;
-        audioPlayer.PlaySound();
+
     }
     
     private IEnumerator Evolve2()
     {
         yield return new WaitForSeconds(delay);
-        audioPlayer.AudioEvent = evolve2;
-        audioPlayer.PlaySound();
         anim.SetBool( "Evolve2", true);
     }
 }

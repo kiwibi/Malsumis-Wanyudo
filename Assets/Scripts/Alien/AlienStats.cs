@@ -8,6 +8,8 @@ public class AlienStats : Stats
     public IntVariable AlienHealth;
     private int nextSpeedUp;
     public readonly int speedUpSteps = 15;
+
+    public SimpleAudioEvent hurtSound;
     private Light lightSource;
 
     private StateController controller;
@@ -17,6 +19,8 @@ public class AlienStats : Stats
     private float DashCooldown;
     private float AlienSpeed;
     private StateController stateController;
+    private AudioSource audioSource;
+  
 
     private Animator anim;
 
@@ -43,6 +47,7 @@ public class AlienStats : Stats
         AlienHealth.Value = AlienMaxHealth;
         nextSpeedUp = AlienHealth.Value - speedUpSteps;
 
+        audioSource = GetComponentInChildren<AudioSource>();
         anim = GetComponentInChildren<Animator>();
         stateController = GetComponent<StateController>();
     }
@@ -55,6 +60,7 @@ public class AlienStats : Stats
             Die();
         }
 
+        hurtSound.Play(audioSource);
         anim.SetBool("IsHit", true);
         Invoke("ResetColor", 0.1f);
         
