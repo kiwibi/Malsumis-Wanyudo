@@ -28,6 +28,7 @@ public class StateController : MonoBehaviour
     public State bossFollowState;
     public State bossFireballState;
     public State fanOfFireState;
+    public State bossPrepareDash;
     
     [Header("Spawn this Fireball prefab")]
     public GameObject fireball;
@@ -93,7 +94,10 @@ public class StateController : MonoBehaviour
         statsObject.FanOfFireDone = false;
         statsObject.FanOfFireOnCooldown = false;
         fireBallsSpawned = 0;
-        shield.SetState(false);
+        if (shield)
+        {
+            shield.SetState(false);
+        }
     }
 
     private void Update()
@@ -119,7 +123,7 @@ public class StateController : MonoBehaviour
 
     public void TransitionToState(State nextState)
     {
-        if (currentState == prepareDashState && nextState == dashState || currentState == bossFollowState && nextState == bossDashState)
+        if (currentState == followState && nextState == dashState || currentState == bossPrepareDash && nextState == bossDashState)
         {
             PlayDashSound();
         }

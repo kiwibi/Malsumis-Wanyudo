@@ -156,7 +156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3588c8b2350579e4886c852aebcfce46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Blood: {fileID: 7069540365454755839, guid: 9a39483610fa54d4fb9cb903c3b9b169, type: 3}
+  Blood: {fileID: 8526390940837453429, guid: 263d63e49efa466448ef19007151bb7b, type: 3}
 --- !u!1 &4841397904929385671
 GameObject:
   m_ObjectHideFlags: 0
