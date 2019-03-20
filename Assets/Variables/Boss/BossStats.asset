@@ -32,7 +32,7 @@ MonoBehaviour:
   fireballAngle: -60
   fireballSpread: 25
   fireballAngle2: -45
-  waitBeforeDash: 0.5
+  waitBeforeDash: 1
   dashColor: {r: 1, g: 0.11792451, b: 0.6620083, a: 0}
   FanOfFireOnCooldown: 0
   FanOfFireCooldown: 5
