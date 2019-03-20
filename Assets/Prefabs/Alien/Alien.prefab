@@ -417,6 +417,8 @@ MonoBehaviour:
   bossDashState: {fileID: 11400000, guid: 77962d99c0f4d9d4e948673df2fe297d, type: 2}
   bossFollowState: {fileID: 11400000, guid: 87f2d40274e8f324599ebcc8f87b9064, type: 2}
   bossFireballState: {fileID: 11400000, guid: 25f3d900c41491941a20cb9769d0e02b, type: 2}
+  fanOfFireState: {fileID: 0}
+  bossPrepareDash: {fileID: 0}
   fireball: {fileID: 1255949191597884776, guid: bd7404781a0ecab4fba83942f07b4946,
     type: 3}
   FireballMaterial: {fileID: 2100000, guid: 3b60068d128578b4281b89cb7eeef6c4, type: 2}
@@ -427,6 +429,8 @@ MonoBehaviour:
   stateTimeElapsed: 0
   dashStartingPosition: {x: 0, y: 0, z: 0}
   spriteRenderer: {fileID: 0}
+  fireBallsSpawned: 0
+  FanOfFireOnDelay: 0
   targetPos: {x: 0, y: 0, z: 0}
   hasTarget: 0
 --- !u!114 &6872808038416071065
@@ -441,6 +445,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6041c4918a48244f8f4839988696fff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentLevel:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: b91425eed0d66394a9e1aa9881387d53, type: 2}
   KillCounter:
     UseConstant: 0
     ConstantValue: 0
@@ -453,7 +461,9 @@ MonoBehaviour:
     UseConstant: 0
     ConstantValue: 0
     Variable: {fileID: 11400000, guid: 70fa65d5a5393184488a5b361420d336, type: 2}
-  delay: 7
+  delay: 6
+  evolve1: {fileID: 11400000, guid: f89af5fcac93bff4591f69d78a61497c, type: 2}
+  evolve2: {fileID: 11400000, guid: 641b14f6fcd49db4fa07adaea79fa227, type: 2}
 --- !u!114 &1428101126407483852
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -466,6 +476,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e0114fab91a7ce4b901a503c2ffa31d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blood: {fileID: 0}
   statsObject: {fileID: 11400000, guid: 98046954293c27341844ac15558153f1, type: 2}
   AlienMaxHealth:
     UseConstant: 1
@@ -541,7 +552,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0

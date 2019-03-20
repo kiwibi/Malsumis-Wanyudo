@@ -18,12 +18,28 @@ public class EnemySpawner : MonoBehaviour
     public SpawnPoint[] spawnPoints;
 
     private Level level;
-
+    private int maxRange;
+    
     IEnumerator Start()
     {
         SpawnerOn.Value = true;
         level = GameObject.FindGameObjectWithTag("Level").GetComponent<Level>();
         spawnPoints = GetComponentsInChildren<SpawnPoint>();
+
+        if (CurrentLevel.Value == 1)
+        {
+            maxRange = 5;
+        }
+        
+        else if (CurrentLevel.Value == 2)
+        {
+            maxRange = 9;
+        }
+        else if (CurrentLevel.Value == 3)
+        {
+            maxRange = 11;
+        }
+        
         
         while (SpawnerOn.Value)
         {
@@ -42,18 +58,23 @@ public class EnemySpawner : MonoBehaviour
 
     GameObject GetEnemyType()
     {
-        int maxEnemyType = level.currentLevel.Value + 1;
-        int enemyType = Random.Range(1, maxEnemyType);
+        int enemyType = Random.Range(1, maxRange);
         switch(enemyType)
         {
             case 1:
-                return Enemy1;
             case 2:
-                return Enemy2;
             case 3:
+            case 4:
+            case 5:       
+                return Enemy1;
+            case 6:
+            case 7:
+            case 8:
+                return Enemy2;
+            case 9:
+            case 10:
                 return Enemy3;
             default:
-                Debug.LogWarning("Trying to spawn wrong enemy type");
                 return Enemy1;
         }
     }

@@ -47,11 +47,6 @@ public class AlienStats : Stats
         stateController = GetComponent<StateController>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-    }
-
     public override void DealDamage(int damage)
     {
         AlienHealth.Value -= damage;

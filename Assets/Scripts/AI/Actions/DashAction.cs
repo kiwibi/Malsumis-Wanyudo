@@ -44,15 +44,6 @@ namespace AI.Actions
 
                 controller.hasTarget = true;
             }
-            
-            /*
-            if (!controller.hasTarget)
-            {
-                controller.targetPos = new Vector3(0,
-                    controller.transform.position.y + controller.statsObject.DashDistance,
-                    0);
-            }
-            */
 
             controller.transform.Translate(controller.targetPos*controller.statsObject.DashSpeed* Time.deltaTime);
         }

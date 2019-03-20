@@ -1011,7 +1011,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Currentlevel: {fileID: 11400000, guid: b91425eed0d66394a9e1aa9881387d53, type: 2}
   CurrentKillCount: {fileID: 11400000, guid: 71c942f071e849b45bba7b9df64489eb, type: 2}
-  fillAmount: {fileID: 11400000, guid: 0786d8c41fe1c364087e158612308ceb, type: 2}
 --- !u!95 &598705950789907840
 Animator:
   serializedVersion: 3
@@ -2827,11 +2826,6 @@ PrefabInstance:
     - target: {fileID: 2995990598099252652, guid: 139a1257ad6a14947a361f0fa5519a53,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6043305935348625759, guid: 139a1257ad6a14947a361f0fa5519a53,
-        type: 3}
-      propertyPath: m_PlayOnAwake
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

@@ -25,7 +25,7 @@ MonoBehaviour:
   FireballKey: 101
   FireballSpawned: 0
   FireballOnCooldown: 0
-  FireballCooldown: 0.90000004
+  FireballCooldown: 5
   FireballMaxCooldown: 1.2
   FireballMinCooldown: 1.2
   fireBalls: 5
