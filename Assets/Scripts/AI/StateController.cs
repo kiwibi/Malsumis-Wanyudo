@@ -20,7 +20,7 @@ public class StateController : MonoBehaviour
     // TODO find a way to do this better
     [Header("Used for resetting abilities")]
     public State dashState;
-    public State prepareDashState;
+    public State bossReturnDashState;
     public State returnDashState;
     public State followState;
     public State fireballState;
@@ -133,7 +133,7 @@ public class StateController : MonoBehaviour
             PlayFireballLaunchSound();
         }
 
-        if (currentState == returnDashState && nextState == followState || currentState == bossDashState && nextState == bossFollowState)
+        if (currentState == returnDashState  || currentState == bossReturnDashState)
         {
             StartCoroutine("ResetDash");
         }
