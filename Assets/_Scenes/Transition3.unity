@@ -10318,8 +10318,13 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "Thank you, John Ward.\nYou have shown your species' true nature. \nNow
-    you are no longer of any use to me.\n"
+  m_Text: 'Good work, John Ward.
+
+    You showed your true nature.
+
+    Now I will feast on your soul!
+
+'
 --- !u!114 &8689606890196634507
 MonoBehaviour:
   m_ObjectHideFlags: 0

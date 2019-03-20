@@ -41,6 +41,7 @@ MonoBehaviour:
   FanOfFireStartAngle: 40
   FanOfFireEndAngle: -40
   FanOfFireFireBalls: 20
+  FireRateFanOfFire: 0.2
   returningLocation: 8
   dashSound: {fileID: 11400000, guid: ff1ad0254d04a7643a248d4242b910ef, type: 2}
   shootFireball: {fileID: 11400000, guid: 897320b39b0127849b403e1aef86e0b4, type: 2}
