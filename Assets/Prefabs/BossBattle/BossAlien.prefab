@@ -290,7 +290,7 @@ CircleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5088736748115763952}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -434,6 +434,7 @@ MonoBehaviour:
     Variable: {fileID: 11400000, guid: 965c39f302e7b4b4da54c625ea6e9d03, type: 2}
   AlienHealth: {fileID: 11400000, guid: b6678d3ec2abc784186af8196058ead5, type: 2}
   hurtSound: {fileID: 11400000, guid: aae59d65baf1ef145ac623af8c7ebb31, type: 2}
+  dieSound: {fileID: 11400000, guid: c7530086359f1a2448c95013556766d6, type: 2}
   FireballMaxCooldown: 0
   FireballMinCooldown: 0
 --- !u!61 &1475564918441375079
@@ -686,13 +687,7 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7748730056746876511, guid: 033e44d245ef0524ca7881e822e07486,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 7748730056746876511, guid: 033e44d245ef0524ca7881e822e07486, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 033e44d245ef0524ca7881e822e07486, type: 3}
 --- !u!1 &5088736748115763952 stripped
 GameObject:

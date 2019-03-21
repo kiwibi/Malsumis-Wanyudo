@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditorInternal.VR;
 using UnityEngine;
 
 public class AlienStats : Stats
@@ -12,6 +13,7 @@ public class AlienStats : Stats
     public readonly int speedUpSteps = 15;
 
     public SimpleAudioEvent hurtSound;
+    public SimpleAudioEvent dieSound;
     private Light lightSource;
 
     private StateController controller;
@@ -25,6 +27,7 @@ public class AlienStats : Stats
     private bool playSound = true;
 
     private Animator anim;
+    private bool isDead;
 
     // Start is called before the first frame update
     void Start()
@@ -56,10 +59,18 @@ public class AlienStats : Stats
 
     public override void DealDamage(int damage)
     {
+        if (isDead)
+        {
+            return;
+        }
+        
         AlienHealth.Value -= damage;
+        
         if (AlienHealth.Value <= 0)
         {
+            isDead = true;
             Die();
+            dieSound.Play(audioSource);
             return;
         }
 
