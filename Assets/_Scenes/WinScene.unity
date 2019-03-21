@@ -10237,6 +10237,11 @@ PrefabInstance:
       propertyPath: m_FontData.m_MaxSize
       value: 42
       objectReference: {fileID: 0}
+    - target: {fileID: 972763827060595808, guid: 1f0fa8cff24f7714f8cb98803740c082,
+        type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 103368634265266193, guid: 1f0fa8cff24f7714f8cb98803740c082,
         type: 3}
       propertyPath: m_FontData.m_Font
