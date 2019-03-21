@@ -141,6 +141,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentLevel: {fileID: 11400000, guid: b91425eed0d66394a9e1aa9881387d53, type: 2}
+  menu: {fileID: 8300000, guid: f1de09633dbca014d81605cdc30d66f4, type: 3}
+  transition: {fileID: 8300000, guid: a31a07b71258ec341938e342b29c7546, type: 3}
+  winScreen: {fileID: 8300000, guid: 6242db2fea3fa604db2cbd0fd18441d0, type: 3}
+  loseScreen: {fileID: 8300000, guid: 0617da2642d43074d8e3432a868cae97, type: 3}
   level1: {fileID: 8300000, guid: 39e90dbf76c990f4a897fca73bad38f4, type: 3}
   level2: {fileID: 8300000, guid: 8fda0d12f31aabb47acdace0dda387f0, type: 3}
   level3: {fileID: 8300000, guid: c1b79df4862edf5499c06e648d2cdd24, type: 3}
