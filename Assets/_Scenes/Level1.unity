@@ -2097,7 +2097,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 10
   m_WholeNumbers: 1
-  m_Value: 10
+  m_Value: 8
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -2601,7 +2601,7 @@ PrefabInstance:
     - target: {fileID: 6707414117047825473, guid: 9b05c7e614960b641a2f56234163fe5d,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6707414117047825478, guid: 9b05c7e614960b641a2f56234163fe5d,
         type: 3}
