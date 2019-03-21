@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireballSound: {fileID: 11400000, guid: c2df1229eca71d941a4898ab1733a372, type: 2}
+  menuclickSound: {fileID: 11400000, guid: cc7fe19fa25604847afe09db959d0723, type: 2}
 --- !u!82 &4476296609119700176
 AudioSource:
   m_ObjectHideFlags: 0

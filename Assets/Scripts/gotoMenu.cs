@@ -11,12 +11,14 @@ public class gotoMenu : MonoBehaviour
     {
         if(Input.GetKey("escape"))
         {
+            EventManager.TriggerEvent("MenuClick");
             SceneManager.LoadScene(menu.Value);
         }
     }
 
     public void GoBackButton()
     {
+        EventManager.TriggerEvent("MenuClick");
         SceneManager.LoadScene(menu.Value);
     }
 }
