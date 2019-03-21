@@ -2404,7 +2404,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 10
   m_WholeNumbers: 1
-  m_Value: 10
+  m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -3124,6 +3124,11 @@ PrefabInstance:
     - target: {fileID: 1358046404968934969, guid: 90a249ad030fbc14198279215c9c4597,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5678334609595897392, guid: 90a249ad030fbc14198279215c9c4597,
+        type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

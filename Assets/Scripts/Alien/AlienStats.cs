@@ -60,6 +60,7 @@ public class AlienStats : Stats
         if (AlienHealth.Value <= 0)
         {
             Die();
+            return;
         }
 
         if(playSound)
