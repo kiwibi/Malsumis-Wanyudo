@@ -300,7 +300,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 96537970ace08e24c846d6eca1f2ff63, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -410,7 +410,7 @@ MonoBehaviour:
   statsObject: {fileID: 11400000, guid: 98046954293c27341844ac15558153f1, type: 2}
   stateVisualizer: {fileID: 2995990598099252652}
   dashState: {fileID: 11400000, guid: b2ca57dede437ed4c9142f96de1006e4, type: 2}
-  prepareDashState: {fileID: 11400000, guid: 9eea156c54c1c564b817b56a07b965b8, type: 2}
+  bossReturnDashState: {fileID: 0}
   returnDashState: {fileID: 11400000, guid: ef62db16393a86240b47a054ee3d4fab, type: 2}
   followState: {fileID: 11400000, guid: a1bc61605b454224ab1f83eddc6ef187, type: 2}
   fireballState: {fileID: 11400000, guid: e6bbbd1c6149d3c469d24657344f1719, type: 2}
@@ -483,6 +483,8 @@ MonoBehaviour:
     ConstantValue: 0
     Variable: {fileID: 0}
   AlienHealth: {fileID: 11400000, guid: b6678d3ec2abc784186af8196058ead5, type: 2}
+  hurtSound: {fileID: 0}
+  dieSound: {fileID: 0}
   FireballMaxCooldown: 0
   FireballMinCooldown: 0
 --- !u!114 &547541005
