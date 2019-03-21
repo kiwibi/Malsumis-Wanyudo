@@ -5185,7 +5185,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &993873853
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10530,8 +10530,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.53762895, y: 0.8186083}
   m_AnchorMax: {x: 0.8257106, y: 0.9153802}
-  m_AnchoredPosition: {x: -56.5, y: 17}
-  m_SizeDelta: {x: 106, y: 34}
+  m_AnchoredPosition: {x: 114, y: -18.331}
+  m_SizeDelta: {x: 4073.3, y: 807.06}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1922785546
 MonoBehaviour:
@@ -10542,7 +10542,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1922785544}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
@@ -10553,20 +10553,15 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_FontData:
-    m_Font: {fileID: 12800000, guid: a75888b054d467f4684a27249d9f8ebb, type: 3}
-    m_FontSize: 300
-    m_FontStyle: 1
-    m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 300
-    m_Alignment: 3
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 1
-    m_VerticalOverflow: 1
-    m_LineSpacing: 1
-  m_Text: Group Wanyudo
+  m_Sprite: {fileID: 21300000, guid: 5a3f70fab61c9074fa1e2cb80709a4bb, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
 --- !u!222 &1922785547
 CanvasRenderer:
   m_ObjectHideFlags: 0
