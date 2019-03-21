@@ -12,6 +12,9 @@ public class BossLevel : MonoBehaviour
     public IntVariable playerHealth;
     public IntVariable alienHealth;
     public Animator anim;
+
+    public float loseDelay;
+    public float winDelay;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,12 +31,12 @@ public class BossLevel : MonoBehaviour
     {
         if (playerHealth.Value <= 0)
         {
-           StartCoroutine(WinScreen(loseScreen.Value, 3));
+           StartCoroutine(WinScreen(loseScreen.Value, loseDelay));
         }
 
         if (alienHealth.Value <= 0)
         {
-            StartCoroutine(WinScreen(winScreen.Value, 5));
+            StartCoroutine(WinScreen(winScreen.Value, winDelay));
         }
     }
 

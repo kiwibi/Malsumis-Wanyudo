@@ -50,3 +50,5 @@ MonoBehaviour:
   playerHealth: {fileID: 11400000, guid: 2320b313e4ec8fe4f80cb51eba84ccfc, type: 2}
   alienHealth: {fileID: 11400000, guid: b6678d3ec2abc784186af8196058ead5, type: 2}
   anim: {fileID: 0}
+  loseDelay: 4
+  winDelay: 8
