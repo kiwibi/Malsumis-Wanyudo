@@ -10156,6 +10156,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 12800000, guid: a75888b054d467f4684a27249d9f8ebb,
         type: 3}
+    - target: {fileID: 2310143405471516402, guid: 1f0fa8cff24f7714f8cb98803740c082,
+        type: 3}
+      propertyPath: m_Text
+      value: You survived
+      objectReference: {fileID: 0}
     - target: {fileID: 2666495031349260985, guid: 1f0fa8cff24f7714f8cb98803740c082,
         type: 3}
       propertyPath: m_AnchoredPosition.x
