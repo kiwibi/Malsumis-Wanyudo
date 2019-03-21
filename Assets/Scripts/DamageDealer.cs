@@ -14,6 +14,13 @@ public class DamageDealer : MonoBehaviour
             //Debug.Log(damageType.name + " hit: " + damageDealer.damageType.name);
             if (col.CompareTag("Shield") && gameObject.CompareTag("Bullet"))
             {
+                var particle = col.GetComponentInChildren<ParticleSystem>();
+                if (particle != null)
+                {
+                    particle.transform.position = gameObject.transform.position;
+                    particle.Play();
+                }
+                
                 Destroy(gameObject);
                 return;
             }
