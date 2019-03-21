@@ -27,19 +27,24 @@ public class Evolve : MonoBehaviour
     {
         if (currentLevel == 1 && KillCounter >= ClearCondition_1)
         {
-            evolve1.Play(audioSource);
-            StartCoroutine(Evolve1());
+            if (!anim.GetBool("Evolve1"))
+            {
+                StartCoroutine(Evolve1());
+            }
         }
 
         if (currentLevel == 2 && KillCounter >= ClearCondition_2)
         {
-            evolve2.Play(audioSource);
-            StartCoroutine(Evolve2());
+            if (!anim.GetBool("Evolve2"))
+            {
+                StartCoroutine(Evolve2());
+            }
         }
     }
 
     private IEnumerator Evolve1()
     {
+        evolve1.Play(audioSource);
         yield return new WaitForSeconds(delay);
         anim.SetBool( "Evolve1", true);
 
@@ -47,6 +52,7 @@ public class Evolve : MonoBehaviour
     
     private IEnumerator Evolve2()
     {
+        evolve2.Play(audioSource);
         yield return new WaitForSeconds(delay);
         anim.SetBool( "Evolve2", true);
     }
