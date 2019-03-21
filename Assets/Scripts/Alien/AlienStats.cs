@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
 public class AlienStats : Stats
 {
@@ -20,7 +22,7 @@ public class AlienStats : Stats
     private float AlienSpeed;
     private StateController stateController;
     private AudioSource audioSource;
-  
+    private bool playSound = true;
 
     private Animator anim;
 
@@ -60,9 +62,15 @@ public class AlienStats : Stats
             Die();
         }
 
-        hurtSound.Play(audioSource);
+        if(playSound)
+        {
+            playSound = false;
+            hurtSound.Play(audioSource);
+            StartCoroutine(FinishSound());
+        }
+
         anim.SetBool("IsHit", true);
-        Invoke("ResetColor", 0.1f);
+        Invoke("ResetColor", 0.05f);
         
         if (AlienHealth.Value <= nextSpeedUp)
         {
@@ -78,6 +86,12 @@ public class AlienStats : Stats
         anim.SetBool("Die", true);
         Instantiate(blood, transform.position, Quaternion.identity);
         //Destroy(gameObject);
+    }
+
+    private IEnumerator FinishSound()
+    {
+     yield return new WaitForSeconds(0.9f);
+     playSound = true;
     }
 
     private void DimLights(int intensity)
