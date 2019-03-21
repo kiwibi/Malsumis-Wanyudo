@@ -49,6 +49,7 @@ public class StateController : MonoBehaviour
     private bool aiActive = true;
     private BoxCollider2D collider2d;
     private AudioPlayer audioPlayer;
+    private Animator anim;
     private Light lightSource;
     private Vector3 dashTarget;
     private DisableShield shield;
@@ -87,6 +88,7 @@ public class StateController : MonoBehaviour
         lightSource = GetComponentInChildren<Light>();
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         shield = GetComponentInChildren<DisableShield>();
+        anim = GetComponentInChildren<Animator>();
 
         AlienHealth.Value = AlienMaxHealth.Value;
         
@@ -238,6 +240,7 @@ public class StateController : MonoBehaviour
 
     private IEnumerator ResetFanOfFire()
     {
+        anim.SetBool("Stand", false);
         statsObject.FanOfFireDone = false;
         statsObject.FanOfFireOnCooldown = true;
         fireBallsSpawned = 0;

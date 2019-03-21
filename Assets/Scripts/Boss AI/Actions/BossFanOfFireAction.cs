@@ -12,6 +12,8 @@ namespace AI.Actions
 
         private void BossFanOfFire(StateController controller)
         {
+            controller.GetComponentInChildren<Animator>().SetBool("Stand", true);
+            
             if (!controller.FanOfFireOnDelay)
             {
                 controller.StartCoroutine(controller.FireBalls());
