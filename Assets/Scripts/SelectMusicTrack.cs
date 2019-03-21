@@ -56,8 +56,9 @@ public class SelectMusicTrack : MonoBehaviour
 
     void selectMenuMusic()
     {
+        instance.played = false;
         //check for winScene
-        if(SceneManager.GetActiveScene().name == "WinScene")
+        if (SceneManager.GetActiveScene().name == "WinScene")
         {
             instance.audioSource.clip = winScreen;
             return;
