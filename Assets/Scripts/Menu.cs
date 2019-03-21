@@ -8,13 +8,16 @@ public class Menu : MonoBehaviour
     public StringVariable Level1;
     public StringVariable Controls;
     public StringVariable Credit;
+
     public void StartGame()
     {
+        EventManager.TriggerEvent("MenuClick");
         SceneManager.LoadScene(Level1.Value);
     }
 
     public void ControlScreen()
     {
+        EventManager.TriggerEvent("MenuClick");
         SceneManager.LoadScene(Controls.Value);
     }
 
@@ -25,6 +28,7 @@ public class Menu : MonoBehaviour
 
     public void Credits()
     {
+        EventManager.TriggerEvent("MenuClick");
         SceneManager.LoadScene(Credit.Value);
     }
 }
