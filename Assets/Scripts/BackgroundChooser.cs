@@ -28,8 +28,10 @@ public class BackgroundChooser : MonoBehaviour
             case 2:
                 level1.SetActive(false);
                 level2.SetActive(true);
+                level3.SetActive(false);
                 break;
             case 3:
+                level1.SetActive(false);
                 level2.SetActive(false);
                 level3.SetActive(true);
                 break;
