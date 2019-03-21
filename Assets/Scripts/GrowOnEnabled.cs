@@ -5,7 +5,7 @@ using UnityEngine;
 public class GrowOnEnabled : MonoBehaviour
 {
     public bool growOnStart;
-
+    public float endScale;
     public float growSpeed;
     // Start is called before the first frame update
     void Start()
@@ -19,13 +19,13 @@ public class GrowOnEnabled : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (transform.localScale.x < 2 && transform.localScale.y < 2)
+        if (transform.localScale.x < endScale && transform.localScale.y < endScale)
         {
             transform.localScale += new Vector3(0.1f, 0.1f, 0) * Time.deltaTime * growSpeed;
         }
         else
         {
-            transform.localScale = new Vector3(2,2,1);
+            transform.localScale = new Vector3(endScale,endScale,1);
         }
     }
 }
