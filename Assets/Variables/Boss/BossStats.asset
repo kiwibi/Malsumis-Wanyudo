@@ -21,11 +21,11 @@ MonoBehaviour:
   DashDuration: 1
   DashDistance: 1
   DashSpeed: 3
-  DashOnCooldown: 1
+  DashOnCooldown: 0
   FireballKey: 101
   FireballSpawned: 0
   FireballOnCooldown: 0
-  FireballCooldown: 1
+  FireballCooldown: 0.9
   FireballMaxCooldown: 1.2
   FireballMinCooldown: 1.2
   fireBalls: 4
@@ -35,7 +35,7 @@ MonoBehaviour:
   waitBeforeDash: 1
   dashColor: {r: 1, g: 0.11792451, b: 0.6620083, a: 0}
   FanOfFireOnCooldown: 0
-  FanOfFireCooldown: 5
+  FanOfFireCooldown: 7.5
   FanOfFireDone: 0
   FanOfFireAngle: 5
   FanOfFireStartAngle: 40
