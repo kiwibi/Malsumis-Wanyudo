@@ -9775,7 +9775,7 @@ PrefabInstance:
     - target: {fileID: 372985115670202509, guid: f697b220a597ca045831133bdcb34b74,
         type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 372985115670202509, guid: f697b220a597ca045831133bdcb34b74,
         type: 3}
@@ -9792,26 +9792,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5612788933398656575, guid: f697b220a597ca045831133bdcb34b74,
-        type: 3}
-      propertyPath: menu
-      value: 
-      objectReference: {fileID: 8300000, guid: f1de09633dbca014d81605cdc30d66f4, type: 3}
-    - target: {fileID: 5612788933398656575, guid: f697b220a597ca045831133bdcb34b74,
-        type: 3}
-      propertyPath: transition
-      value: 
-      objectReference: {fileID: 8300000, guid: a31a07b71258ec341938e342b29c7546, type: 3}
-    - target: {fileID: 5612788933398656575, guid: f697b220a597ca045831133bdcb34b74,
-        type: 3}
-      propertyPath: winScreen
-      value: 
-      objectReference: {fileID: 8300000, guid: 6242db2fea3fa604db2cbd0fd18441d0, type: 3}
-    - target: {fileID: 5612788933398656575, guid: f697b220a597ca045831133bdcb34b74,
-        type: 3}
-      propertyPath: loseScreen
-      value: 
-      objectReference: {fileID: 8300000, guid: 0617da2642d43074d8e3432a868cae97, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f697b220a597ca045831133bdcb34b74, type: 3}
 --- !u!1001 &1451394490
@@ -9864,7 +9844,7 @@ PrefabInstance:
     - target: {fileID: 5861435170278585822, guid: 478980c660f5b554bac1709d55feece0,
         type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 5861435170278585822, guid: 478980c660f5b554bac1709d55feece0,
         type: 3}
@@ -9881,12 +9861,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5861435170278585809, guid: 478980c660f5b554bac1709d55feece0,
-        type: 3}
-      propertyPath: menuclickSound
-      value: 
-      objectReference: {fileID: 11400000, guid: cc7fe19fa25604847afe09db959d0723,
-        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 478980c660f5b554bac1709d55feece0, type: 3}
 --- !u!1 &2105647994

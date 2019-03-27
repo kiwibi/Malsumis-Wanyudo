@@ -8,6 +8,22 @@ public class SoundEvents : MonoBehaviour
     public SimpleAudioEvent menuclickSound;
     private AudioSource audioSource;
 
+    public static SoundEvents instance = null;
+    void Awake()
+    {
+        audioSource = GetComponent<AudioSource>();
+        if (instance != null && instance != this)
+        {
+            Destroy(this.gameObject);
+            return;
+        }
+        else
+        {
+            instance = this;
+        }
+        DontDestroyOnLoad(this.gameObject);
+    }
+
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
