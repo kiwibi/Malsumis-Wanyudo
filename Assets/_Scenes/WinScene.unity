@@ -10735,7 +10735,7 @@ PrefabInstance:
     - target: {fileID: 972763827060595808, guid: 1f0fa8cff24f7714f8cb98803740c082,
         type: 3}
       propertyPath: m_Text
-      value: " Play \nAgain\n"
+      value: " Play \nagain\n"
       objectReference: {fileID: 0}
     - target: {fileID: 103368634265266193, guid: 1f0fa8cff24f7714f8cb98803740c082,
         type: 3}
