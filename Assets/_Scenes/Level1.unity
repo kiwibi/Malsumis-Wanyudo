@@ -1046,6 +1046,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Currentlevel: {fileID: 11400000, guid: b91425eed0d66394a9e1aa9881387d53, type: 2}
   CurrentKillCount: {fileID: 11400000, guid: 71c942f071e849b45bba7b9df64489eb, type: 2}
+  Level1Clear: {fileID: 11400000, guid: 7c0e62f919766bf478350d39e83cb7f2, type: 2}
+  Level2Clear: {fileID: 11400000, guid: 70fa65d5a5393184488a5b361420d336, type: 2}
+  Level3Clear: {fileID: 11400000, guid: 170435ce370a8784c960f29ab5b90f21, type: 2}
 --- !u!95 &598705950789907840
 Animator:
   serializedVersion: 3
