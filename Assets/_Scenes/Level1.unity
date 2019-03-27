@@ -2549,11 +2549,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: SoundEvents
       objectReference: {fileID: 0}
-    - target: {fileID: 5861435170278585808, guid: 478980c660f5b554bac1709d55feece0,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5861435170278585822, guid: 478980c660f5b554bac1709d55feece0,
         type: 3}
       propertyPath: m_LocalPosition.x
