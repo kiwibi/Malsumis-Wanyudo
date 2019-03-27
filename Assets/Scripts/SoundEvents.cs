@@ -6,6 +6,7 @@ public class SoundEvents : MonoBehaviour
 {
     public SimpleAudioEvent fireballSound;
     public SimpleAudioEvent menuclickSound;
+    public SimpleAudioEvent hurtSound;
     private AudioSource audioSource;
 
     public static SoundEvents instance = null;
@@ -33,12 +34,14 @@ public class SoundEvents : MonoBehaviour
     {
         EventManager.StartListening("Fireball", FireBallSound);
         EventManager.StartListening("MenuClick", menuClickSound);
+        EventManager.StartListening("Hurt", HurtSound);
     }
 
     void OnDisable()
     {
         EventManager.StopListening("Fireball", FireBallSound);
         EventManager.StopListening("MenuClick", menuClickSound);
+        EventManager.StopListening("Hurt", HurtSound);
     }
 
     void FireBallSound()
@@ -49,5 +52,10 @@ public class SoundEvents : MonoBehaviour
     void menuClickSound()
     {
         menuclickSound.Play(audioSource);
+    }
+
+    void HurtSound()
+    {
+        hurtSound.Play(audioSource);
     }
 }

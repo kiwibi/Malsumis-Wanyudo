@@ -38,6 +38,7 @@ public class PlayerStats : Stats
             dmgFeedback.Flash();
             StartCoroutine(InvincibilityFrame());
             CurrentHealth.Value -= value;
+            EventManager.TriggerEvent("Hurt");
         }
     }
 
