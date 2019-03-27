@@ -44,6 +44,7 @@ public class PlayerStats : Stats
 
     public override void Die()
     {
+        dmgFeedback.BloodSpawn();
         Destroy(gameObject);
     }
 
