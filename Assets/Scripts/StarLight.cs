@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class StarLight : MonoBehaviour
 {
-    private Light light;
+    private Light starLight;
     public int minIntensity;
     public int maxIntensity;
     public float intensitySpeed;
@@ -14,26 +14,26 @@ public class StarLight : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        light = GetComponent<Light>();
+        starLight = GetComponent<Light>();
     }
 
     // Update is called once per frame
     void Update()
     {
         if (intensityUp == true){
-            light.intensity = light.intensity + Time.deltaTime*intensitySpeed;
+            starLight.intensity = starLight.intensity + Time.deltaTime*intensitySpeed;
         }
-        if (light.intensity < minIntensity)
+        if (starLight.intensity < minIntensity)
         {
             intensityUp = true;
         }
-        if (light.intensity > maxIntensity)
+        if (starLight.intensity > maxIntensity)
         {
             intensityUp = false;
         }
         if (intensityUp == false)
         {
-            light.intensity = light.intensity - Time.deltaTime*intensitySpeed;
+            starLight.intensity = starLight.intensity - Time.deltaTime*intensitySpeed;
         }
             
         // if intensity is smaller than maxIntensity

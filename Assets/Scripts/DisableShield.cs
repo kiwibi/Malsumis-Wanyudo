@@ -4,19 +4,19 @@ using UnityEngine;
 
 public class DisableShield : MonoBehaviour
 {
-    private MeshRenderer renderer;
-    private CircleCollider2D collider;
+    private MeshRenderer renderMesh;
+    private CircleCollider2D col;
     
     // Start is called before the first frame update
     void Start()
     {
-        renderer = GetComponent<MeshRenderer>();
-        collider = GetComponent<CircleCollider2D>();
+        renderMesh = GetComponent<MeshRenderer>();
+        col = GetComponent<CircleCollider2D>();
     }
 
     public void SetState(bool enable)
     {
-        renderer.enabled = enable;
-        collider.enabled = enable;
+        renderMesh.enabled = enable;
+        col.enabled = enable;
     }
 }

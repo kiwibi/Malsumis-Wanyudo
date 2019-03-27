@@ -27,7 +27,7 @@ public class AlienStats : Stats
 
     private Animator anim;
     private bool isDead;
-    private Collider2D collider;
+    private Collider2D col;
 
     // Start is called before the first frame update
     void Start()
@@ -43,7 +43,7 @@ public class AlienStats : Stats
             lightSource.intensity = 5;
         }
         
-        collider = GetComponent<Collider2D>();
+        col = GetComponent<Collider2D>();
 
         // Set local variables
         FireballMaxCooldown = statsObject.FireballMaxCooldown;
@@ -58,7 +58,7 @@ public class AlienStats : Stats
         anim = GetComponentInChildren<Animator>();
         stateController = GetComponent<StateController>();
         
-         collider.enabled = true;
+         col.enabled = true;
     }
 
     public override void DealDamage(int damage)
@@ -98,10 +98,10 @@ public class AlienStats : Stats
 
     public override void Die()
     {
+        Instantiate(blood, transform.position, Quaternion.identity);
         stateController.Disable();
         anim.SetBool("Die", true);
-        collider.enabled = false;
-        Instantiate(blood, transform.position, Quaternion.identity);
+        col.enabled = false;
         //Destroy(gameObject);
     }
 
