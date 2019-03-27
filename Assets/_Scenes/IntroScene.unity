@@ -445,7 +445,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: d08e812c2f78c804a90fcbde8b163393, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f4e9a59816a8fba468d8c3a9e6b32386, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -475,12 +475,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   panels:
-  - {fileID: 21300000, guid: d08e812c2f78c804a90fcbde8b163393, type: 3}
-  - {fileID: 21300000, guid: 97873df0d769bc04fb076f1567aa4610, type: 3}
-  - {fileID: 21300000, guid: 0b73bc2859291974ea260a9d34763b70, type: 3}
-  - {fileID: 21300000, guid: 0be4fc884d39ee541a1d349fb2b327de, type: 3}
-  - {fileID: 21300000, guid: 045f42747049dab4aa61e267a5442d03, type: 3}
-  - {fileID: 21300000, guid: d06007410dab7654ba9019bcbf1b8de1, type: 3}
+  - {fileID: 21300000, guid: f4e9a59816a8fba468d8c3a9e6b32386, type: 3}
+  - {fileID: 21300000, guid: 643849d978e4f8042a22bfdee708c2a7, type: 3}
+  - {fileID: 21300000, guid: 573f795d53daaf54e9fb0c181b608e1b, type: 3}
+  - {fileID: 21300000, guid: 5b28146c76a2be24895267d1b0dd8155, type: 3}
+  - {fileID: 21300000, guid: 6062ef8cac07f3047a9eb0c1b8ff4465, type: 3}
+  - {fileID: 21300000, guid: 0ae1784017f7ccd4b8217304b04dc862, type: 3}
 --- !u!1 &277064153
 GameObject:
   m_ObjectHideFlags: 0
