@@ -37,6 +37,7 @@ public class EventManager : MonoBehaviour {
         {
             eventDictionary = new Dictionary<string, UnityEvent>();
         }
+        DontDestroyOnLoad(this.gameObject);
     }
 
     public static void StartListening (string eventName, UnityAction listener)

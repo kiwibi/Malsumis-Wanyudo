@@ -207,7 +207,7 @@ PrefabInstance:
     - target: {fileID: 3248784329227621819, guid: f697b220a597ca045831133bdcb34b74,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 372985115670202509, guid: f697b220a597ca045831133bdcb34b74,
         type: 3}
@@ -2112,7 +2112,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 10
   m_WholeNumbers: 1
-  m_Value: 8
+  m_Value: 10
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -2549,7 +2549,7 @@ PrefabInstance:
     - target: {fileID: 5861435170278585808, guid: 478980c660f5b554bac1709d55feece0,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5861435170278585822, guid: 478980c660f5b554bac1709d55feece0,
         type: 3}
